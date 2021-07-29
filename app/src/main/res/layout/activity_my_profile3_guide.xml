@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="30dp"
+    android:layout_marginVertical="30dp"
+    android:weightSum="7.2"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="right|bottom"
+        android:layout_weight="0.3"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/close_add_group_btn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="#F00"></ImageButton>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6.9"
+        android:weightSum="6.9"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            android:text="가이드 및 사용법"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:paddingLeft="12dp"
+            android:gravity="center|left"></TextView>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6.3"></ListView>
+    </LinearLayout>
+
+
+</LinearLayout>

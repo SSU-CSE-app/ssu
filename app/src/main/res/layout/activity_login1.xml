@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <!-- 위쪽 여백 (세로 : 0 ~ 3)-->
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3">
+
+    </LinearLayout>
+
+    <!-- 아이디 ~ 회원가입 부분 (세로 : 3 ~ 7.3)-->
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="4.3"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <!-- 왼쪽 여백 (가로 : 0 ~ 0.7) -->
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7">
+
+        </LinearLayout>
+
+        <!-- 아이디 ~ 회원가입 부분 (가로 : 0.7 ~ 4.3) -->
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="3.6"
+            android:orientation="vertical"
+            android:weightSum="4.3">
+
+            <!-- 아이디 부분 (세로 : 3 ~ 3.6) -->
+            <EditText android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:hint="아이디"
+                android:textColorHint="#808080"
+                android:inputType="text"/>
+
+            <!-- 아이디와 비빌번호 사이 (세로 : 3.6 ~ 3.8) -->
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2">
+
+            </LinearLayout>
+
+            <!-- 비빌번호 부분 (세로 : 3.8 ~ 4.4) -->
+            <EditText android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:hint="비밀번호"
+                android:textColorHint="#808080"
+                android:inputType="text"/>
+
+            <!-- 비빌번호와 로그인 버튼 사이 (세로 : 4.4 ~ 4.6) -->
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2">
+
+            </LinearLayout>
+
+            <!-- 로그인 버튼 (세로 : 4.6 ~ 5.2) -->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:text="로그인 하기"
+                android:textSize="18dp"
+                android:textColor="#080808"
+                android:textStyle="bold"
+                android:backgroundTint="#C5C5C5"/>
+
+            <!-- 로그인 버튼과 카카오 로그인 버튼 사이 (세로 : 5.2 ~ 5.5) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3">
+
+            </LinearLayout>
+
+            <!-- 카카오 로그인 버튼 (세로 : 5.5 ~ 6.1) -->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:text="카카오 로그인"
+                android:textSize="18dp"
+                android:textColor="#080808"
+                android:textStyle="bold"
+                android:backgroundTint="#FCF600"/>
+
+            <!-- 카카오 로그인 버튼과 네이버 로그인 버튼 사이 (세로 : 6.1 ~ 6.4) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3">
+
+            </LinearLayout>
+
+            <!-- 네이버 로그인 버튼 (세로 : 6.4 ~ 7) -->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:text="네이버 로그인"
+                android:textSize="18dp"
+                android:textColor="#080808"
+                android:textStyle="bold"
+                android:backgroundTint="#41F15E"/>
+
+            <!-- 회원가입 버튼 (세로 : 7 ~ 7.3) -->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:layout_gravity="right"
+                android:gravity="center_vertical|top"
+                android:text="회원가입"
+                android:textSize="15dp"
+                android:textColor="#080808"
+                android:textStyle="bold"
+                android:background="#00ff0000"/>
+
+        </LinearLayout>
+
+        <!-- 오른쪽 여백 (가로 : 4.3 ~ 5) -->
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 아래쪽 여백(세로 : 7.3 ~ 10)-->
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2.7">
+
+    </LinearLayout>
+
+</LinearLayout>
