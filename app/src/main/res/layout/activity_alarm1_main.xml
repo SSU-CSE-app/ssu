@@ -70,20 +70,40 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <Spinner
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/board_layout"></Spinner>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical"
+                    android:gravity="center|left">
+
+                    <Spinner
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/board_layout"></Spinner>
+
+                </LinearLayout>
 
 
-                <ImageButton
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="230dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@color/purple_200"></ImageButton>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"></View>
 
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="right|center">
+
+                    <ImageButton
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/purple_200"></ImageButton>
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -115,6 +135,7 @@
         android:weightSum="5">
 
         <ImageButton
+            android:id="@+id/tap_alarm"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1.25"
@@ -122,6 +143,7 @@
             android:scaleType = "fitCenter"></ImageButton>
 
         <ImageButton
+            android:id="@+id/tap_group"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1.25"
@@ -129,6 +151,7 @@
             android:scaleType = "fitCenter"></ImageButton>
 
         <ImageButton
+            android:id="@+id/tap_friends"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1.25"
@@ -136,6 +159,7 @@
             android:scaleType = "fitCenter"></ImageButton>
 
         <ImageButton
+            android:id="@+id/tap_profile"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1.25"
