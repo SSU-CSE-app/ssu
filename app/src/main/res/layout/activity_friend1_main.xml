@@ -32,25 +32,44 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="4">
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="친구: 50"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="20dp"
-                    android:paddingLeft="12dp"
-                    android:gravity="center|left"></TextView>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical"
+                    android:gravity="center|left">
 
-                <ImageButton
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="230dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@color/purple_200"></ImageButton>
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="친구: 50"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:paddingLeft="12dp"
+                        android:gravity="bottom|left"/>
+                </LinearLayout>
 
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"></View>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="right|center">
+
+                    <ImageButton
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/purple_200"></ImageButton>
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -76,40 +95,5 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        android:layout_weight="1"
-        android:weightSum="5">
 
-        <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.25"
-            android:src="@drawable/tap_alarm"
-            android:scaleType = "fitCenter"></ImageButton>
-
-        <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.25"
-            android:src="@drawable/tap_groups"
-            android:scaleType = "fitCenter"></ImageButton>
-
-        <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.25"
-            android:src="@drawable/tap_friends"
-            android:scaleType = "fitCenter"></ImageButton>
-
-        <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.25"
-            android:src="@drawable/tap_profile"
-            android:scaleType = "fitCenter"></ImageButton>
-
-    </LinearLayout>
 </LinearLayout>
