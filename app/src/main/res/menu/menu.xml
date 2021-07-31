@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/alarm_menu"
+        android:icon="@drawable/tap_alarm"
+        android:title="Alarm"></item>
+
+    <item
+        android:id="@+id/group_menu"
+        android:icon="@drawable/tap_groups"
+        android:title="Group"></item>
+
+    <item
+        android:id="@+id/friend_menu"
+        android:icon="@drawable/tap_friends"
+        android:title="Friend"></item>
+
+    <item
+        android:id="@+id/MyProfile_menu"
+        android:icon="@drawable/tap_profile"
+        android:title="MyProfile"></item>
+
+</menu>
