@@ -37,18 +37,22 @@
             android:exported="true"></activity>
         <activity
             android:name=".Group4_InviteMember"
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog"
             android:exported="true"></activity>
         <activity
             android:name=".Group2_AddGroup"
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog"
             android:exported="true"></activity>
         <activity
             android:name=".Group3_GroupInfo"
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog"
             android:exported="true"></activity>
         <activity
             android:name=".Group1_main"
             android:exported="true"></activity>
         <activity
             android:name=".Alarm2_PlusAlarm"
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog"
             android:exported="true"></activity>
         <activity
             android:name=".Alarm1_main"
