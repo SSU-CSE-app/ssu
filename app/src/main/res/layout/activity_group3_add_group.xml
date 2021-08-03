@@ -3,8 +3,6 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginHorizontal="30dp"
-    android:layout_marginVertical="30dp"
     android:weightSum="7.2"
     android:layout_gravity="center">
 
