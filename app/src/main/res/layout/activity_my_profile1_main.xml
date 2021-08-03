@@ -124,6 +124,7 @@
                 android:orientation="vertical">
 
                 <ImageButton
+                    android:id="@+id/btn_myprofile_notice"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -132,6 +133,7 @@
                 </ImageButton>
 
                 <ImageButton
+                    android:id="@+id/btn_myprofile_guide"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -140,6 +142,7 @@
                 </ImageButton>
 
                 <ImageButton
+                    android:id="@+id/btn_myprofile_inquiry"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -150,14 +153,6 @@
             </LinearLayout>
         </LinearLayout>
 
-
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="0.25"
-            android:visibility="invisible">
-        </View>
 
     </LinearLayout>
 

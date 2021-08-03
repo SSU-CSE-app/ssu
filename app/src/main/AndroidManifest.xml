@@ -19,41 +19,44 @@
         </activity>
         <activity
             android:name=".MyProfile4_inquiry"
+            android:theme="@style/Theme.SmallGongjeon."
             android:exported="true"></activity>
         <activity
             android:name=".MyProfile3_guide"
+            android:theme="@style/Theme.SmallGongjeon."
             android:exported="true"></activity>
         <activity
             android:name=".MyProfile2_notice"
+            android:theme="@style/Theme.SmallGongjeon."
             android:exported="true"></activity>
         <activity
             android:name=".MyProfile1_main"
             android:exported="true"></activity>
         <activity
             android:name=".Friend2_AddFriend"
-            android:theme="@style/Theme.AppCompat.DayNight.Dialog"
+            android:theme="@style/Theme.SmallGongjeon."
             android:exported="true"></activity>
         <activity
             android:name=".Friend1_main"
             android:exported="true"></activity>
         <activity
             android:name=".Group4_InviteMember"
-            android:theme="@style/Theme.AppCompat.DayNight.Dialog"
+            android:theme="@style/Theme.SmallGongjeon."
             android:exported="true"></activity>
         <activity
             android:name=".Group2_AddGroup"
-            android:theme="@style/Theme.AppCompat.DayNight.Dialog"
+            android:theme="@style/Theme.SmallGongjeon."
             android:exported="true"></activity>
         <activity
             android:name=".Group3_GroupInfo"
-            android:theme="@style/Theme.AppCompat.DayNight.Dialog"
+            android:theme="@style/Theme.SmallGongjeon."
             android:exported="true"></activity>
         <activity
             android:name=".Group1_main"
             android:exported="true"></activity>
         <activity
             android:name=".Alarm2_PlusAlarm"
-            android:theme="@style/Theme.AppCompat.DayNight.Dialog"
+            android:theme="@style/Theme.SmallGongjeon."
             android:exported="true"></activity>
         <activity
             android:name=".Alarm1_main"
