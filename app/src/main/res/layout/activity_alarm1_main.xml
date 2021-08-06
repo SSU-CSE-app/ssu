@@ -44,7 +44,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.4"
+                    android:layout_weight="0.5"
                     android:paddingLeft="12dp"
                     android:textSize="20dp"
                     android:gravity="center|left"
@@ -54,11 +54,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.6"
+                    android:layout_weight="0.5"
                     android:textSize="18dp"
-                    android:gravity="top|left"
+                    android:layout_gravity="center_vertical"
                     android:paddingLeft="12dp"
-                    android:paddingTop="5dp"
                     android:text="일찍일어나는 새가 벌레를 잡아먹는다."
                     android:textColor="@android:color/white">
                 </TextView>
