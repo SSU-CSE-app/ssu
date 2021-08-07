@@ -2,6 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:weightSum="7.2"
     android:gravity="center">
@@ -17,6 +19,9 @@
             android:id="@+id/close_guide_btn"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:layout_gravity="top"
+            app:srcCompat="@drawable/ic_baseline_close_24"
+            tools:ignore="VectorDrawableCompat"
             android:background="#F00"></ImageButton>
 
     </LinearLayout>
