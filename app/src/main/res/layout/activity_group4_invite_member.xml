@@ -12,7 +12,7 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/close_add_group_btn"
+            android:id="@+id/close_invite_member_btn"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:background="#F00"></ImageButton>
