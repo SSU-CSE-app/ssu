@@ -6,8 +6,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,6 +27,8 @@ public class Group1_main extends Fragment implements View.OnClickListener{
         view=inflater.inflate(R.layout.activity_group1_main,container,false);
         btn_add_group = (ImageButton)view.findViewById(R.id.btn_add_group);
         btn_add_group.setOnClickListener(this);
+
+
         ListView lv = view.findViewById(R.id.listview_group);
         GroupList adapter = new GroupList();
 
@@ -32,6 +37,13 @@ public class Group1_main extends Fragment implements View.OnClickListener{
         adapter.addGroup(ContextCompat.getDrawable(getActivity(),R.drawable.ic_launcher_background), "뚱이", 7);
         adapter.addGroup(ContextCompat.getDrawable(getActivity(),R.drawable.tap_friends), "파워레인저", 5);
         adapter.addGroup(ContextCompat.getDrawable(getActivity(),R.drawable.tap_profile), "소공전", 3);
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                getActivity().startActivity(new Intent(getActivity(), Group3_GroupInfo.class));
+            }
+        });
         return view;
     }
 

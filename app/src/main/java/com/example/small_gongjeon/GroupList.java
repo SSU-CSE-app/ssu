@@ -1,20 +1,22 @@
 package com.example.small_gongjeon;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class GroupList extends BaseAdapter {
     ArrayList<Group> groups = new ArrayList<>();
     ImageView img;
-
 
     //총 몇개?
     @Override
@@ -53,6 +55,7 @@ public class GroupList extends BaseAdapter {
         iv.setImageDrawable(g.getD());
         tv1.setText(g.getName());
         tv2.setText("" + g.getNumber());
+
 
         return view;
     }
