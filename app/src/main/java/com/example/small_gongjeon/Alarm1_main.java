@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ListView;
 
 
 import androidx.annotation.NonNull;
@@ -24,6 +25,15 @@ public class Alarm1_main extends Fragment implements View.OnClickListener {
         view=inflater.inflate(R.layout.activity_alarm1_main,container,false);
         btn_plus_alarm = (ImageButton)view.findViewById(R.id.btn_plus_alarm);
         btn_plus_alarm.setOnClickListener(this);
+
+        ListView lv = view.findViewById(R.id.listview_alarm);
+        AlarmGroupList adapter = new AlarmGroupList();
+
+        lv.setAdapter(adapter);
+
+        adapter.addGroupAlarm("09:00","뚱이");
+        adapter.addGroupAlarm("09:30","스폰지밥");
+        adapter.addGroupAlarm("10:00","다람이");
         return view;
     }
 
