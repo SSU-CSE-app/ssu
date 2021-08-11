@@ -75,7 +75,7 @@ public class AlarmList extends BaseAdapter {
                     s = (Switch)view.findViewById(R.id.switch_alarm);
                     break;
                 case ITEM_GROUPINFO:
-                    view = li.inflate(R.layout.listviewitem_alarm_groupinfo, viewGroup, false);
+                    view = li.inflate(R.layout.listviewitem_alarm_group_info, viewGroup, false);
                     img = (ImageView)view.findViewById(R.id.image_alarm_group);
                     TextView tv4 = (TextView)view.findViewById(R.id.alarm_time);
                     TextView tv5 = (TextView)view.findViewById(R.id.number_groupinfo_member);

@@ -1,12 +1,14 @@
 package com.example.small_gongjeon;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
+import android.widget.ListView;
 
 public class Group2_AddGroup extends AppCompatActivity {
 
@@ -23,6 +25,15 @@ public class Group2_AddGroup extends AppCompatActivity {
                 finish();
             }
         });
+
+        ListView lv = findViewById(R.id.listview_group_add);
+        InviteMemberList adapter = new InviteMemberList();
+
+        lv.setAdapter(adapter);
+
+        adapter.addFriend(ContextCompat.getDrawable(this,R.drawable.ic_launcher_background), "이선호", "좀 되라");
+        adapter.addFriend(ContextCompat.getDrawable(this,R.drawable.tap_friends), "이민지", "하이하이");
+        adapter.addFriend(ContextCompat.getDrawable(this,R.drawable.tap_friends), "김흥수", "!!!!!!!");
     }
 
     @Override
