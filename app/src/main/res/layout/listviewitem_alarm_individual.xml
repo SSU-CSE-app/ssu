@@ -53,6 +53,7 @@
                         android:gravity="right|center">
 
                         <Switch
+                            android:id="@+id/switch_alarm"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:switchMinWidth="50dp">

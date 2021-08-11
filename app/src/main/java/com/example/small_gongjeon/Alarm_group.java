@@ -1,4 +1,4 @@
-package com.example.small_gongjeon;
+gitpackage com.example.small_gongjeon;
 
 import android.graphics.drawable.Drawable;
 import android.widget.Switch;
