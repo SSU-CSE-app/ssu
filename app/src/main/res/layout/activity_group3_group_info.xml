@@ -118,6 +118,7 @@
             </LinearLayout>
 
             <ListView
+                android:id="@+id/listview_groupinfo"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="3.1"></ListView>

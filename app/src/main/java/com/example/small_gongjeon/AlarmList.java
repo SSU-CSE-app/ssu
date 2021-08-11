@@ -16,7 +16,8 @@ public class AlarmList extends BaseAdapter {
     ArrayList<Alarm> alarms = new ArrayList<>();
     private static final int ITEM_GROUP = 0;
     private static final int ITEM_INDIVIDUAL = 1;
-    private static final int TYPE_COUNT = 2;
+    private static final int ITEM_GROUPINFO = 2;
+    private static final int TYPE_COUNT = 3;
     ImageView img;
     ImageButton btn;
     Switch s;
@@ -73,6 +74,17 @@ public class AlarmList extends BaseAdapter {
                     btn = (ImageButton)view.findViewById(R.id.btn_delete_alarm);
                     s = (Switch)view.findViewById(R.id.switch_alarm);
                     break;
+                case ITEM_GROUPINFO:
+                    view = li.inflate(R.layout.listviewitem_alarm_groupinfo, viewGroup, false);
+                    img = (ImageView)view.findViewById(R.id.image_alarm_group);
+                    TextView tv4 = (TextView)view.findViewById(R.id.alarm_time);
+                    TextView tv5 = (TextView)view.findViewById(R.id.number_groupinfo_member);
+                    btn = (ImageButton)view.findViewById(R.id.btn_delete_alarm);
+                    s = (Switch)view.findViewById(R.id.switch_alarm);
+
+                    tv4.setText(g.getTime());
+                    tv5.setText(""+g.getMember());
+                    break;
             }
         }
         return view;
@@ -93,6 +105,15 @@ public class AlarmList extends BaseAdapter {
         Alarm g = new Alarm();
 
         g.setType(ITEM_INDIVIDUAL);
+        g.setTime(time);
+
+        alarms.add(g);
+    }
+    public void addAlarm(int member,String time){
+        Alarm g = new Alarm();
+
+        g.setType(ITEM_GROUPINFO);
+        g.setMember(member);
         g.setTime(time);
 
         alarms.add(g);

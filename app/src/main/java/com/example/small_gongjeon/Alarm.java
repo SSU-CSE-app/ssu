@@ -8,6 +8,15 @@ public class Alarm {
     private String name;
     private Switch onoff;
     private int type;
+    private int member;
+
+    public void setMember(int member) {
+        this.member = member;
+    }
+
+    public int getMember() {
+        return member;
+    }
 
     public void setName(String name) {
         this.name = name;

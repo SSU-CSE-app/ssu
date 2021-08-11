@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ListView;
 
 public class Group3_GroupInfo extends AppCompatActivity {
 
@@ -22,6 +23,14 @@ public class Group3_GroupInfo extends AppCompatActivity {
                 finish();
             }
         });
+
+        ListView lv = findViewById(R.id.listview_groupinfo);
+        AlarmList adapter = new AlarmList();
+
+        lv.setAdapter(adapter);
+
+        adapter.addAlarm(7,"08:00");
+        adapter.addAlarm(13,"13:00");
     }
 
     @Override
