@@ -16,6 +16,7 @@ public class AlarmList extends BaseAdapter {
     ArrayList<Alarm> alarms = new ArrayList<>();
     private static final int ITEM_GROUP = 0;
     private static final int ITEM_INDIVIDUAL = 1;
+    private static final int TYPE_COUNT = 2;
     ImageView img;
     ImageButton btn;
     Switch s;
@@ -38,12 +39,12 @@ public class AlarmList extends BaseAdapter {
 
     @Override
     public int getViewTypeCount() {
-        return super.getViewTypeCount();
+        return TYPE_COUNT;
     }
 
     @Override
     public int getItemViewType(int i) {
-        return super.getItemViewType(i);
+        return alarms.get(i).getType();
     }
 
     @Override
