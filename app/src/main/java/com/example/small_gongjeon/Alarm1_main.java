@@ -1,7 +1,6 @@
 package com.example.small_gongjeon;
 
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -27,13 +26,14 @@ public class Alarm1_main extends Fragment implements View.OnClickListener {
         btn_plus_alarm.setOnClickListener(this);
 
         ListView lv = view.findViewById(R.id.listview_alarm);
-        AlarmGroupList adapter = new AlarmGroupList();
+        AlarmList adapter = new AlarmList();
 
         lv.setAdapter(adapter);
 
         adapter.addAlarm("09:00","뚱이");
         adapter.addAlarm("09:30","스폰지밥");
         adapter.addAlarm("10:00","다람이");
+        adapter.addAlarm("07:00");
         return view;
     }
 

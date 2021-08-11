@@ -3,7 +3,7 @@ package com.example.small_gongjeon;
 import android.graphics.drawable.Drawable;
 import android.widget.Switch;
 
-public class Alarm_group {
+public class Alarm {
     private String time;
     private String name;
     private Switch onoff;

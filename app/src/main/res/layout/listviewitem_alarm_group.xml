@@ -14,7 +14,7 @@
             android:gravity="center">
 
             <ImageView
-                android:id="@+id/image_alarm"
+                android:id="@+id/image_alarm_group"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:background="@drawable/ic_baseline_group_35">
