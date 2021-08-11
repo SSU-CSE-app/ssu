@@ -31,9 +31,9 @@ public class Alarm1_main extends Fragment implements View.OnClickListener {
 
         lv.setAdapter(adapter);
 
-        adapter.addGroupAlarm("09:00","뚱이");
-        adapter.addGroupAlarm("09:30","스폰지밥");
-        adapter.addGroupAlarm("10:00","다람이");
+        adapter.addAlarm("09:00","뚱이");
+        adapter.addAlarm("09:30","스폰지밥");
+        adapter.addAlarm("10:00","다람이");
         return view;
     }
 
