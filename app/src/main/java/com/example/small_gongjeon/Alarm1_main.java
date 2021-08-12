@@ -6,17 +6,24 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import java.util.ArrayList;
+
 public class Alarm1_main extends Fragment implements View.OnClickListener {
     private View view;
     ImageButton btn_plus_alarm;
+    private Spinner spinner;
+    ArrayList<String> arrayList;
+    ArrayAdapter<String> arrayAdapter;
 
     @Nullable
     @Override
@@ -24,6 +31,17 @@ public class Alarm1_main extends Fragment implements View.OnClickListener {
         view=inflater.inflate(R.layout.activity_alarm1_main,container,false);
         btn_plus_alarm = (ImageButton)view.findViewById(R.id.btn_plus_alarm);
         btn_plus_alarm.setOnClickListener(this);
+
+        ArrayList arrayList = new ArrayList<>();
+        arrayList.add("       전체");
+        arrayList.add("       그룹");
+        arrayList.add("       개인");
+
+        spinner = (Spinner)view.findViewById(R.id.spinner_alarm);
+        arrayAdapter = new ArrayAdapter<>(view.getContext(),android.R.layout.simple_spinner_dropdown_item,arrayList);
+        spinner.setAdapter(arrayAdapter);
+
+
 
         ListView lv = view.findViewById(R.id.listview_alarm);
         AlarmList adapter = new AlarmList();

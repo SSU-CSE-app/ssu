@@ -105,8 +105,9 @@
                 android:gravity="center|left">
 
                 <Spinner
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
+                    android:id="@+id/spinner_group"
+                    android:layout_width="110dp"
+                    android:layout_height="30dp"
                     android:background="@drawable/board_layout"></Spinner>
 
             </LinearLayout>
