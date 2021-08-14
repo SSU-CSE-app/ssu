@@ -41,9 +41,11 @@ public class Login1_main extends AppCompatActivity {
             }
         });
 
+        //로그인 하기 버튼 클릭 시 수행
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 // EditText에 현재 입력되어있는 값을 get(가져온다)해온다.
                 String userID = et_id.getText().toString();
                 String userPass = et_pass.getText().toString();
@@ -56,6 +58,9 @@ public class Login1_main extends AppCompatActivity {
                             System.out.println("hongchul" + response);
                             JSONObject jsonObject = new JSONObject(response);
                             boolean success = jsonObject.getBoolean("success");
+
+                            Toast.makeText(getApplicationContext(),"여기까지 됨",Toast.LENGTH_SHORT).show();
+
                             if (success) { // 로그인에 성공한 경우
                                 String userID = jsonObject.getString("userID");
                                 String userPass = jsonObject.getString("userPassword");
