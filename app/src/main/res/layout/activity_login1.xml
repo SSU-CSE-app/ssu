@@ -34,12 +34,13 @@
             android:weightSum="4.3">
 
             <!-- 아이디 부분 (세로 : 3 ~ 3.6) -->
-            <EditText android:layout_width="match_parent"
+            <EditText android:id="@+id/et_id"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.6"
                 android:hint="아이디"
                 android:textColorHint="#808080"
-                android:inputType="text"/>
+                android:inputType="textPersonName"/>
 
             <!-- 아이디와 비빌번호 사이 (세로 : 3.6 ~ 3.8) -->
             <LinearLayout android:layout_width="match_parent"
@@ -49,12 +50,13 @@
             </LinearLayout>
 
             <!-- 비빌번호 부분 (세로 : 3.8 ~ 4.4) -->
-            <EditText android:layout_width="match_parent"
+            <EditText android:id="@+id/et_pass"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.6"
                 android:hint="비밀번호"
                 android:textColorHint="#808080"
-                android:inputType="text"/>
+                android:inputType="textPersonName"/>
 
             <!-- 비빌번호와 로그인 버튼 사이 (세로 : 4.4 ~ 4.6) -->
             <LinearLayout android:layout_width="match_parent"
@@ -65,6 +67,7 @@
 
             <!-- 로그인 버튼 (세로 : 4.6 ~ 5.2) -->
             <Button
+                android:id="@+id/btn_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.6"
@@ -114,6 +117,7 @@
 
             <!-- 회원가입 버튼 (세로 : 7 ~ 7.3) -->
             <Button
+                android:id="@+id/btn_register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"

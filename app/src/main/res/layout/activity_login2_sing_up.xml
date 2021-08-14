@@ -58,12 +58,14 @@
                     android:weightSum="3.6">
 
                     <!-- 입력 부분 (가로 : 0.7 ~ 4) -->
-                    <EditText android:layout_width="wrap_content"
+                    <EditText
+                        android:id="@+id/et_id"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="3.3"
                         android:hint="6 ~ 13자리까지 입력 가능합니다"
                         android:textColorHint="#808080"
-                        android:inputType="text"/>
+                        android:inputType="textPersonName"/>
 
                     <!-- 입력 부분과 중복확인 버튼 사이 (가로 : 4 ~ 4.2) -->
                     <LinearLayout android:layout_width="wrap_content"
@@ -94,7 +96,8 @@
             </LinearLayout>
 
             <!-- 비빌번호 부분 (세로 : 3 ~ 4.5) -->
-            <LinearLayout android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.5"
                 android:orientation="vertical"
@@ -111,12 +114,14 @@
                     android:textStyle="bold"/>
 
                 <!-- 입력 부분 (세로 : 3.4 ~ 4) -->
-                <EditText android:layout_width="match_parent"
+                <EditText
+                    android:id="@+id/et_pass"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.6"
                     android:hint="6 ~ 13자리까지 입력 가능합니다"
                     android:textColorHint="#808080"
-                    android:inputType="text">
+                    android:inputType="textPersonName">
 
                 </EditText>
 
@@ -147,12 +152,14 @@
                     android:textStyle="bold"/>
 
                 <!-- 입력 부분 (세로 : 4.9 ~ 5.5) -->
-                <EditText android:layout_width="match_parent"
+                <EditText
+                    android:id="@+id/et_age"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.6"
-                    android:hint="6 ~ 13자리까지 입력 가능합니다"
+                    android:hint="나이 입력해줭..."
                     android:textColorHint="#808080"
-                    android:inputType="text">
+                    android:inputType="textPersonName">
 
                 </EditText>
 
@@ -183,12 +190,14 @@
                     android:textStyle="bold"/>
 
                 <!-- 입력 부분 (세로 : 6.4 ~ 7) -->
-                <EditText android:layout_width="match_parent"
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.6"
                     android:hint="2 ~ 8자리까지 입력 가능합니다"
                     android:textColorHint="#808080"
-                    android:inputType="text">
+                    android:inputType="textPersonName">
 
                 </EditText>
 
@@ -209,7 +218,9 @@
             </LinearLayout>
 
             <!-- 가입하기 버튼 (세로 : 7.9 ~ 8.5) -->
-            <Button android:layout_width="match_parent"
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.6"
                 android:text="가입하기"
