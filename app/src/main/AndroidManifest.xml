@@ -70,7 +70,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GroupMember"/>
+        <activity android:name=".GroupMember"
+            android:theme="@style/Theme.SmallGongjeon."/>
     </application>
 
 </manifest>
