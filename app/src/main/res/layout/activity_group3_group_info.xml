@@ -104,11 +104,12 @@
                 android:orientation="vertical"
                 android:gravity="center|left">
 
-                <Spinner
-                    android:id="@+id/spinner_group"
-                    android:layout_width="110dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/board_layout"></Spinner>
+                <Button
+                    android:id="@+id/btn_group_member"
+                    android:layout_width="120dp"
+                    android:text="그룹 멤버"
+                    android:textSize="10dp"
+                    android:layout_height="match_parent"></Button>
 
             </LinearLayout>
 
@@ -171,18 +172,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="0.2"></View>
-
-
             </LinearLayout>
-
-
 
         </LinearLayout>
 
-
-
     </LinearLayout>
-
-
 
 </LinearLayout>

@@ -3,35 +3,23 @@ package com.example.small_gongjeon;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.Spinner;
 
-public class Group3_GroupInfo extends AppCompatActivity {
-
-    Button btn;
+public class GroupMember extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_group3_group_info);
-
-        btn = (Button)findViewById(R.id.btn_group_member);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), GroupMember.class);
-                startActivity(intent);
-            }
-        });
+        setContentView(R.layout.activity_group5_groupinfo_member);
 
         //x버튼 클릭시 종료
-        ImageButton finishBtn = findViewById(R.id.close_group_info_btn);
+        ImageButton finishBtn = findViewById(R.id.close_group_member_btn);
         finishBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,16 +27,15 @@ public class Group3_GroupInfo extends AppCompatActivity {
             }
         });
 
-        ListView lv = findViewById(R.id.listview_groupinfo);
+        ListView lv = findViewById(R.id.listview_group_member);
 
-        AlarmList adapter = new AlarmList();
+        MemberList adapter = new MemberList();
 
         lv.setAdapter(adapter);
 
-        adapter.addAlarm(7,"08:00");
-        adapter.addAlarm(13,"13:00");
-
-
+        adapter.addMember(ContextCompat.getDrawable(this,R.drawable.ic_launcher_background),"이민지","흐음");
+        adapter.addMember(ContextCompat.getDrawable(this,R.drawable.ic_baseline_person_35),"이선호","어라라");
+        adapter.addMember(ContextCompat.getDrawable(this,R.drawable.ic_baseline_group_35),"김흥수","오오");
     }
 
     @Override
@@ -60,10 +47,10 @@ public class Group3_GroupInfo extends AppCompatActivity {
         return true;
     }
 
+
     @Override
     public void onBackPressed() {
         //안드로이드 백버튼 막기
         return;
     }
-
 }
