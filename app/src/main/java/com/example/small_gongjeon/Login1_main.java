@@ -63,10 +63,10 @@ public class Login1_main extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(),"로그인에 성공하였습니다.",Toast.LENGTH_SHORT).show();
 
                                 //화면전환 코드
-                                //Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                //intent.putExtra("userID", userID);
-                                //intent.putExtra("userPass", userPass);
-                                //startActivity(intent);
+                                Intent intent = new Intent(Login1_main.this, Main.class);
+                                intent.putExtra("userID", userID);
+                                intent.putExtra("userPass", userPass);
+                                startActivity(intent);
                             } else { // 로그인에 실패한 경우
                                 Toast.makeText(getApplicationContext(),"로그인에 실패하였습니다.",Toast.LENGTH_SHORT).show();
                                 return;
