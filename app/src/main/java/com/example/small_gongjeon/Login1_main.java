@@ -59,8 +59,6 @@ public class Login1_main extends AppCompatActivity {
                             JSONObject jsonObject = new JSONObject(response);
                             boolean success = jsonObject.getBoolean("success");
 
-                            Toast.makeText(getApplicationContext(),"여기까지 됨",Toast.LENGTH_SHORT).show();
-
                             if (success) { // 로그인에 성공한 경우
                                 String userID = jsonObject.getString("userID");
                                 String userPass = jsonObject.getString("userPassword");
