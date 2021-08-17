@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.WindowManager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -29,6 +30,12 @@ public class Main extends AppCompatActivity {
         // 타이틀바 없애기
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+
+        // 상태바 없애기
+        //getWindow().setFlags(
+        //        WindowManager.LayoutParams.FLAG_FULLSCREEN,
+        //        WindowManager.LayoutParams.FLAG_FULLSCREEN
+        //);
 
         NavigationBarView navigationView = findViewById(R.id.navigationView);
         navigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
