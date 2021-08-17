@@ -18,7 +18,7 @@ import org.json.JSONObject;
 
 public class Login2_SingUp extends AppCompatActivity {
 
-    private EditText et_id, et_pass, et_name, et_age;
+    private EditText et_id, et_pass, et_name, et_passcheck;
     private Button btn_register;
 
     @Override
@@ -30,7 +30,7 @@ public class Login2_SingUp extends AppCompatActivity {
         et_id = findViewById(R.id.et_id);
         et_pass = findViewById(R.id.et_pass);
         et_name = findViewById(R.id.et_name);
-        et_age = findViewById(R.id.et_age);
+//        et_passcheck = findViewById(R.id.et_passcheck);
 
         // 회원가입 버튼 클릭 시 수행
         btn_register = findViewById(R.id.btn_register);
@@ -41,7 +41,8 @@ public class Login2_SingUp extends AppCompatActivity {
                 String userID = et_id.getText().toString();
                 String userPass = et_pass.getText().toString();
                 String userName = et_name.getText().toString();
-                int userAge = Integer.parseInt(et_age.getText().toString());
+
+//                int userAge = Integer.parseInt(et_passcheck.getText().toString());
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
@@ -50,11 +51,11 @@ public class Login2_SingUp extends AppCompatActivity {
                             JSONObject jsonObject = new JSONObject(response);
                             boolean success = jsonObject.getBoolean("success");
                             if (success) { // 회원등록에 성공한 경우
-                                Toast.makeText(getApplicationContext(), "회원 등록에 성공하였습니다.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Succeed", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(Login2_SingUp.this, Login1_main.class);
                                 startActivity(intent);
                             } else { // 회원등록에 실패한 경우
-                                Toast.makeText(getApplicationContext(), "회원 등록에 실패하였습니다.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
                                 return;
                             }
                         } catch (JSONException e) {
@@ -64,7 +65,7 @@ public class Login2_SingUp extends AppCompatActivity {
                     }
                 };
                 // 서버로 Volley를 이용해서 요청을 함.
-                RegisterRequest registerRequest = new RegisterRequest(userID, userPass, userName, userAge, responseListener);
+                RegisterRequest registerRequest = new RegisterRequest(userID, userPass, userName, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(Login2_SingUp.this);
                 queue.add(registerRequest);
 
