@@ -5,9 +5,12 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -21,6 +24,8 @@ public class Main extends AppCompatActivity {
     private Group1_main group1_main;
     private Friend1_main friend1_main;
     private MyProfile1_main myprofile1_main;
+    private TextView tv_test;
+    public static String userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +35,9 @@ public class Main extends AppCompatActivity {
         // 타이틀바 없애기
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+
+        Intent intent = getIntent();
+        userID = intent.getStringExtra("userID");
 
         // 상태바 없애기
         //getWindow().setFlags(

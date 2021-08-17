@@ -61,6 +61,7 @@
                         android:layout_weight="1"></View>
 
                     <TextView
+                        android:id="@+id/tv_my_profile_name"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:text="이민지"

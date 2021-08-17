@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,14 +15,21 @@ import androidx.fragment.app.Fragment;
 
 public class MyProfile1_main extends Fragment implements View.OnClickListener{
     private View view;
-    ImageButton btn_myprofile_notice;
-    ImageButton btn_myprofile_guide;
-    ImageButton btn_myprofile_inquiry;
+    private ImageButton btn_myprofile_notice;
+    private ImageButton btn_myprofile_guide;
+    private ImageButton btn_myprofile_inquiry;
+    private TextView tv_name;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view=inflater.inflate(R.layout.activity_my_profile1_main,container,false);
+
+        // 프로필 닉네임 보이게 하기
+        tv_name = view.findViewById(R.id.tv_my_profile_name);
+
+        tv_name.setText(Main.userID);
+
         btn_myprofile_notice = (ImageButton)view.findViewById(R.id.btn_myprofile_notice);
         btn_myprofile_notice.setOnClickListener(this);
         btn_myprofile_guide = (ImageButton)view.findViewById(R.id.btn_myprofile_guide);
