@@ -1,6 +1,7 @@
 package com.example.small_gongjeon;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -25,6 +26,9 @@ public class Main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // 타이틀바 없애기
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         NavigationBarView navigationView = findViewById(R.id.navigationView);
         navigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {

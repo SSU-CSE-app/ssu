@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.RequestQueue;
@@ -25,6 +26,10 @@ public class Login1_main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login1);
+
+        // 타이들바 없애기
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         et_id = findViewById(R.id.et_id);
         et_pass = findViewById(R.id.et_pass);
