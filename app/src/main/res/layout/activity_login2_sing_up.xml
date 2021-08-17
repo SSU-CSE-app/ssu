@@ -75,7 +75,9 @@
                     </LinearLayout>
 
                     <!-- 중복확인 버튼 (가로 4.2 ~ 4.3) -->
-                    <Button android:layout_width="wrap_content"
+                    <Button
+                        android:id="@+id/btn_id_check"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="0.1"
                         android:text="중복확인"
