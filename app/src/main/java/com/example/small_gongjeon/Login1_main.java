@@ -36,7 +36,7 @@ public class Login1_main extends AppCompatActivity {
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Login1_main.this, Login2_SingUp.class);
+                Intent intent = new Intent(Login1_main.this, Login2_SignUp.class);
                 startActivity(intent);
             }
         });

@@ -16,17 +16,16 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class Login2_SingUp extends AppCompatActivity {
+public class Login2_SignUp extends AppCompatActivity {
 
     private EditText et_id, et_pass, et_name, et_passcheck;
     private Button btn_register, btn_id_check;
     private boolean validate = false;
-    private boolean check = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) { // 액티비티 시작시 처음으로 실행되는 생명주기!
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login2_sing_up);
+        setContentView(R.layout.activity_login2_sign_up);
 
         // 아이디 값 찾아주기
         et_id = findViewById(R.id.et_id);
@@ -73,7 +72,7 @@ public class Login2_SingUp extends AppCompatActivity {
 
                 // 서버로 Volley를 이용해서 요청을 함.
                 ValidateRequest validateRequest = new ValidateRequest(checkID, responseListener);
-                RequestQueue queue = Volley.newRequestQueue(Login2_SingUp.this);
+                RequestQueue queue = Volley.newRequestQueue(Login2_SignUp.this);
                 queue.add(validateRequest);
             }
         });
@@ -115,7 +114,7 @@ public class Login2_SingUp extends AppCompatActivity {
                             boolean success = jsonObject.getBoolean("success");
                             if (success) { // 회원등록에 성공한 경우
                                 Toast.makeText(getApplicationContext(), "회원 등록에 성공하였습니다.", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(Login2_SingUp.this, Login1_main.class);
+                                Intent intent = new Intent(Login2_SignUp.this, Login1_main.class);
                                 startActivity(intent);
                             } else { // 회원등록에 실패한 경우
                                 Toast.makeText(getApplicationContext(), "회원 등록에 실패하였습니다.", Toast.LENGTH_SHORT).show();
@@ -129,7 +128,7 @@ public class Login2_SingUp extends AppCompatActivity {
                 };
                 // 서버로 Volley를 이용해서 요청을 함.
                 RegisterRequest registerRequest = new RegisterRequest(userID, userPass, userName, responseListener);
-                RequestQueue queue = Volley.newRequestQueue(Login2_SingUp.this);
+                RequestQueue queue = Volley.newRequestQueue(Login2_SignUp.this);
                 queue.add(registerRequest);
 
             }

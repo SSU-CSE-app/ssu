@@ -75,8 +75,7 @@
                     </LinearLayout>
 
                     <!-- 중복확인 버튼 (가로 4.2 ~ 4.3) -->
-                    <Button
-                        android:id="@+id/btn_id_check"
+                    <Button android:id="@+id/btn_id_check"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="0.1"
@@ -159,7 +158,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.6"
-                    android:hint="비밀번호를 다시 입력하세요 // 구현?"
+                    android:hint="비밀번호를 한 번 더 입력해주세요"
                     android:textColorHint="#808080"
                     android:inputType="textPersonName">
 
@@ -185,7 +184,7 @@
                 <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.4"
-                    android:text="이름"
+                    android:text="닉네임"
                     android:gravity="bottom|left"
                     android:textSize="20dp"
                     android:textColor="#000000"
@@ -197,7 +196,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.6"
-                    android:hint="2 ~ 8자리까지 입력 가능합니다 // 구현?"
+                    android:hint="2 ~ 8자리까지 입력 가능합니다"
                     android:textColorHint="#808080"
                     android:inputType="textPersonName">
 

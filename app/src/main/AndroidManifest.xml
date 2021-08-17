@@ -59,7 +59,7 @@
             android:name=".Alarm1_main"
             android:exported="true"></activity>
         <activity
-            android:name=".Login2_SingUp"
+            android:name=".Login2_SignUp"
             android:exported="true"></activity>
         <activity
             android:name=".Login1_main"
