@@ -27,7 +27,7 @@ public class MyProfile1_main extends Fragment implements View.OnClickListener{
 
         // 프로필 닉네임 보이게 하기
         tv_name = view.findViewById(R.id.tv_my_profile_name);
-        tv_name.setText(Main.userID);
+        tv_name.setText(Main.userName);
 
         btn_myprofile_notice = (ImageButton)view.findViewById(R.id.btn_myprofile_notice);
         btn_myprofile_notice.setOnClickListener(this);

@@ -24,8 +24,8 @@ public class Main extends AppCompatActivity {
     private Group1_main group1_main;
     private Friend1_main friend1_main;
     private MyProfile1_main myprofile1_main;
-    private TextView tv_test;
     public static String userID;
+    public static String userName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,14 +36,10 @@ public class Main extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
+        // user정보 갖고오기
         Intent intent = getIntent();
         userID = intent.getStringExtra("userID");
-
-        // 상태바 없애기
-        //getWindow().setFlags(
-        //        WindowManager.LayoutParams.FLAG_FULLSCREEN,
-        //        WindowManager.LayoutParams.FLAG_FULLSCREEN
-        //);
+        userName = intent.getStringExtra("userName");
 
         NavigationBarView navigationView = findViewById(R.id.navigationView);
         navigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
