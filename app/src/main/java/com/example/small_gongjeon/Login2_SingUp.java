@@ -18,8 +18,8 @@ import org.json.JSONObject;
 
 public class Login2_SingUp extends AppCompatActivity {
 
-    private EditText et_id, et_pass, et_name, et_passcheck;
-    private Button btn_register;
+    private EditText et_id, et_pass, et_name;
+    private Button btn_register, btn_id_check;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) { // 액티비티 시작시 처음으로 실행되는 생명주기!
@@ -30,7 +30,6 @@ public class Login2_SingUp extends AppCompatActivity {
         et_id = findViewById(R.id.et_id);
         et_pass = findViewById(R.id.et_pass);
         et_name = findViewById(R.id.et_name);
-//        et_passcheck = findViewById(R.id.et_passcheck);
 
         // 회원가입 버튼 클릭 시 수행
         btn_register = findViewById(R.id.btn_register);
@@ -41,8 +40,6 @@ public class Login2_SingUp extends AppCompatActivity {
                 String userID = et_id.getText().toString();
                 String userPass = et_pass.getText().toString();
                 String userName = et_name.getText().toString();
-
-//                int userAge = Integer.parseInt(et_passcheck.getText().toString());
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
@@ -68,6 +65,40 @@ public class Login2_SingUp extends AppCompatActivity {
                 RegisterRequest registerRequest = new RegisterRequest(userID, userPass, userName, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(Login2_SingUp.this);
                 queue.add(registerRequest);
+
+            }
+        });
+
+        // 아이디 중복확인 버튼
+        btn_id_check = findViewById(R.id.btn_Id_check);
+        btn_id_check.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // EditText에 현재 입력되어있는 값을 get(가져온다)해온다.
+                String userID = et_id.getText().toString();
+
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            boolean success = jsonObject.getBoolean("success");
+                            if (success) { // 아이디가 사용 가능한 경우
+                                Toast.makeText(getApplicationContext(), "This ID (" + userID + ") is available", Toast.LENGTH_SHORT).show();
+                            } else { // 아이디가 중복되어서 사용 불가능한 경우
+                                Toast.makeText(getApplicationContext(), "This Id (" + userID + ") is already being used.", Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                };
+                // 서버로 Volley를 이용해서 요청을 함.
+                IdCheckRequest idCheckRequest = new IdCheckRequest(userID, responseListener);
+                RequestQueue queue = Volley.newRequestQueue(Login2_SingUp.this);
+                queue.add(idCheckRequest);
 
             }
         });
