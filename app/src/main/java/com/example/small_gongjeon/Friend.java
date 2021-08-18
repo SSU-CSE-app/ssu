@@ -1,6 +1,9 @@
 package com.example.small_gongjeon;
 
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+
+import androidx.core.content.res.ResourcesCompat;
 
 public class Friend {
     private String name;
@@ -15,9 +18,7 @@ public class Friend {
         this.message = message;
     }
 
-    public void setD(Drawable d) {
-        this.d = d;
-    }
+    public void setD(Drawable d) { this.d = d;}
 
     public String getName() {
         return name;

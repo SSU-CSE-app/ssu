@@ -17,50 +17,50 @@
         <activity
             android:name=".MyProfile4_inquiry"
             android:theme="@style/Theme.SmallGongjeon."
-            android:exported="true"></activity>
+            android:exported="true"/>
         <activity
             android:name=".MyProfile3_guide"
             android:theme="@style/Theme.SmallGongjeon."
-            android:exported="true"></activity>
+            android:exported="true"/>
         <activity
             android:name=".MyProfile2_notice"
             android:theme="@style/Theme.SmallGongjeon."
-            android:exported="true"></activity>
+            android:exported="true"/>
         <activity
             android:name=".MyProfile1_main"
-            android:exported="true"></activity>
+            android:exported="true"/>
         <activity
             android:name=".Friend2_AddFriend"
             android:theme="@style/Theme.SmallGongjeon."
-            android:exported="true"></activity>
+            android:exported="true"/>
         <activity
             android:name=".Friend1_main"
-            android:exported="true"></activity>
+            android:exported="true"/>
         <activity
             android:name=".Group4_InviteMember"
             android:theme="@style/Theme.SmallGongjeon."
-            android:exported="true"></activity>
+            android:exported="true"/>
         <activity
             android:name=".Group2_AddGroup"
             android:theme="@style/Theme.SmallGongjeon."
-            android:exported="true"></activity>
+            android:exported="true"/>
         <activity
             android:name=".Group3_GroupInfo"
             android:theme="@style/Theme.SmallGongjeon."
-            android:exported="true"></activity>
+            android:exported="true"/>
         <activity
             android:name=".Group1_main"
-            android:exported="true"></activity>
+            android:exported="true"/>
         <activity
             android:name=".Alarm2_PlusAlarm"
             android:theme="@style/Theme.SmallGongjeon."
-            android:exported="true"></activity>
+            android:exported="true"/>
         <activity
             android:name=".Alarm1_main"
-            android:exported="true"></activity>
+            android:exported="true"/>
         <activity
             android:name=".Login2_SignUp"
-            android:exported="true"></activity>
+            android:exported="true"/>
         <activity
             android:name=".Login1_main"
             android:exported="true">

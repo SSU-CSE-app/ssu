@@ -64,11 +64,11 @@
                         android:id="@+id/tv_my_profile_name"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:text="이민지"
                         android:layout_weight="5"
-                        android:textStyle="bold"
+                        android:gravity="center_vertical"
+                        android:text="이민지"
                         android:textSize="60dp"
-                        android:gravity="center_vertical"></TextView>
+                        android:textStyle="bold"></TextView>
                 </LinearLayout>
 
                 <LinearLayout

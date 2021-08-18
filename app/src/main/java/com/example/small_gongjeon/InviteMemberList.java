@@ -50,7 +50,7 @@ public class InviteMemberList extends BaseAdapter {
 
         Friend f = friends.get(i);
 
-        iv.setImageDrawable(f.getD());
+//        iv.setImageDrawable(f.getD());
         tv1.setText(f.getName());
         tv2.setText(f.getMessage());
 
@@ -60,7 +60,7 @@ public class InviteMemberList extends BaseAdapter {
     public void addFriend(Drawable d, String name, String message){
         Friend f = new Friend();
 
-        f.setD(d);
+//        f.setD(d);
         f.setName(name);
         f.setMessage(message);
 

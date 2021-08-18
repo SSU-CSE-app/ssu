@@ -56,5 +56,4 @@ public class Group1_main extends Fragment implements View.OnClickListener{
 
     }
 
-
 }

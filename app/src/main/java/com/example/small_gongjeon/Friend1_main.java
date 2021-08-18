@@ -38,9 +38,9 @@ import java.util.ArrayList;
 
 public class Friend1_main extends Fragment implements View.OnClickListener{
     private static String IP_ADDRESS = "27.96.134.147";
-    private static String TAG = "Php_Connection";
+    private static String TAG = "small_gongjeon";
 
-    private TextView mTextViewResult;
+//    private TextView mTextViewResult;
     private ArrayList<Friend> mArrayList;
     private FriendAdapter mAdapter;
     private RecyclerView mRecyclerView;
@@ -51,23 +51,30 @@ public class Friend1_main extends Fragment implements View.OnClickListener{
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         view=inflater.inflate(R.layout.activity_friend1_main,container,false);
         btn_add_friend = (ImageButton)view.findViewById(R.id.btn_add_friend);
         btn_add_friend.setOnClickListener(this);
 
-        mTextViewResult = (TextView)view.findViewById(R.id.name_friend);
+//        mTextViewResult = (TextView)view.findViewById(R.id.name_friend);
         mRecyclerView = (RecyclerView)view.findViewById(R.id.recyclerview_friend);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        mTextViewResult.setMovementMethod(new ScrollingMovementMethod());
-
-
+//        mTextViewResult.setMovementMethod(new ScrollingMovementMethod());
 
         mArrayList = new ArrayList<>();
 
         mAdapter = new FriendAdapter(getActivity(), mArrayList);
         mRecyclerView.setAdapter(mAdapter);
+
+        mArrayList.clear();
+        mAdapter.notifyDataSetChanged();
+
+
+        String Keyword =  Main.userID;
+
+        GetData task = new GetData();
+        task.execute( "http://" + IP_ADDRESS + "/query.php", Keyword);
 
         /*
         Button button_search = (Button) view.findViewById(R.id.button_main_search);
@@ -85,25 +92,8 @@ public class Friend1_main extends Fragment implements View.OnClickListener{
                 task.execute( "http://" + IP_ADDRESS + "/query.php", Keyword);
             }
         });
-
-
-        Button button_all = (Button) view.findViewById(R.id.button_main_all);
-        button_all.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-                mArrayList.clear();
-                mAdapter.notifyDataSetChanged();
-
-                GetData task = new GetData();
-                task.execute( "http://" + IP_ADDRESS + "/jinu_test01.php", "");
-            }
-        });
         */
 
-        mAdapter.notifyDataSetChanged();
-
-        GetData task = new GetData();
-        task.execute( "http://" + IP_ADDRESS + "/jinu_test01.php", "");
 
         return view;
     }
@@ -127,12 +117,12 @@ public class Friend1_main extends Fragment implements View.OnClickListener{
             super.onPostExecute(result);
 
             progressDialog.dismiss();
-            mTextViewResult.setText(result);
+//            mTextViewResult.setText(result);
             Log.d(TAG, "response - " + result);
 
             if (result == null){
 
-                mTextViewResult.setText(errorString);
+//                mTextViewResult.setText(errorString);
             }
             else {
 
@@ -146,7 +136,7 @@ public class Friend1_main extends Fragment implements View.OnClickListener{
         protected String doInBackground(String... params) {
 
             String serverURL = params[0];
-            String postParameters = "UserId=" + params[1];
+            String postParameters = "userId=" + params[1];
 
 
             try {
@@ -211,7 +201,7 @@ public class Friend1_main extends Fragment implements View.OnClickListener{
 
         String TAG_JSON="webnautes";
         String TAG_NAME = "userName";
-        String TAG_Message = "userMessage";
+        String TAG_Message = "userStatus";
 
         try {
             JSONObject jsonObject = new JSONObject(mJsonString);
