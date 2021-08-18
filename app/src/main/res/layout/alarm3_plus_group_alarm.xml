@@ -48,17 +48,17 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:backgroundTint="#808080"></ImageButton>
-
-                <ImageButton
-                    android:id="@+id/btn_add_group_alarm"
+                    android:id="@+id/btn_back_to_individual"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
                     android:backgroundTint="#DCDCDC"></ImageButton>
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:backgroundTint="#808080"></ImageButton>
             </LinearLayout>
 
             <View
@@ -340,11 +340,52 @@
                         android:layout_height="2dp"
                         android:background="@color/purple_200"></View>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.7"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:text="그룹"
+                            android:textSize="10dp"
+                            android:textStyle="bold"></TextView>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:orientation="vertical"
+                            android:weightSum="0.7">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.2"
+                                android:visibility="invisible"></View>
+
+                            <Spinner
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="0.3"
+                                android:background="@color/purple_200"></Spinner>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
 
                     <View
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:layout_weight="1.2"
+                        android:layout_weight="0.5"
                         android:visibility="invisible"></View>
 
                     <LinearLayout

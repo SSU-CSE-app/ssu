@@ -1,29 +1,29 @@
 package com.example.small_gongjeon;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ListView;
 
-public class Alarm2_PlusAlarm extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
-    ImageButton btn;
+public class Alarm3_PlusGroupAlarm extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_alarm2_plus_alarm);
+        setContentView(R.layout.alarm3_plus_group_alarm);
 
-        btn = (ImageButton)findViewById(R.id.btn_add_group_alarm);
+
+        //개인 누르면 다시 개인 알람 창으로 가게
+        ImageButton btn = (ImageButton)findViewById(R.id.btn_back_to_individual);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Alarm3_PlusGroupAlarm.class);
-                startActivity(intent);
+                finish();
             }
         });
 
@@ -35,8 +35,6 @@ public class Alarm2_PlusAlarm extends AppCompatActivity {
                 finish();
             }
         });
-
-        //if(Alarm3_PlusGroupAlarm.sig==1) finish();
     }
 
     @Override
