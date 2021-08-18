@@ -74,13 +74,13 @@
             </LinearLayout>
 
 
-            <ListView
-                android:id="@+id/listview_friend"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_friend"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="8"
                 android:dividerHeight="20dp"
-                android:divider="#ffffff"></ListView>
+                android:divider="#ffffff"></androidx.recyclerview.widget.RecyclerView>
 
 
 

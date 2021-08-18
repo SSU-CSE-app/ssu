@@ -14,6 +14,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class FriendList extends BaseAdapter{
+
+
     ArrayList<Friend> friends = new ArrayList<>();
     ImageButton btn;
 
