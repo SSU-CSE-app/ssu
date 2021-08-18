@@ -86,6 +86,7 @@ public class Friend1_main extends Fragment implements View.OnClickListener{
             }
         });
 
+
         Button button_all = (Button) view.findViewById(R.id.button_main_all);
         button_all.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -98,6 +99,11 @@ public class Friend1_main extends Fragment implements View.OnClickListener{
             }
         });
         */
+
+        mAdapter.notifyDataSetChanged();
+
+        GetData task = new GetData();
+        task.execute( "http://" + IP_ADDRESS + "/jinu_test01.php", "");
 
         return view;
     }
