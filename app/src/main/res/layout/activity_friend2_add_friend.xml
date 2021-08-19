@@ -68,20 +68,21 @@
                         android:layout_weight="0.2"></View>
 
                     <ImageButton
+                        android:id="@+id/btn_add_friend_search"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="0.6"></ImageButton>
+                        android:layout_weight="0.6"/>
 
                     <View
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="0.2"></View>
+                        android:layout_weight="0.2"/>
                 </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.2"></View>
+                    android:layout_weight="0.2"/>
 
             </LinearLayout>
 
@@ -95,7 +96,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.2"></View>
+                    android:layout_weight="0.2"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -105,16 +106,16 @@
                     android:layout_weight="0.6">
 
                     <EditText
+                        android:id="@+id/add_friend_keyword"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="2.8"
-                        android:hint="아이디 검색">
-                    </EditText>
+                        android:hint="아이디 검색"/>
 
                     <View
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="0.2"></View>
+                        android:layout_weight="0.2"/>
                 </LinearLayout>
 
 
@@ -122,7 +123,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.2"></View>
+                    android:layout_weight="0.2"/>
 
 
 
@@ -130,9 +131,58 @@
 
         </LinearLayout>
 
-        <ListView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"></ListView>
+            android:layout_weight="2"
+            android:weightSum="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/add_friend_result_image"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.75"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/add_friend_result_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.6"
+                        android:hint="name"
+                        android:textSize="30dp"/>
+                    <TextView
+                        android:id="@+id/add_friend_result_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.4"
+                        android:hint="status"
+                        android:textSize="15dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <ImageButton
+                android:id="@+id/add_friend_send_request"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 </LinearLayout>

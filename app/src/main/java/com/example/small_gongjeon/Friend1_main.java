@@ -56,6 +56,8 @@ public class Friend1_main extends Fragment implements View.OnClickListener{
         btn_add_friend = (ImageButton)view.findViewById(R.id.btn_add_friend);
         btn_add_friend.setOnClickListener(this);
 
+
+
 //        mTextViewResult = (TextView)view.findViewById(R.id.name_friend);
         mRecyclerView = (RecyclerView)view.findViewById(R.id.recyclerview_friend);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -237,7 +239,12 @@ public class Friend1_main extends Fragment implements View.OnClickListener{
         switch (view.getId()){
             case R.id.btn_add_friend:
                 getActivity().startActivity(new Intent(getActivity(), Friend2_AddFriend.class));
+                return;
+
+//            case R.id.btn_add_friend_search:
+//                //TODO
         }
 
     }
+
 }
