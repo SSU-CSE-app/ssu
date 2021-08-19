@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -22,6 +21,7 @@ import org.json.JSONObject;
 public class Friend2_AddFriend extends AppCompatActivity {
     private EditText search_keyword;
     ImageButton btn_search_userbyid;
+    ImageButton btn_friend_request;
 
     TextView result_name;
     TextView result_status;
@@ -40,13 +40,14 @@ public class Friend2_AddFriend extends AppCompatActivity {
 
         // 버튼 바인딩
         btn_search_userbyid = findViewById((R.id.btn_add_friend_search));
+        btn_friend_request = findViewById(R.id.btn_send_friend_request);
 
         // 클릭 시 실행
         btn_search_userbyid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String id_keyword = search_keyword.getText().toString();
-                System.out.println("id_keyword : "+id_keyword);
+//                System.out.println("id_keyword : "+id_keyword);
 
                 if (id_keyword.equals("")){
                     Toast.makeText(getApplicationContext(), "아이디를 입력하세요.", Toast.LENGTH_SHORT).show();
@@ -60,8 +61,11 @@ public class Friend2_AddFriend extends AppCompatActivity {
                             System.out.println("addFriendSearch\n" + response);
                             JSONObject jsonObject = new JSONObject(response);
                             String userName = jsonObject.getString("userName");
+                            String userStatus = jsonObject.getString("userStatus");
 
                             result_name.setText(userName);
+                            result_status.setText(userStatus);
+                            //result_image                            //TODO userPhoto 설정
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -80,8 +84,52 @@ public class Friend2_AddFriend extends AppCompatActivity {
             }
         });
 
+        // 친구 요청 전송 버튼
+        btn_friend_request.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String name_requester = Main.userID;    // 요청자
+                String name_requestFor = result_name.getText().toString();  // 요청수신자
+                System.out.println("requester : "+name_requester+"\nrequestFor : "+result_name);    // 디버깅
+
+                if (name_requestFor.equals("")){
+                    Toast.makeText(getApplicationContext(), "유저를 검색해 주세요", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            System.out.println("friend_request:\n" + response);
+                            JSONObject jsonObject = new JSONObject(response);
+                            boolean isSucceed = jsonObject.getBoolean("success");
+
+                            if( isSucceed){ // 성공 시
+                                Toast.makeText(getApplicationContext(), "친구 요청을 보냈습니다.", Toast.LENGTH_SHORT).show();
+                            }
+                            else{           // 실패 시
+                                Toast.makeText(getApplicationContext(), "친구 요청을 전송을 실패했습니다.", Toast.LENGTH_SHORT).show();
+                            }
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                };
+
+                // 서버로 Volley를 이용해서 요청을 함.
+                SendFriendRequest sendFriendRequest = new SendFriendRequest(name_requester, name_requestFor, responseListener);
+                RequestQueue queue = Volley.newRequestQueue(Friend2_AddFriend.this);
+                queue.add(sendFriendRequest);
+
+            }
+        });
+
                 //x버튼 클릭시 종료
-                ImageButton finishBtn = findViewById(R.id.close_add_friend_btn);
+        ImageButton finishBtn = findViewById(R.id.close_add_friend_btn);
         finishBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

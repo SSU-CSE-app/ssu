@@ -163,21 +163,19 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="0.6"
-                        android:hint="name"
                         android:textSize="30dp"/>
                     <TextView
                         android:id="@+id/add_friend_result_status"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="0.4"
-                        android:hint="status"
                         android:textSize="15dp"/>
 
                 </LinearLayout>
 
             </LinearLayout>
             <ImageButton
-                android:id="@+id/add_friend_send_request"
+                android:id="@+id/btn_send_friend_request"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.5"/>
