@@ -10,7 +10,7 @@ import java.util.Map;
 public class SendFriendRequest extends StringRequest {
 
     // 서버 URL 설정 ( PHP 파일 연동 )
-    final static private String URL = "http://27.96.134.147/final_login00.php";     //TODO php주소 수정
+    final static private String URL = "http://27.96.134.147/final_friend_request00.php";     //TODO php주소 수정
     private Map<String, String> map;
 
     // requester : 요청 보내는 사람    requestFor : 요청 받는 사람

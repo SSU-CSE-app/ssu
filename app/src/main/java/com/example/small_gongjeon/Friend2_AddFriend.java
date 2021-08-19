@@ -91,7 +91,7 @@ public class Friend2_AddFriend extends AppCompatActivity {
 
                 String name_requester = Main.userID;    // 요청자
                 String name_requestFor = result_name.getText().toString();  // 요청수신자
-                System.out.println("requester : "+name_requester+"\nrequestFor : "+result_name);    // 디버깅
+                System.out.println("requester : "+name_requester+"\nrequestFor : "+name_requestFor);    // 디버깅
 
                 if (name_requestFor.equals("")){
                     Toast.makeText(getApplicationContext(), "유저를 검색해 주세요", Toast.LENGTH_SHORT).show();
