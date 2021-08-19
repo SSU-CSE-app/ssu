@@ -48,6 +48,7 @@ public class Friend1_main extends Fragment implements View.OnClickListener{
     private String mJsonString;
     private View view;
     ImageButton btn_add_friend;
+    ImageButton btn_friend_request;
 
     @Nullable
     @Override
@@ -55,6 +56,8 @@ public class Friend1_main extends Fragment implements View.OnClickListener{
         view=inflater.inflate(R.layout.activity_friend1_main,container,false);
         btn_add_friend = (ImageButton)view.findViewById(R.id.btn_add_friend);
         btn_add_friend.setOnClickListener(this);
+        btn_friend_request = (ImageButton)view.findViewById(R.id.btn_friend_request);
+        btn_friend_request.setOnClickListener(this);
 
 
 
@@ -241,8 +244,9 @@ public class Friend1_main extends Fragment implements View.OnClickListener{
                 getActivity().startActivity(new Intent(getActivity(), Friend2_AddFriend.class));
                 return;
 
-//            case R.id.btn_add_friend_search:
-//                //TODO
+            case R.id.btn_friend_request:
+                getActivity().startActivity(new Intent(getActivity(), Friend3_request.class));
+                break;
         }
 
     }

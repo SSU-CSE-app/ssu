@@ -19,7 +19,7 @@
 
         <ImageButton
 
-            android:id="@+id/close_group_member_btn"
+            android:id="@+id/btn_close"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_gravity="top"
