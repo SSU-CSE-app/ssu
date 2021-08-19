@@ -1,6 +1,7 @@
 package com.example.small_gongjeon;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,20 +11,50 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class Alarm2_PlusAlarm extends AppCompatActivity {
+import com.google.android.material.tabs.TabLayout;
 
-    ImageButton btn;
+public class Alarm2_PlusAlarm extends AppCompatActivity {
+    Fragment fragment1,fragment2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarm2_plus_alarm);
 
-        btn = (ImageButton)findViewById(R.id.btn_add_group_alarm);
-        btn.setOnClickListener(new View.OnClickListener() {
+
+        fragment1 = new Fragment1_individual();
+        fragment2 = new Fragment2_group();
+
+        getSupportFragmentManager().beginTransaction().add(R.id.frame, fragment1).commit();
+
+        TabLayout tabs = (TabLayout) findViewById(R.id.tabs);
+
+        tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Alarm3_PlusGroupAlarm.class);
-                startActivity(intent);
+            public void onTabSelected(TabLayout.Tab tab) {
+
+                int position = tab.getPosition();
+
+                Fragment selected = null;
+                if(position == 0){
+
+                    selected = fragment1;
+
+                }
+                if(position == 1)
+                    selected = fragment2;
+
+                getSupportFragmentManager().beginTransaction().replace(R.id.frame, selected).commit();
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
             }
         });
 
@@ -36,7 +67,6 @@ public class Alarm2_PlusAlarm extends AppCompatActivity {
             }
         });
 
-        //if(Alarm3_PlusGroupAlarm.sig==1) finish();
     }
 
     @Override
