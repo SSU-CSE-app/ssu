@@ -89,7 +89,8 @@
                 android:layout_height="0dp"
                 android:layout_weight="7.4"
                 android:divider="#ffffff"
-                android:dividerHeight="20dp"></androidx.recyclerview.widget.RecyclerView>
+                android:dividerHeight="20dp"
+                android:clipToPadding="false"/>
 
 
         </LinearLayout>
