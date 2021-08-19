@@ -72,8 +72,6 @@
         </activity>
         <activity android:name=".GroupMember"
             android:theme="@style/Theme.SmallGongjeon."/>
-        <activity android:name=".Alarm3_PlusGroupAlarm"
-             android:theme="@style/Theme.SmallGongjeon."/>
     </application>
 
 </manifest>
