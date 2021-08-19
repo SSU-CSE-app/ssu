@@ -60,11 +60,18 @@ public class InviteMemberList extends BaseAdapter {
     public void addFriend(Drawable d, String name, String message){
         Friend f = new Friend();
 
-//        f.setD(d);
+        f.setD(d);
         f.setName(name);
         f.setMessage(message);
 
         friends.add(f);
     }
+    public void addFriend(Drawable d, String name){
+        Friend f = new Friend();
 
+        f.setD(d);
+        f.setName(name);
+
+        friends.add(f);
+    }
 }

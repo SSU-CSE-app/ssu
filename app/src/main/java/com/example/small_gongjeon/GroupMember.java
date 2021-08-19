@@ -33,9 +33,9 @@ public class GroupMember extends AppCompatActivity {
 
         lv.setAdapter(adapter);
 
-        adapter.addMember(ContextCompat.getDrawable(this,R.drawable.ic_launcher_background),"이민지","흐음");
-        adapter.addMember(ContextCompat.getDrawable(this,R.drawable.ic_baseline_person_35),"이선호","어라라");
-        adapter.addMember(ContextCompat.getDrawable(this,R.drawable.ic_baseline_group_35),"김흥수","오오");
+        adapter.addMember(ContextCompat.getDrawable(this,R.drawable.ic_launcher_background),"이민지");
+        adapter.addMember(ContextCompat.getDrawable(this,R.drawable.ic_baseline_person_35),"이선호");
+        adapter.addMember(ContextCompat.getDrawable(this,R.drawable.ic_baseline_group_35),"김흥수");
     }
 
     @Override

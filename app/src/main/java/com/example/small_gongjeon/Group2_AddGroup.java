@@ -31,9 +31,9 @@ public class Group2_AddGroup extends AppCompatActivity {
 
         lv.setAdapter(adapter);
 
-        adapter.addFriend(ContextCompat.getDrawable(this,R.drawable.ic_launcher_background), "이선호", "좀 되라");
-        adapter.addFriend(ContextCompat.getDrawable(this,R.drawable.tap_friends), "이민지", "하이하이");
-        adapter.addFriend(ContextCompat.getDrawable(this,R.drawable.tap_friends), "김흥수", "!!!!!!!");
+        adapter.addFriend(ContextCompat.getDrawable(this,R.drawable.ic_launcher_background), "이선호");
+        adapter.addFriend(ContextCompat.getDrawable(this,R.drawable.tap_friends), "이민지");
+        adapter.addFriend(ContextCompat.getDrawable(this,R.drawable.tap_friends), "김흥수");
     }
 
     @Override

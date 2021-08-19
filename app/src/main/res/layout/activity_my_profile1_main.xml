@@ -58,17 +58,23 @@
                     <View
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"></View>
+                        android:layout_weight="0.5"></View>
 
-                    <TextView
+                    <Button
                         android:id="@+id/tv_my_profile_name"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="5"
                         android:gravity="center_vertical"
                         android:text="이민지"
-                        android:textSize="60dp"
-                        android:textStyle="bold"></TextView>
+                        android:textColor="@color/black"
+                        android:textSize="50dp"
+                        android:backgroundTint="#00ff0000"
+                        android:textStyle="bold"></Button>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"></View>
                 </LinearLayout>
 
                 <LinearLayout
@@ -83,26 +89,22 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"></View>
 
-                    <TextView
+                    <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="7"
+                        android:layout_weight="8.5"
                         android:text="~~상태 메세지~~"
                         android:textStyle="bold"
                         android:textSize="24dp"
+                        android:textColor="@color/black"
+                        android:backgroundTint="#00ff0000"
                         android:gravity="center_vertical">
-                    </TextView>
+                    </Button>
 
-
-                    <TextView
+                    <View
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="2"
-
-                        android:text="프로필 편집"
-                        android:gravity="center">
-
-                    </TextView>
+                        android:layout_weight="0.5"></View>
                 </LinearLayout>
 
 
