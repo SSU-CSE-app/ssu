@@ -4,15 +4,10 @@ import android.graphics.drawable.Drawable;
 
 public class Member {
     private String name;
-    private String message;
     private Drawable d;
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
     }
 
     public void setD(Drawable d) {
@@ -21,10 +16,6 @@ public class Member {
 
     public String getName() {
         return name;
-    }
-
-    public String getMessage() {
-        return message;
     }
 
     public Drawable getD() {

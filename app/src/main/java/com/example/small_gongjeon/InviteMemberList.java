@@ -14,7 +14,6 @@ import java.util.ArrayList;
 
 public class InviteMemberList extends BaseAdapter {
     ArrayList<Friend> friends = new ArrayList<>();
-    CheckBox checkBox;
 
     //총 몇개?
     @Override
@@ -45,27 +44,16 @@ public class InviteMemberList extends BaseAdapter {
 
         ImageView iv = (ImageView)view.findViewById(R.id.image_friend);
         TextView tv1 = (TextView)view.findViewById(R.id.name_friend);
-        TextView tv2 = (TextView)view.findViewById(R.id.message_friend);
-        checkBox = (CheckBox)view.findViewById(R.id.checkbox_invite_member);
+        CheckBox checkBox = (CheckBox)view.findViewById(R.id.checkbox_invite_member);
 
         Friend f = friends.get(i);
 
-//        iv.setImageDrawable(f.getD());
+        iv.setImageDrawable(f.getD());
         tv1.setText(f.getName());
-        tv2.setText(f.getMessage());
 
         return view;
     }
 
-    public void addFriend(Drawable d, String name, String message){
-        Friend f = new Friend();
-
-        f.setD(d);
-        f.setName(name);
-        f.setMessage(message);
-
-        friends.add(f);
-    }
     public void addFriend(Drawable d, String name){
         Friend f = new Friend();
 
