@@ -22,7 +22,7 @@
             android:layout_gravity="top"
             app:srcCompat="@drawable/ic_baseline_close_24"
             tools:ignore="VectorDrawableCompat"
-            android:background="#F00"></ImageButton>
+            android:background="#F00"/>
     </LinearLayout>
 
 
@@ -36,7 +36,7 @@
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.2"></View>
+            android:layout_weight="0.2"/>
 
         <LinearLayout
             android:layout_width="0dp"
@@ -55,7 +55,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.2"></LinearLayout>
+                    android:layout_weight="0.2"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -66,14 +66,14 @@
                     <ImageButton
                         android:id="@+id/add_group_image_btn"
                         android:layout_width="94dp"
-                        android:layout_height="94dp"></ImageButton>
+                        android:layout_height="94dp"/>
 
                     <TextView
                         android:layout_width="220dp"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="Group Name"
-                        android:textSize="30dp"></TextView>
+                        android:textSize="30dp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -84,11 +84,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:text="상태메세지"
                     android:textSize="18dp"
                     android:textStyle="bold"
                     android:gravity="center"
-                    android:layout_weight="0.5"></TextView>
+                    android:layout_weight="0.5"/>
             </LinearLayout>
 
             <LinearLayout
@@ -109,7 +108,7 @@
                     android:layout_width="120dp"
                     android:text="그룹 멤버"
                     android:textSize="10dp"
-                    android:layout_height="match_parent"></Button>
+                    android:layout_height="match_parent"/>
 
             </LinearLayout>
 
@@ -123,7 +122,7 @@
                 android:id="@+id/listview_groupinfo"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="3.1"></ListView>
+                android:layout_weight="3.1"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -135,7 +134,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.2"></View>
+                    android:layout_weight="0.2"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -151,7 +150,7 @@
 
                         <ImageButton
                             android:layout_width="100dp"
-                            android:layout_height="60dp"></ImageButton>
+                            android:layout_height="60dp"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -162,7 +161,7 @@
 
                         <ImageButton
                             android:layout_width="100dp"
-                            android:layout_height="60dp"></ImageButton>
+                            android:layout_height="60dp"/>
 
                     </LinearLayout>
                 </LinearLayout>
@@ -171,7 +170,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.2"></View>
+                    android:layout_weight="0.2"/>
             </LinearLayout>
 
         </LinearLayout>

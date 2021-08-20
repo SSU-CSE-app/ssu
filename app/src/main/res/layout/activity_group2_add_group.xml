@@ -68,11 +68,11 @@
                         android:layout_width="94dp"
                         android:layout_height="94dp"/>
 
-                    <TextView
+                    <EditText
                         android:layout_width="220dp"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="Group Name"
+                        android:hint="Group Name"
                         android:textSize="30dp"/>
                 </LinearLayout>
 
@@ -84,7 +84,6 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:text="상태메세지"
                     android:textSize="18dp"
                     android:textStyle="bold"
                     android:gravity="center"
@@ -103,8 +102,8 @@
                 android:layout_weight="0.5"
                 android:text="그룹멤버 초대"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:gravity="center|left"/>
+                android:gravity="center|left"
+                android:textStyle="bold"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerview_add_group_friend_members"
