@@ -43,6 +43,7 @@
                     android:gravity="center|left">
 
                     <TextView
+                        android:id="@+id/tv_group_num"
                         android:layout_width="100dp"
                         android:layout_height="40dp"
                         android:text="그룹: 7"
@@ -74,13 +75,13 @@
             </LinearLayout>
 
 
-            <ListView
-                android:id="@+id/listview_group"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_group"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="8"
                 android:dividerHeight="20dp"
-                android:divider="#ffffff"></ListView>
+                android:divider="#ffffff"></androidx.recyclerview.widget.RecyclerView>
 
 
 
