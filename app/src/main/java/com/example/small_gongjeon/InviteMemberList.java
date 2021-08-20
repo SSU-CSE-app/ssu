@@ -42,9 +42,9 @@ public class InviteMemberList extends BaseAdapter {
             view = li.inflate(R.layout.listviewitem_group_add, viewGroup, false);
         }
 
-        ImageView iv = (ImageView)view.findViewById(R.id.image_friend);
-        TextView tv1 = (TextView)view.findViewById(R.id.name_friend);
-        CheckBox checkBox = (CheckBox)view.findViewById(R.id.checkbox_invite_member);
+        ImageView iv = (ImageView)view.findViewById(R.id.image_invite_friend);
+        TextView tv1 = (TextView)view.findViewById(R.id.name_invite_friend);
+        CheckBox checkBox = (CheckBox)view.findViewById(R.id.checkbox_invite_friend);
 
         Friend f = friends.get(i);
 
