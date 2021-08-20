@@ -54,7 +54,7 @@
             ></View>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/listview_group_member"
+            android:id="@+id/listview_received_request"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="3.8"></androidx.recyclerview.widget.RecyclerView>
