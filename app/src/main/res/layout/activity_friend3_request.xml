@@ -25,7 +25,7 @@
             android:layout_gravity="top"
             app:srcCompat="@drawable/ic_baseline_close_24"
             tools:ignore="VectorDrawableCompat"
-            android:background="#F00"></ImageButton>
+            android:background="#F00"/>
 
 
     </LinearLayout>
@@ -46,12 +46,12 @@
             android:textSize="25dp"
             android:gravity="center_vertical"
             android:textStyle="bold"
-            ></TextView>
+            />
         <View
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.2"
-            ></View>
+            />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/listview_group_member"
