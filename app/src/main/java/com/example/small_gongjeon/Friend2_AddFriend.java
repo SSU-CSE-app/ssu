@@ -90,7 +90,7 @@ public class Friend2_AddFriend extends AppCompatActivity {
             public void onClick(View view) {
 
                 String name_requester = Main.userID;    // 요청자
-                String name_requestFor = result_name.getText().toString();  // 요청수신자
+                String name_requestFor = search_keyword.getText().toString();  // 요청수신자
                 System.out.println("requester : "+name_requester+"\nrequestFor : "+name_requestFor);    // 디버깅
 
                 if (name_requestFor.equals("")){
