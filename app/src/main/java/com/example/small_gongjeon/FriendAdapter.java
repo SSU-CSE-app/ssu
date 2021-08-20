@@ -27,14 +27,14 @@ public class FriendAdapter extends RecyclerView.Adapter<FriendAdapter.CustomView
     class CustomViewHolder extends RecyclerView.ViewHolder {
         protected TextView name;
         protected TextView message;
-//        protected ImageView imageView;
+        protected ImageView imageView;
 
 
         public CustomViewHolder(View view) {
             super(view);
             this.name = (TextView) view.findViewById(R.id.name_friend);
             this.message = (TextView) view.findViewById(R.id.message_friend);
-//            this.imageView = (ImageView) view.findViewById(R.id.image_friend);
+            this.imageView = (ImageView) view.findViewById(R.id.image_friend);
         }
     }
 
@@ -52,7 +52,7 @@ public class FriendAdapter extends RecyclerView.Adapter<FriendAdapter.CustomView
 
         viewholder.name.setText(mList.get(position).getName());
         viewholder.message.setText(mList.get(position).getMessage());
-//        viewholder.imageView.setImageDrawable(mList.get(position).getD());
+        viewholder.imageView.setImageResource(mList.get(position).getPhotoID());
     }
 
     @Override

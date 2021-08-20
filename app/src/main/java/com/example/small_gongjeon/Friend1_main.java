@@ -3,6 +3,7 @@ package com.example.small_gongjeon;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
@@ -212,6 +213,7 @@ public class Friend1_main extends Fragment implements View.OnClickListener{
         String TAG_JSON="webnautes";
         String TAG_NAME = "userName";
         String TAG_Message = "userStatus";
+        String TAG_Photo = "userPhoto";
 
         try {
             JSONObject jsonObject = new JSONObject(mJsonString);
@@ -226,11 +228,23 @@ public class Friend1_main extends Fragment implements View.OnClickListener{
 
                 String name = item.getString(TAG_NAME);
                 String message = item.getString(TAG_Message);
+                String photo = item.getString(TAG_Photo);
+                Integer photoID = null;
+
+                switch (photo) {
+                    case "1" :
+                        photoID = R.drawable.ic_android_black_50;
+                        break;
+                    case "2" :
+                        photoID = R.drawable.ic_baseline_adb_50;
+                        break;
+                }
 
                 Friend friend = new Friend();
 
                 friend.setName(name);
                 friend.setMessage(message);
+                friend.setPhotoID(photoID);
 
                 mArrayList.add(friend);
                 mAdapter.notifyDataSetChanged();

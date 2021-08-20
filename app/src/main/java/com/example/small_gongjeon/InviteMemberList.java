@@ -48,16 +48,16 @@ public class InviteMemberList extends BaseAdapter {
 
         Friend f = friends.get(i);
 
-        iv.setImageDrawable(f.getD());
+        iv.setImageResource(f.getPhotoID());
         tv1.setText(f.getName());
 
         return view;
     }
 
-    public void addFriend(Drawable d, String name){
+    public void addFriend(Integer photoID, String name){
         Friend f = new Friend();
 
-        f.setD(d);
+        f.setPhotoID(photoID);
         f.setName(name);
 
         friends.add(f);

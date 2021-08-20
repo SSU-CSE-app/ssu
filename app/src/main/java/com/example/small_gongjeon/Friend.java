@@ -8,7 +8,7 @@ import androidx.core.content.res.ResourcesCompat;
 public class Friend {
     private String name;
     private String message;
-    private Drawable d;
+    private Integer photoID;
 
     public void setName(String name) {
         this.name = name;
@@ -18,7 +18,7 @@ public class Friend {
         this.message = message;
     }
 
-    public void setD(Drawable d) { this.d = d;}
+    public void setPhotoID(Integer photoID) { this.photoID = photoID;}
 
     public String getName() {
         return name;
@@ -28,8 +28,8 @@ public class Friend {
         return message;
     }
 
-    public Drawable getD() {
-        return d;
+    public Integer getPhotoID() {
+        return photoID;
     }
 
 
