@@ -39,13 +39,20 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.5"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:gravity="center|left">
 
                     <TextView
-                        android:layout_width="100dp"
+                        android:layout_width="50dp"
                         android:layout_height="40dp"
-                        android:text="친구: 50"
+                        android:text="친구 :"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:gravity="bottom|left"/>
+                    <TextView
+                        android:id="@+id/tv_friend_num"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
                         android:textSize="20dp"
                         android:textStyle="bold"
                         android:gravity="bottom|left"/>

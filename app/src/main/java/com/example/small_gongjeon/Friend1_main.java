@@ -47,6 +47,7 @@ public class Friend1_main extends Fragment implements View.OnClickListener{
     private EditText mEditTextSearchKeyword;
     private String mJsonString;
     private View view;
+    private TextView friend_num;
     ImageButton btn_add_friend;
     ImageButton btn_friend_request;
 
@@ -54,10 +55,14 @@ public class Friend1_main extends Fragment implements View.OnClickListener{
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         view=inflater.inflate(R.layout.activity_friend1_main,container,false);
+
+
         btn_add_friend = (ImageButton)view.findViewById(R.id.btn_add_friend);
         btn_add_friend.setOnClickListener(this);
         btn_friend_request = (ImageButton)view.findViewById(R.id.btn_friend_request);
         btn_friend_request.setOnClickListener(this);
+
+        friend_num = (TextView)view.findViewById(R.id.tv_friend_num);
 
 
 
@@ -211,9 +216,12 @@ public class Friend1_main extends Fragment implements View.OnClickListener{
         try {
             JSONObject jsonObject = new JSONObject(mJsonString);
             JSONArray jsonArray = jsonObject.getJSONArray(TAG_JSON);
-
+            System.out.println("jsonAraay : "+jsonArray);
+            System.out.println("jsonLength : "+jsonArray.length());
+            String temp_friend_num = String.valueOf(jsonArray.length());
+            friend_num.setText(temp_friend_num);
             for(int i=0;i<jsonArray.length();i++){
-
+//                System.out.println("currJson: "+jsonArray.getJSONObject(i));
                 JSONObject item = jsonArray.getJSONObject(i);
 
                 String name = item.getString(TAG_NAME);
