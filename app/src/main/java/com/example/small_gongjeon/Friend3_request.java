@@ -25,6 +25,14 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import android.widget.Toast;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class Friend3_request extends AppCompatActivity {
 
@@ -40,6 +48,9 @@ public class Friend3_request extends AppCompatActivity {
     // 뷰 선언
     private ImageView mImageView;
     private TextView mTextView;
+
+    ImageButton btn_accept_friend;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +72,48 @@ public class Friend3_request extends AppCompatActivity {
 
         Friend3_request.GetData task = new Friend3_request.GetData();
         task.execute( "http://" + IP_ADDRESS + "/get_recieved_friend_request.php", userId);
+
+        btn_accept_friend = findViewById(R.id.btn_accept_friend);
+
+        btn_accept_friend.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                String requesterId = Main.userID;
+                //todo 이거 DB에서 받아온거 위에 줄 처럼 해야할듯.
+                //String receiverId =
+                System.out.println("ㅡㅡrequesterㅡㅡ\n"+requesterId);
+                //System.out.println("--receiver--\n"+receiverId);
+
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try{
+                            System.out.println("친구 수락\n"+response);
+                            JSONObject jsonObject = new JSONObject(response);
+                            boolean isSucceed = jsonObject.getBoolean("success");
+
+                            if( isSucceed){ // 성공 시
+                                Toast.makeText(getApplicationContext(), "친구 요청을 수락했습니다.", Toast.LENGTH_SHORT).show();
+                            }
+                            else{           // 실패 시
+                                Toast.makeText(getApplicationContext(), "친구 요청 수락을 실패했습니다.", Toast.LENGTH_SHORT).show();
+                            }
+
+                        } catch(JSONException e){
+                            e.printStackTrace();
+                        }
+                    }
+                };
+                //VOLLEY
+                AcceptFriendRequest acceptFriendRequest = new AcceptFriendRequest(requesterId, receiverId, responseListener);
+                RequestQueue queue = Volley.newRequestQueue(Friend3_request.this);
+                queue.add(acceptFriendRequest);
+
+            }
+
+        });
+
+
 
         //x버튼 클릭시 종료
         ImageButton finishBtn = findViewById(R.id.btn_close);
