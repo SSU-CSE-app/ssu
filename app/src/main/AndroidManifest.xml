@@ -2,69 +2,70 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.small_gongjeon">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.SmallGongjeon">
-        <activity android:name=".Main"
-            android:exported="true">
-        </activity>
+        android:theme="@style/Theme.SmallGongjeon"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Main"
+            android:exported="true"></activity>
         <activity
             android:name=".MyProfile4_inquiry"
-            android:theme="@style/Theme.SmallGongjeon."
-            android:exported="true"/>
+            android:exported="true"
+            android:theme="@style/Theme.SmallGongjeon." />
         <activity
             android:name=".MyProfile3_guide"
-            android:theme="@style/Theme.SmallGongjeon."
-            android:exported="true"/>
+            android:exported="true"
+            android:theme="@style/Theme.SmallGongjeon." />
         <activity
             android:name=".MyProfile2_notice"
-            android:theme="@style/Theme.SmallGongjeon."
-            android:exported="true"/>
+            android:exported="true"
+            android:theme="@style/Theme.SmallGongjeon." />
         <activity
             android:name=".MyProfile1_main"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Friend3_request"
-            android:theme="@style/Theme.SmallGongjeon."
-            android:exported="true"/>
+            android:exported="true"
+            android:theme="@style/Theme.SmallGongjeon." />
         <activity
             android:name=".Friend2_AddFriend"
-            android:theme="@style/Theme.SmallGongjeon."
-            android:exported="true"/>
+            android:exported="true"
+            android:theme="@style/Theme.SmallGongjeon." />
         <activity
             android:name=".Friend1_main"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Group4_InviteMember"
-            android:theme="@style/Theme.SmallGongjeon."
-            android:exported="true"/>
+            android:exported="true"
+            android:theme="@style/Theme.SmallGongjeon." />
         <activity
             android:name=".Group2_AddGroup"
-            android:theme="@style/Theme.SmallGongjeon."
-            android:exported="true"/>
+            android:exported="true"
+            android:theme="@style/Theme.SmallGongjeon." />
         <activity
             android:name=".Group3_GroupInfo"
-            android:theme="@style/Theme.SmallGongjeon."
-            android:exported="true"/>
+            android:exported="true"
+            android:theme="@style/Theme.SmallGongjeon." />
         <activity
             android:name=".Group1_main"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Alarm2_PlusAlarm"
-            android:theme="@style/Theme.SmallGongjeon."
-            android:exported="true"/>
+            android:exported="true"
+            android:theme="@style/Theme.SmallGongjeon." />
         <activity
             android:name=".Alarm1_main"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Login2_SignUp"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Login1_main"
             android:exported="true">
@@ -74,7 +75,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GroupMember"
+        <activity
+            android:name=".GroupMember"
+            android:theme="@style/Theme.SmallGongjeon." />
+        <activity android:name=".Group6_AddGroupImage"
             android:theme="@style/Theme.SmallGongjeon."/>
     </application>
 

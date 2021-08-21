@@ -1,12 +1,16 @@
 package com.example.small_gongjeon;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -34,6 +38,7 @@ public class Group2_AddGroup extends AppCompatActivity {
     private static String IP_ADDRESS = "27.96.134.147";
     private static String TAG = "small_gongjeon";
     private String mJsonString;
+    public static int sig;
 
     // 어댑터 관련 선언
     private ArrayList<Friend> mArrayList;
@@ -64,6 +69,31 @@ public class Group2_AddGroup extends AppCompatActivity {
 
         GetData task = new GetData();
         task.execute( "http://" + IP_ADDRESS + "/query.php", userId);
+
+        //그룹 이미지 추가
+        ImageButton btn = findViewById(R.id.btn_add_group_image);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Group6_AddGroupImage.class);
+                startActivity(intent);
+
+                switch (sig){
+                    case 1:
+                        btn.setImageResource(R.drawable.ic_baseline_face_24);
+                        break;
+                    case 2:
+                        btn.setImageResource(R.drawable.ic_baseline_sentiment_satisfied_alt_24);
+                        break;
+                    case 3:
+                        btn.setImageResource(R.drawable.ic_baseline_restaurant_24);
+                        break;
+                }
+            }
+        });
+
 
 
         //x버튼 클릭시 종료

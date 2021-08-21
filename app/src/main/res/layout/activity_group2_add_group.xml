@@ -63,10 +63,16 @@
                     android:layout_weight="1"
                     android:orientation="horizontal">
 
+
                     <ImageButton
-                        android:id="@+id/add_group_image_btn"
+                        android:id="@+id/btn_add_group_image"
                         android:layout_width="94dp"
-                        android:layout_height="94dp"/>
+                        android:layout_height="94dp"
+                        android:layout_gravity="bottom"
+                        app:srcCompat="@drawable/ic_baseline_add_a_photo_24"
+                        tools:ignore="VectorDrawableCompat"
+                        android:background="#00ff0000"
+                        android:layout_marginRight="15dp"></ImageButton>
 
                     <EditText
                         android:layout_width="220dp"
@@ -145,4 +151,3 @@
 
 
 </LinearLayout>
-
