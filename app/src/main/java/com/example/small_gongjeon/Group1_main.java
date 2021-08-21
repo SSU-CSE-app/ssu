@@ -79,7 +79,7 @@ public class Group1_main extends Fragment implements View.OnClickListener{
         String Keyword = Main.userID;
 
         GetData task = new GetData();
-        task.execute( "http://" + IP_ADDRESS + "/group_info_request_test.php", Keyword);
+        task.execute( "http://" + IP_ADDRESS + "/group_info_request_final.php", Keyword);
 
 
         return view;
