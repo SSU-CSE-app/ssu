@@ -144,7 +144,7 @@ public class Group3_GroupInfo extends AppCompatActivity {
         btn_group_member.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), GroupMember.class);
+                Intent intent = new Intent(getApplicationContext(), Group5_GroupMember.class);
                 startActivity(intent);
             }
         });

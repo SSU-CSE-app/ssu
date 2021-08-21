@@ -76,7 +76,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".GroupMember"
+            android:name=".Group5_GroupMember"
             android:theme="@style/Theme.SmallGongjeon." />
         <activity android:name=".Group6_AddGroupImage"
             android:theme="@style/Theme.SmallGongjeon."/>
