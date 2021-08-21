@@ -217,9 +217,8 @@ public class Friend1_main extends Fragment implements View.OnClickListener{
 
         try {
             JSONObject jsonObject = new JSONObject(mJsonString);
+            System.out.println("mJsonString :"+mJsonString);
             JSONArray jsonArray = jsonObject.getJSONArray(TAG_JSON);
-            System.out.println("jsonAraay : "+jsonArray);
-            System.out.println("jsonLength : "+jsonArray.length());
             String temp_friend_num = String.valueOf(jsonArray.length());
             friend_num.setText(temp_friend_num);
             for(int i=0;i<jsonArray.length();i++){

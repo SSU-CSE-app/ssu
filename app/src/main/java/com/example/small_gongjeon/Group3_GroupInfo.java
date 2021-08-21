@@ -37,6 +37,7 @@ public class Group3_GroupInfo extends AppCompatActivity {
 
     private static String IP_ADDRESS = "27.96.134.147";
     private static String TAG = "small_gongjeon";
+
     private String mJsonString;
 
     // 어댑터 관련 선언
@@ -104,15 +105,20 @@ public class Group3_GroupInfo extends AppCompatActivity {
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        String TAG_JSON="webnautes";
                         try {
                             System.out.println("group withdraw\n" + response);
-                            JSONObject jsonObject = new JSONObject(response);
-                            Boolean success = jsonObject.getBoolean("success");
 
-                            if(success){
+                            JSONObject jsonObject = new JSONObject(response);
+                            JSONArray jsonArray = jsonObject.getJSONArray(TAG_JSON);
+                            System.out.println("length :"+jsonArray.length());
+
+                            if(jsonArray.length() >= 2){
+                                System.out.println("탈퇴 실행됨");
                                 Toast.makeText(getApplicationContext(), "그룹을 탈퇴하였습니다.", Toast.LENGTH_SHORT).show();
                             }
                             else{
+                                System.out.println("탈퇴 실행 안됨");
                                 Toast.makeText(getApplicationContext(), "그룹 탈퇴에 실패하였습니다.", Toast.LENGTH_SHORT).show();
                             }
 
