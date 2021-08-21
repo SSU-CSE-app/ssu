@@ -3,9 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_group1_main.xml" value="0.1" />
         <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_login2_sing_up.xml" value="0.1296875" />
-        <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/listviewitem_group.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_friend1_main.xml" value="0.30027173913043476" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_friend2_add_friend.xml" value="0.31068840579710144" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_friend3_request.xml" value="0.38645833333333335" />
@@ -18,6 +16,8 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_login2_sign_up.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_login2_sing_up.xml" value="0.32653985507246375" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_my_profile1_main.xml" value="0.38645833333333335" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/listviewitem_alarm_group_info.xml" value="0.33" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/listviewitem_alarm_individual.xml" value="0.26721014492753625" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/listviewitem_friend.xml" value="0.30027173913043476" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/listviewitem_friend_request.xml" value="0.38645833333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/listviewitem_group.xml" value="0.38645833333333335" />

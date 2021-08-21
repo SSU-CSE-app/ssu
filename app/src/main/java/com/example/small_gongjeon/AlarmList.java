@@ -78,12 +78,12 @@ public class AlarmList extends BaseAdapter {
                     view = li.inflate(R.layout.listviewitem_alarm_group_info, viewGroup, false);
                     img = (ImageView)view.findViewById(R.id.image_alarm_group);
                     TextView tv4 = (TextView)view.findViewById(R.id.alarm_time);
-                    TextView tv5 = (TextView)view.findViewById(R.id.number_groupinfo_member);
+//                    TextView tv5 = (TextView)view.findViewById(R.id.number_groupinfo_member);
                     btn = (ImageButton)view.findViewById(R.id.btn_delete_alarm);
                     s = (Switch)view.findViewById(R.id.switch_alarm);
 
                     tv4.setText(g.getTime());
-                    tv5.setText(""+g.getMember());
+//                    tv5.setText(""+g.getMember());
                     break;
             }
         }
@@ -113,7 +113,7 @@ public class AlarmList extends BaseAdapter {
         Alarm g = new Alarm();
 
         g.setType(ITEM_GROUPINFO);
-        g.setMember(member);
+//        g.setMember(member);
         g.setTime(time);
 
         alarms.add(g);

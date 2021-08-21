@@ -7,15 +7,21 @@ public class Alarm {
     private String time;
     private String name;
     private Switch onoff;
+    private boolean isChecked ;
     private int type;
-    private int member;
+    private String participates;
 
-    public void setMember(int member) {
-        this.member = member;
+
+    public boolean getisChecked() { return isChecked; }
+
+    public void setisChecked(boolean isChecked) {  this.isChecked = isChecked; }
+
+    public void setParticipates(String participates) {
+        this.participates = participates;
     }
 
-    public int getMember() {
-        return member;
+    public String getParticipates() {
+        return participates;
     }
 
     public void setName(String name) {
