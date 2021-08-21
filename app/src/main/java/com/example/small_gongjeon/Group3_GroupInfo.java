@@ -15,6 +15,11 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -83,6 +88,48 @@ public class Group3_GroupInfo extends AppCompatActivity {
         btn_group_withdraw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String keyword_id = userId;
+                String keyword_groupName = groupName;
+//                System.out.println("id_keyword : "+id_keyword);
+
+                if (keyword_id.equals("")){
+                    Toast.makeText(getApplicationContext(), "오류!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (keyword_groupName.equals("")){
+                    Toast.makeText(getApplicationContext(), "오류!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            System.out.println("group withdraw\n" + response);
+                            JSONObject jsonObject = new JSONObject(response);
+                            Boolean success = jsonObject.getBoolean("success");
+
+                            if(success){
+                                Toast.makeText(getApplicationContext(), "그룹을 탈퇴하였습니다.", Toast.LENGTH_SHORT).show();
+                            }
+                            else{
+                                Toast.makeText(getApplicationContext(), "그룹 탈퇴에 실패하였습니다.", Toast.LENGTH_SHORT).show();
+                            }
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                };
+
+                // 서버로 Volley를 이용해서 요청을 함.
+                GroupWithdraw groupWithdraw = new GroupWithdraw(keyword_id,keyword_groupName, responseListener);
+                RequestQueue queue = Volley.newRequestQueue(Group3_GroupInfo.this);
+                queue.add(groupWithdraw);
+
+
 
             }
         });

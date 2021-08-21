@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class GroupWithdraw extends StringRequest {
     // 서버 URL 설정 ( PHP 파일 연동 )
-    final static private String URL = "http://27.96.134.147/.php";  //TODO php파일 만들고 넣기
+    final static private String URL = "http://27.96.134.147/group_withdraw_request.php";  //TODO php파일 만들고 넣기
     private Map<String, String> map;
 
 
