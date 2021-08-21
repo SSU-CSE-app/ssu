@@ -39,6 +39,7 @@ public class Group2_AddGroup extends AppCompatActivity {
     private static String TAG = "small_gongjeon";
     private String mJsonString;
     public static int sig;
+    public static ImageView group_iv;
 
     // 어댑터 관련 선언
     private ArrayList<Friend> mArrayList;
@@ -71,36 +72,24 @@ public class Group2_AddGroup extends AppCompatActivity {
         task.execute( "http://" + IP_ADDRESS + "/query.php", userId);
 
         //그룹 이미지 추가
-        ImageButton btn = findViewById(R.id.btn_add_group_image);
+        group_iv = findViewById(R.id.btn_add_group_image);
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        group_iv.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Group6_AddGroupImage.class);
                 startActivity(intent);
 
-                switch (sig){
-                    case 1:
-                        btn.setImageResource(R.drawable.ic_baseline_face_24);
-                        break;
-                    case 2:
-                        btn.setImageResource(R.drawable.ic_baseline_sentiment_satisfied_alt_24);
-                        break;
-                    case 3:
-                        btn.setImageResource(R.drawable.ic_baseline_restaurant_24);
-                        break;
-                }
             }
         });
-
-
 
         //x버튼 클릭시 종료
         ImageButton finishBtn = findViewById(R.id.close_add_group_btn);
         finishBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                sig = 0;
                 finish();
             }
         });
@@ -261,4 +250,5 @@ public class Group2_AddGroup extends AppCompatActivity {
         //안드로이드 백버튼 막기
         return;
     }
+
 }

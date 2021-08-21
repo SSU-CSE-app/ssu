@@ -64,7 +64,7 @@
                     android:orientation="horizontal">
 
 
-                    <ImageButton
+                    <ImageView
                         android:id="@+id/btn_add_group_image"
                         android:layout_width="94dp"
                         android:layout_height="94dp"
@@ -72,7 +72,7 @@
                         app:srcCompat="@drawable/ic_baseline_add_a_photo_24"
                         tools:ignore="VectorDrawableCompat"
                         android:background="#00ff0000"
-                        android:layout_marginRight="15dp"></ImageButton>
+                        android:layout_marginRight="15dp"></ImageView>
 
                     <EditText
                         android:layout_width="220dp"

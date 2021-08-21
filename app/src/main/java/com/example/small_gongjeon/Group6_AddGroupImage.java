@@ -20,6 +20,8 @@ public class Group6_AddGroupImage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Group2_AddGroup.sig = 1;
+                Group2_AddGroup.group_iv.setImageResource(R.drawable.ic_baseline_face_24);
+                //Group2_AddGroup.group_iv.setImageDrawable(null);
                 finish();
             }
         });
@@ -28,6 +30,7 @@ public class Group6_AddGroupImage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Group2_AddGroup.sig = 2;
+                Group2_AddGroup.group_iv.setImageResource(R.drawable.ic_baseline_sentiment_satisfied_alt_24);
                 finish();
             }
         });
@@ -36,18 +39,11 @@ public class Group6_AddGroupImage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Group2_AddGroup.sig = 3;
+                Group2_AddGroup.group_iv.setImageResource(R.drawable.ic_baseline_restaurant_24);
                 finish();
             }
         });
 
-/*
-        //x버튼 클릭시 종료
-        ImageButton finishBtn = findViewById(R.id.close_add_group_image_btn);
-        finishBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });*/
     }
+
 }
