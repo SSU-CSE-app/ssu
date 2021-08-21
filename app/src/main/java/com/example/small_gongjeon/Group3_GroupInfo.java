@@ -1,7 +1,6 @@
 package com.example.small_gongjeon;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -15,8 +14,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -49,7 +46,8 @@ public class Group3_GroupInfo extends AppCompatActivity {
     private TextView mTextView;
     private TextView mTextView_request; //TODO 수정
 
-    Button btn;
+    private Button btn_group_member;
+    private Button btn_group_withdraw;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +58,8 @@ public class Group3_GroupInfo extends AppCompatActivity {
         groupName = (TextView) findViewById(R.id.tv_group_info_group_name);
         groupName_main = (TextView) findViewById(R.id.name_group);
         groupName.setText(Main.currGroup);
-        btn = (Button)findViewById(R.id.btn_group_member);
+        btn_group_member = (Button)findViewById(R.id.btn_group_member);
+        btn_group_withdraw = (Button)findViewById(R.id.btn_group_info_group_withdraw);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerview_group_info_alarm);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -80,8 +79,16 @@ public class Group3_GroupInfo extends AppCompatActivity {
         System.out.println("task execute!! (userId :"+userId+" / groupName :"+groupName+")");
         task.execute( "http://" + IP_ADDRESS + "/alarmlist_in_group_info_request.php", "userId" ,userId, "groupName",groupName);
 
+        // 탈퇴 버튼 누를시 실행
+        btn_group_withdraw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-        btn.setOnClickListener(new View.OnClickListener() {
+            }
+        });
+
+        // 그룹 멤버 누를시 실행
+        btn_group_member.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), GroupMember.class);
