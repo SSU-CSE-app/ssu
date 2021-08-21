@@ -73,7 +73,7 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.CustomViewHo
     public void onBindViewHolder(@NonNull CustomViewHolder viewholder, int position) {
 
         viewholder.name.setText(mList.get(position).getName());
-//        viewholder.number.setText("" + mList.get(position).getNumber());
+        viewholder.number.setText("" + mList.get(position).getNumber());
 //        viewholder.img.setImageDrawable(mList.get(position).getD());
     }
     @Override

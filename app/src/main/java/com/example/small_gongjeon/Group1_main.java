@@ -79,7 +79,7 @@ public class Group1_main extends Fragment implements View.OnClickListener{
         String Keyword = Main.userID;
 
         GetData task = new GetData();
-        task.execute( "http://" + IP_ADDRESS + "/group_info_request.php", Keyword);
+        task.execute( "http://" + IP_ADDRESS + "/group_info_request_test.php", Keyword);
 
 
         return view;
@@ -185,6 +185,7 @@ public class Group1_main extends Fragment implements View.OnClickListener{
 
         String TAG_JSON="webnautes";
         String TAG_NAME = "group";
+        String TAG_NUMBER = "participants";
         //String TAG_Message = "userStatus";
 
         try {
@@ -199,11 +200,13 @@ public class Group1_main extends Fragment implements View.OnClickListener{
                 JSONObject item = jsonArray.getJSONObject(i);
 
                 String name = item.getString(TAG_NAME);
+                int number = item.getInt(TAG_NUMBER);
                 //String message = item.getString(TAG_Message);
 
                 Group group = new Group();
 
                 group.setName(name);
+                group.setNumber(number);
 
 
                 mArrayList.add(group);
