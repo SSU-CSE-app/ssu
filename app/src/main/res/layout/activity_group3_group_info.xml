@@ -69,11 +69,12 @@
                         android:layout_height="94dp"/>
 
                     <TextView
+                        android:id="@+id/tv_group_info_group_name"
                         android:layout_width="220dp"
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="Group Name"
-                        android:textSize="30dp"/>
+                        android:textSize="30dp" />
                 </LinearLayout>
 
                 <LinearLayout

@@ -13,6 +13,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.CustomViewHolder>{
@@ -49,6 +51,8 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.CustomViewHo
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    TextView groupname_temp = (TextView) view.findViewById(R.id.name_group);
+                    Main.currGroup = (String) groupname_temp.getText();
                     int position = getAbsoluteAdapterPosition();
                     if(position != RecyclerView.NO_POSITION){
                         if(mListener != null){

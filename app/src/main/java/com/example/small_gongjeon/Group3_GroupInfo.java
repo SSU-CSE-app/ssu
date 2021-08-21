@@ -11,8 +11,11 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class Group3_GroupInfo extends AppCompatActivity {
+    private TextView groupName;
+    private TextView groupName_main;
 
     Button btn;
 
@@ -21,6 +24,9 @@ public class Group3_GroupInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_group3_group_info);
 
+        groupName = (TextView) findViewById(R.id.tv_group_info_group_name);
+        groupName_main = (TextView) findViewById(R.id.name_group);
+        groupName.setText(Main.currGroup);
         btn = (Button)findViewById(R.id.btn_group_member);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
