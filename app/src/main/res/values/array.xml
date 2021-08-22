@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="repeat_alarm_min">  //몇분마다 반복
+        <item> 1분마다 </item>
+        <item> 3분마다 </item>
+        <item> 5분마다 </item>
+        <item> 10분마다 </item>
+    </string-array>
+
+    <string-array name="repeat_alarm_num">  //몇번 반복
+        <item> 1회 반복 </item>
+        <item> 2회 반복 </item>
+        <item> 3회 반복 </item>
+        <item> 4회 반복 </item>
+    </string-array>
+</resources>
