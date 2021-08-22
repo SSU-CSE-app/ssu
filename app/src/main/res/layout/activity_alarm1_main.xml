@@ -31,7 +31,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:visibility="invisible"></View>
+                android:visibility="invisible"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -50,7 +50,7 @@
                     android:textSize="20dp"
                     android:gravity="center|left"
                     android:text="오늘의 명언"
-                    android:textColor="#FFFF00"></TextView>
+                    android:textColor="#FFFF00"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -78,10 +78,10 @@
                     android:gravity="center|left">
 
                     <Spinner
-                        android:id="@+id/spinner_alarm"
+                        android:id="@+id/spinner_which_alarm"
                         android:layout_width="100dp"
                         android:layout_height="30dp"
-                        android:background="@drawable/board_layout"></Spinner>
+                        android:background="@drawable/board_layout"/>
 
                 </LinearLayout>
 
@@ -89,7 +89,7 @@
                 <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_weight="1.5"></View>
+                    android:layout_weight="1.5"/>
 
 
                 <LinearLayout
@@ -103,18 +103,20 @@
                         android:id="@+id/btn_plus_alarm"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:background="@color/purple_200"></ImageButton>
+                        android:background="@color/purple_200"/>
 
                 </LinearLayout>
 
             </LinearLayout>
 
 
-            <ListView
-                android:id="@+id/listview_alarm"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_alarm_main_list"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="6"></ListView>
+                android:layout_weight="6"
+                android:dividerHeight="20dp"
+                android:divider="#ffffff"/>
 
 
 

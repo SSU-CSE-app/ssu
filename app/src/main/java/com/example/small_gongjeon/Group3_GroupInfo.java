@@ -295,8 +295,6 @@ public class Group3_GroupInfo extends AppCompatActivity {
                 mAdapter.notifyDataSetChanged();
             }
 
-
-
         } catch (JSONException e) {
 
             Log.d(TAG, "showResult : ", e);

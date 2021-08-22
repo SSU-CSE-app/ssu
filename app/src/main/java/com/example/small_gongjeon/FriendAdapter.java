@@ -13,8 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class FriendAdapter extends RecyclerView.Adapter<FriendAdapter.CustomViewHolder> {
-
-
     private ArrayList<Friend> mList = null;
     private Activity context = null;
 
