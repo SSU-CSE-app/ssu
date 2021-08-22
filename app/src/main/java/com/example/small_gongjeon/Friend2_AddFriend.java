@@ -19,6 +19,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Friend2_AddFriend extends AppCompatActivity {
+    public static String receiverId;
+
     private EditText search_keyword;
     ImageButton btn_search_userbyid;
     ImageButton btn_friend_request;
@@ -62,6 +64,8 @@ public class Friend2_AddFriend extends AppCompatActivity {
                             JSONObject jsonObject = new JSONObject(response);
                             String userName = jsonObject.getString("userName");
                             String userStatus = jsonObject.getString("userStatus");
+
+                            receiverId = userName;
 
                             result_name.setText(userName);
                             result_status.setText(userStatus);
