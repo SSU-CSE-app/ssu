@@ -9,10 +9,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
@@ -62,6 +64,29 @@ public class Alarm1_main extends Fragment implements View.OnClickListener {
         arrayAdapter = new ArrayAdapter<>(view.getContext(),android.R.layout.simple_spinner_dropdown_item,arrayList);
         spinner.setAdapter(arrayAdapter);
 
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                System.out.println("currType : "+spinner.getSelectedItem().toString());
+                mainArrayList.clear();
+                GetData afterTask = new GetData();
+                if(spinner.getSelectedItem().toString().equals("       개인")){
+                    afterTask.execute( "http://" + IP_ADDRESS + "/alarm_ind_list_request.php", Main.userID);
+                }
+                else if(spinner.getSelectedItem().toString().equals("       그룹")){
+                    afterTask.execute( "http://" + IP_ADDRESS + "/alarm_group_list_request.php", Main.userID);
+                }
+                else if(spinner.getSelectedItem().toString().equals("       전체")){
+                    afterTask.execute( "http://" + IP_ADDRESS + "/alarm_list_request.php", Main.userID);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
         mRecyclerView = (RecyclerView)view.findViewById(R.id.recyclerview_alarm_main_list);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
@@ -81,10 +106,11 @@ public class Alarm1_main extends Fragment implements View.OnClickListener {
 
         mainAdapter.notifyDataSetChanged();
 
-        String userId = Main.userID;
 
-        GetData task = new GetData();
-        task.execute( "http://" + IP_ADDRESS + "/alarm_list_request.php", userId);
+//        String userId = Main.userID;
+//
+//        GetData task = new GetData();
+//        task.execute( "http://" + IP_ADDRESS + "/alarm_list_request.php", userId);
 
         return view;
     }
@@ -237,4 +263,6 @@ public class Alarm1_main extends Fragment implements View.OnClickListener {
         }
 
     }
+
+
 }
