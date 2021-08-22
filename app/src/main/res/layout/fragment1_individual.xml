@@ -234,20 +234,17 @@
                                 android:layout_height="match_parent"
                                 android:layout_weight="0.1"
                                 android:layout_gravity="center"></CheckBox>
-                            <EditText
+                            <Spinner
+                                android:id="@+id/spinner_alarm_min"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.3"
-                                android:hint="1분마다"
-                                android:textSize="15dp"></EditText>
+                                android:layout_weight="0.3"></Spinner>
 
                             <Spinner
                                 android:id="@+id/spinner_alarm_num"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.3"
-                                android:layout_margin="10dp"
-                                android:background="@color/purple_200"></Spinner>
+                                android:layout_weight="0.3"></Spinner>
                         </LinearLayout>
 
                     </LinearLayout>
