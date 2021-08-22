@@ -44,7 +44,7 @@ public class Group2_AddGroup extends AppCompatActivity {
     private String getGroupName;
 
     //그룹 사진 추가 관련 선언
-    public static int sig;
+    public static int group_image_sig;
     public static ImageView group_iv;
 
     // 어댑터 관련 선언
@@ -97,7 +97,7 @@ public class Group2_AddGroup extends AppCompatActivity {
         finishBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sig = 0;  //나갔다 들어오면 다시 처음 상태로
+                group_image_sig = 0;  //나갔다 들어오면 다시 처음 상태로
                 finish();
             }
         });

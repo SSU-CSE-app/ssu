@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,6 +20,10 @@ public class MyProfile1_main extends Fragment implements View.OnClickListener{
     private ImageButton btn_myprofile_guide;
     private ImageButton btn_myprofile_inquiry;
     private TextView tv_name;
+
+    //프로필 사진 추가 관련 선언
+    public static int profile_image_sig;
+    public static ImageView profile_iv;
 
     @Nullable
     @Override
@@ -35,6 +40,17 @@ public class MyProfile1_main extends Fragment implements View.OnClickListener{
         btn_myprofile_guide.setOnClickListener(this);
         btn_myprofile_inquiry = (ImageButton)view.findViewById(R.id.btn_myprofile_inquiry);
         btn_myprofile_inquiry.setOnClickListener(this);
+
+        //그룹 이미지 추가
+        profile_iv = view.findViewById(R.id.profile_picture);
+        profile_iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().startActivity(new Intent(getActivity(), MyProfile5_AddProfileImage.class));
+
+            }
+        });
+
         return view;
     }
 

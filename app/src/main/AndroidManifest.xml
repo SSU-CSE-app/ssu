@@ -12,9 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmallGongjeon"
         android:usesCleartextTraffic="true">
+
         <activity
             android:name=".Main"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MyProfile4_inquiry"
             android:exported="true"
@@ -78,7 +79,11 @@
         <activity
             android:name=".Group5_GroupMember"
             android:theme="@style/Theme.SmallGongjeon." />
-        <activity android:name=".Group6_AddGroupImage"
+        <activity
+            android:name=".Group6_AddGroupImage"
+            android:theme="@style/Theme.SmallGongjeon." />
+        <activity
+            android:name=".MyProfile5_AddProfileImage"
             android:theme="@style/Theme.SmallGongjeon."/>
     </application>
 
