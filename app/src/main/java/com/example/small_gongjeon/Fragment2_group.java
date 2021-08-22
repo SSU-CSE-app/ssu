@@ -42,7 +42,7 @@ public class Fragment2_group extends Fragment {
         arrayList2.add("4번 반복");
         arrayList2.add("5번 반복");
 
-        spinner_num = (Spinner)view.findViewById(R.id.spinner_alarm_num);
+        spinner_num = (Spinner)view.findViewById(R.id.spinner_add_ind_alarm_repeatTime);
         ArrayAdapter<String> numAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, arrayList2);
         spinner_num.setAdapter(numAdapter);
 

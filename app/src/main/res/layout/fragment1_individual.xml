@@ -25,7 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.6"
-                android:visibility="invisible"></View>
+                android:visibility="invisible"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -38,7 +38,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
-                    android:visibility="invisible"></View>
+                    android:visibility="invisible"/>
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -58,7 +58,7 @@
                             android:layout_height="match_parent"
                             android:text="시간"
                             android:textSize="20dp"
-                            android:textStyle="bold"></TextView>
+                            android:textStyle="bold"/>
 
                     </LinearLayout>
 
@@ -68,15 +68,16 @@
                         android:layout_weight="1">
 
                         <TimePicker
+                            android:id="@+id/tp_add_ind_alarm_time"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:timePickerMode="spinner"></TimePicker>
+                            android:timePickerMode="spinner"/>
                     </LinearLayout>
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="2dp"
-                        android:background="@color/purple_200"></View>
+                        android:background="@color/purple_200"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -92,7 +93,7 @@
                             android:gravity="center"
                             android:text="요일"
                             android:textSize="15dp"
-                            android:textStyle="bold"></TextView>
+                            android:textStyle="bold"/>
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -111,49 +112,49 @@
                                     android:layout_height="match_parent"
                                     android:layout_weight="0.5"
                                     android:gravity="center"
-                                    android:text="월"></TextView>
+                                    android:text="월"/>
 
                                 <TextView
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="0.5"
                                     android:gravity="center"
-                                    android:text="화"></TextView>
+                                    android:text="화"/>
 
                                 <TextView
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="0.5"
                                     android:gravity="center"
-                                    android:text="수"></TextView>
+                                    android:text="수"/>
 
                                 <TextView
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="0.5"
                                     android:gravity="center"
-                                    android:text="목"></TextView>
+                                    android:text="목"/>
 
                                 <TextView
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="0.5"
                                     android:gravity="center"
-                                    android:text="금"></TextView>
+                                    android:text="금"/>
 
                                 <TextView
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="0.5"
                                     android:gravity="center"
-                                    android:text="토"></TextView>
+                                    android:text="토"/>
 
                                 <TextView
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="0.5"
                                     android:gravity="center"
-                                    android:text="일"></TextView>
+                                    android:text="일"/>
 
                             </LinearLayout>
 
@@ -164,39 +165,46 @@
                                 android:orientation="horizontal">
 
                                 <CheckBox
+                                    android:id="@+id/cb_add_ind_alarm_MON"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
-                                    android:layout_weight="0.5"></CheckBox>
+                                    android:layout_weight="0.5"/>
 
                                 <CheckBox
+                                    android:id="@+id/cb_add_ind_alarm_TUE"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
-                                    android:layout_weight="0.5"></CheckBox>
+                                    android:layout_weight="0.5"/>
 
                                 <CheckBox
+                                    android:id="@+id/cb_add_ind_alarm_WED"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
-                                    android:layout_weight="0.5"></CheckBox>
+                                    android:layout_weight="0.5"/>
 
                                 <CheckBox
+                                    android:id="@+id/cb_add_ind_alarm_THU"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
-                                    android:layout_weight="0.5"></CheckBox>
+                                    android:layout_weight="0.5"/>
 
                                 <CheckBox
+                                    android:id="@+id/cb_add_ind_alarm_FRI"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
-                                    android:layout_weight="0.5"></CheckBox>
+                                    android:layout_weight="0.5"/>
 
                                 <CheckBox
+                                    android:id="@+id/cb_add_ind_alarm_SAT"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
-                                    android:layout_weight="0.5"></CheckBox>
+                                    android:layout_weight="0.5"/>
 
                                 <CheckBox
+                                    android:id="@+id/cb_add_ind_alarm_SUN"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
-                                    android:layout_weight="0.5"></CheckBox>
+                                    android:layout_weight="0.5"/>
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
@@ -230,21 +238,22 @@
                             android:weightSum="0.7">
 
                             <CheckBox
+                                android:id="@+id/cb_add_ind_alarm_repeat"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="0.1"
-                                android:layout_gravity="center"></CheckBox>
+                                android:layout_gravity="center"/>
                             <Spinner
-                                android:id="@+id/spinner_alarm_min"
+                                android:id="@+id/spinner_add_ind_alarm_repeatMin"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.3"></Spinner>
+                                android:layout_weight="0.3"/>
 
                             <Spinner
-                                android:id="@+id/spinner_alarm_num"
+                                android:id="@+id/spinner_add_ind_alarm_repeatTime"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.3"></Spinner>
+                                android:layout_weight="0.3"/>
                         </LinearLayout>
 
                     </LinearLayout>
@@ -284,6 +293,7 @@
                                 android:visibility="invisible"></View>
 
                             <EditText
+                                android:id="@+id/et_add_ind_alarm_name"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:layout_marginLeft="5dp"
@@ -292,7 +302,7 @@
                                 android:background="@drawable/board_layout"
                                 android:hint="클릭해서 입력"
                                 android:paddingLeft="5dp"
-                                android:textSize="15dp"></EditText>
+                                android:textSize="15dp"/>
 
                         </LinearLayout>
 
@@ -325,8 +335,9 @@
                             android:visibility="invisible"></View>
 
                         <ImageButton
+                            android:id="@+id/btn_add_ind_alarm"
                             android:layout_width="100dp"
-                            android:layout_height="60dp"></ImageButton>
+                            android:layout_height="60dp"/>
                     </LinearLayout>
 
                 </LinearLayout>
