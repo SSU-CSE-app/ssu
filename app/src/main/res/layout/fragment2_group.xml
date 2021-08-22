@@ -349,8 +349,7 @@
                                 android:layout_height="0dp"
                                 android:layout_marginLeft="5dp"
                                 android:layout_marginRight="5dp"
-                                android:layout_weight="0.3"
-                                android:background="@color/purple_200"/>
+                                android:layout_weight="0.3" />
 
                         </LinearLayout>
 
