@@ -8,10 +8,16 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 
 import com.google.android.material.tabs.TabLayout;
+
+import java.util.ArrayList;
+
+import static java.security.AccessController.getContext;
 
 public class Alarm2_PlusAlarm extends AppCompatActivity {
     Fragment fragment1,fragment2;
@@ -20,7 +26,6 @@ public class Alarm2_PlusAlarm extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarm2_plus_alarm);
-
 
         fragment1 = new Fragment1_individual();
         fragment2 = new Fragment2_group();

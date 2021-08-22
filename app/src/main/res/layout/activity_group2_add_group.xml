@@ -75,6 +75,7 @@
                         android:layout_marginRight="15dp"></ImageView>
 
                     <EditText
+                        android:id="@+id/add_group_name"
                         android:layout_width="220dp"
                         android:layout_height="match_parent"
                         android:gravity="center"

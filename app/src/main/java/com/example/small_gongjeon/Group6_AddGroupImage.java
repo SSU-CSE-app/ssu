@@ -14,14 +14,13 @@ public class Group6_AddGroupImage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_group6_add_group_image);
 
-        //이미지 클릭 시 해당 이미지 정보 주기
+        //이미지 클릭 시 해당 이미지로 바꾸기
         ImageView img = findViewById(R.id.image_face);
         img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Group2_AddGroup.sig = 1;
-                Group2_AddGroup.group_iv.setImageResource(R.drawable.ic_baseline_face_24);
-                //Group2_AddGroup.group_iv.setImageDrawable(null);
+                Group2_AddGroup.sig = 1; // 첫번째 이미지 선택, 정보 등록
+                Group2_AddGroup.group_iv.setImageResource(R.drawable.ic_baseline_face_24); //이미지 바꾸기
                 finish();
             }
         });

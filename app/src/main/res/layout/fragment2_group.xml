@@ -227,22 +227,29 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="2.5"
-                            android:orientation="vertical"
+                            android:orientation="horizontal"
                             android:weightSum="0.7">
 
-                            <View
+                            <CheckBox
                                 android:layout_width="0dp"
-                                android:layout_height="0dp"
-                                android:layout_weight="0.2"
-                                android:visibility="invisible"></View>
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.1"
+                                android:layout_gravity="center"></CheckBox>
+                            <EditText
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:hint="1분마다"
+                                android:textSize="15dp"></EditText>
 
                             <Spinner
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_marginLeft="5dp"
-                                android:layout_marginRight="5dp"
+                                android:id="@+id/spinner_alarm_num"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="0.3"
+                                android:layout_margin="10dp"
                                 android:background="@color/purple_200"></Spinner>
+
                         </LinearLayout>
 
                     </LinearLayout>
@@ -331,6 +338,7 @@
                                 android:visibility="invisible"></View>
 
                             <Spinner
+                                android:id="@+id/spinner_select_group"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:layout_marginLeft="5dp"

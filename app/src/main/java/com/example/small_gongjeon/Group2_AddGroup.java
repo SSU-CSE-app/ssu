@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -38,6 +39,11 @@ public class Group2_AddGroup extends AppCompatActivity {
     private static String IP_ADDRESS = "27.96.134.147";
     private static String TAG = "small_gongjeon";
     private String mJsonString;
+
+    private EditText group_name;
+    private String getGroupName;
+
+    //그룹 사진 추가 관련 선언
     public static int sig;
     public static ImageView group_iv;
 
@@ -71,11 +77,13 @@ public class Group2_AddGroup extends AppCompatActivity {
         GetData task = new GetData();
         task.execute( "http://" + IP_ADDRESS + "/query.php", userId);
 
+        //그룹 이름 받아오기
+        group_name = (EditText)findViewById(R.id.add_group_name);
+        getGroupName = group_name.getText().toString();
+
         //그룹 이미지 추가
         group_iv = findViewById(R.id.btn_add_group_image);
-
         group_iv.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Group6_AddGroupImage.class);
@@ -89,7 +97,7 @@ public class Group2_AddGroup extends AppCompatActivity {
         finishBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sig = 0;
+                sig = 0;  //나갔다 들어오면 다시 처음 상태로
                 finish();
             }
         });
