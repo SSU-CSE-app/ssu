@@ -4,22 +4,22 @@ import android.graphics.drawable.Drawable;
 
 public class GroupMember {
     private String name;
-    private Drawable d;
+    private Integer photo;
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setD(Drawable d) {
-        this.d = d;
+    public void setPhoto(Integer photo) {
+        this.photo = photo;
     }
 
     public String getName() {
         return name;
     }
 
-    public Drawable getD() {
-        return d;
+    public Integer getPhoto() {
+        return photo;
     }
 
 

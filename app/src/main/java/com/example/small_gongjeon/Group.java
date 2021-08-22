@@ -5,7 +5,7 @@ import android.graphics.drawable.Drawable;
 public class Group {
     private String name;
     private int number;
-    private Drawable d;
+    private Integer photo;
 
     public void setName(String name) {
         this.name = name;
@@ -15,8 +15,8 @@ public class Group {
         this.number = number;
     }
 
-    public void setD(Drawable d) {
-        this.d = d;
+    public void setPhoto(Integer photo) {
+        this.photo = photo;
     }
 
     public String getName() {
@@ -27,8 +27,8 @@ public class Group {
         return number;
     }
 
-    public Drawable getD() {
-        return d;
+    public Integer getPhoto() {
+        return photo;
     }
 
 

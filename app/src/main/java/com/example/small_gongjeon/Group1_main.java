@@ -186,6 +186,7 @@ public class Group1_main extends Fragment implements View.OnClickListener{
         String TAG_JSON="webnautes";
         String TAG_NAME = "group";
         String TAG_NUMBER = "participants";
+        String TAG_Photo = "groupPhoto";
         //String TAG_Message = "userStatus";
 
         try {
@@ -201,13 +202,23 @@ public class Group1_main extends Fragment implements View.OnClickListener{
 
                 String name = item.getString(TAG_NAME);
                 int number = item.getInt(TAG_NUMBER);
+                String photo = item.getString(TAG_Photo);
+                Integer photoID = null;
                 //String message = item.getString(TAG_Message);
 
+                switch (photo) {
+                    case "1" :
+                        photoID = R.drawable.ic_android_black_50;
+                        break;
+                    case "2" :
+                        photoID = R.drawable.ic_baseline_adb_50;
+                        break;
+                }
                 Group group = new Group();
 
                 group.setName(name);
                 group.setNumber(number);
-
+                group.setPhoto(photoID);
 
                 mArrayList.add(group);
                 mAdapter.notifyDataSetChanged();

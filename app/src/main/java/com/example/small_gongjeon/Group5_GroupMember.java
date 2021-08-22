@@ -172,6 +172,7 @@ public class Group5_GroupMember extends AppCompatActivity {
 
         String TAG_JSON="webnautes";
         String TAG_NAME = "userName";
+        String TAG_Photo = "userPhoto";
 
         try {
             JSONObject jsonObject = new JSONObject(mJsonString);
@@ -183,11 +184,23 @@ public class Group5_GroupMember extends AppCompatActivity {
                 JSONObject item = jsonArray.getJSONObject(i);
 
                 String name = item.getString(TAG_NAME);
+                String photo = item.getString(TAG_Photo);
+                Integer photoID = null;
                 //String message = item.getString(TAG_Message);
+
+                switch (photo) {
+                    case "1" :
+                        photoID = R.drawable.ic_android_black_50;
+                        break;
+                    case "2" :
+                        photoID = R.drawable.ic_baseline_adb_50;
+                        break;
+                }
 
                 GroupMember groupMember = new GroupMember();
 
                 groupMember.setName(name);
+                groupMember.setPhoto(photoID);
 
                 mArrayList.add(groupMember);
                 mAdapter.notifyDataSetChanged();

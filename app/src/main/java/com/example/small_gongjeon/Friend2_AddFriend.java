@@ -2,6 +2,7 @@ package com.example.small_gongjeon;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -27,8 +28,7 @@ public class Friend2_AddFriend extends AppCompatActivity {
 
     TextView result_name;
     TextView result_status;
-    ImageView result_image; //TODO number로 받아온 photo값에 따라 이미지 부여
-
+    ImageView result_photo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +39,8 @@ public class Friend2_AddFriend extends AppCompatActivity {
         result_name = findViewById(R.id.add_friend_result_name);
         result_status = findViewById(R.id.add_friend_result_status);
 
+        // 이미지 뷰 바인딩
+        result_photo = findViewById(R.id.add_friend_result_image);
 
         // 버튼 바인딩
         btn_search_userbyid = findViewById((R.id.btn_add_friend_search));
@@ -64,12 +66,24 @@ public class Friend2_AddFriend extends AppCompatActivity {
                             JSONObject jsonObject = new JSONObject(response);
                             String userName = jsonObject.getString("userName");
                             String userStatus = jsonObject.getString("userStatus");
+                            String userPhoto = jsonObject.getString("userPhoto");
+                            Drawable photo = null;
+
+                            switch (userPhoto) {
+                                case "1" :
+                                    photo = getResources().getDrawable(R.drawable.ic_android_black_50);
+                                    break;
+                                case "2" :
+                                    photo = getResources().getDrawable(R.drawable.ic_baseline_adb_50);
+                                    break;
+                            }
+
 
                             receiverId = userName;
 
                             result_name.setText(userName);
                             result_status.setText(userStatus);
-                            //result_image                            //TODO userPhoto 설정
+                            result_photo.setImageDrawable(photo);
 
                         } catch (JSONException e) {
                             e.printStackTrace();

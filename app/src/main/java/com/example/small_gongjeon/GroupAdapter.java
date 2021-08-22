@@ -78,7 +78,7 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.CustomViewHo
 
         viewholder.name.setText(mList.get(position).getName());
         viewholder.number.setText("" + mList.get(position).getNumber());
-//        viewholder.img.setImageDrawable(mList.get(position).getD());
+        viewholder.img.setImageResource(mList.get(position).getPhoto());
     }
     @Override
     public int getItemCount() {

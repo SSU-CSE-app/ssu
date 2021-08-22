@@ -47,7 +47,7 @@ public class GroupMemberAdapter extends RecyclerView.Adapter<GroupMemberAdapter.
     public void onBindViewHolder(@NonNull CustomViewHolder viewholder, int position) {
 
         viewholder.name.setText(mList.get(position).getName());
-        //viewholder.img.setImageDrawable(mList.get(position).getD());
+        viewholder.img.setImageResource(mList.get(position).getPhoto());
     }
     @Override
     public int getItemCount() {

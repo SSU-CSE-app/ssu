@@ -46,16 +46,16 @@ public class MemberList extends BaseAdapter {
 
         GroupMember m = groupMembers.get(i);
 
-        iv.setImageDrawable(m.getD());
+        iv.setImageResource(m.getPhoto());
         tv1.setText(m.getName());
 
         return view;
     }
 
-    public void addMember(Drawable d, String name){
+    public void addMember(Integer photo, String name){
         GroupMember m = new GroupMember();
 
-        m.setD(d);
+        m.setPhoto(photo);
         m.setName(name);
 
         groupMembers.add(m);
