@@ -70,7 +70,6 @@ public class Fragment1_individual extends Fragment {
         time = (TimePicker)view.findViewById(R.id.tp_add_ind_alarm_time);
 
         // 알람 반복 스피너 (몇분마다)
-
         ArrayList arrayList = new ArrayList<>();
         arrayList.add("1분마다");
         arrayList.add("3분마다");
@@ -81,7 +80,6 @@ public class Fragment1_individual extends Fragment {
         spinner_min.setAdapter(minAdapter);
 
         //알람 반복 스피너 (몇번반복)
-
         ArrayList arrayList2 = new ArrayList<>();
         arrayList2.add("1번 반복");
         arrayList2.add("2번 반복");
