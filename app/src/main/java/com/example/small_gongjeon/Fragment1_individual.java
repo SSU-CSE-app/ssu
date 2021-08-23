@@ -166,6 +166,7 @@ public class Fragment1_individual extends Fragment {
 
                             if( isSucceed){ // 성공 시
                                 Toast.makeText(getActivity().getApplicationContext(), "새로운 알람을 등록하였습니다.", Toast.LENGTH_SHORT).show();
+                                getActivity().finish();
                             }
                             else{           // 실패 시
                                 Toast.makeText(getActivity().getApplicationContext(), "알람을 등록하는데 실패했습니다.", Toast.LENGTH_SHORT).show();
@@ -183,6 +184,8 @@ public class Fragment1_individual extends Fragment {
                 SendAddIndAlarmRequest sendAddIndAlarmRequest = new SendAddIndAlarmRequest(userId,alarmTime,alarmDays,isRepeatChecked,repeatMin,repeatTimes,responseListener);
                 RequestQueue queue = Volley.newRequestQueue(getContext());
                 queue.add(sendAddIndAlarmRequest);
+
+
             }
         });
 

@@ -116,6 +116,7 @@ public class Group3_GroupInfo extends AppCompatActivity {
                             if(jsonArray.length() >= 2){
                                 System.out.println("탈퇴 실행됨");
                                 Toast.makeText(getApplicationContext(), "그룹을 탈퇴하였습니다.", Toast.LENGTH_SHORT).show();
+                                finish();
                             }
                             else{
                                 System.out.println("탈퇴 실행 안됨");
