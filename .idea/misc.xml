@@ -3,11 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Master/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_alarm1_main.xml" value="0.18070652173913043" />
-        <entry key="..\:/Users/Master/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_thumbnail.xml" value="0.1" />
+        <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_alarm2_plus_alarm.xml" value="0.12604166666666666" />
+        <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_friend1_main.xml" value="0.12335359675785208" />
         <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_group5_groupinfo_member.xml" value="0.10099637681159421" />
         <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_login2_sing_up.xml" value="0.1296875" />
-        <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/fragment2_group.xml" value="0.264" />
+        <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/fragment1_individual.xml" value="0.4" />
+        <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/fragment2_group.xml" value="0.378125" />
+        <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/listviewitem_alarm_group.xml" value="0.10572916666666667" />
+        <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/listviewitem_alarm_individual.xml" value="0.12335359675785208" />
+        <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/listviewitem_friend.xml" value="0.213768115942029" />
         <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/listviewitem_group_member.xml" value="0.136" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_friend1_main.xml" value="0.30027173913043476" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_friend2_add_friend.xml" value="0.31068840579710144" />

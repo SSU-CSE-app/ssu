@@ -56,7 +56,7 @@
                         android:layout_width="94dp"
                         android:layout_height="94dp"
                         android:layout_gravity="center"
-                        app:srcCompat="@drawable/profile_7_sick"
+                        app:srcCompat="@drawable/profile_9_default"
                         tools:ignore="VectorDrawableCompat"
                         android:scaleType="fitCenter"></ImageView>
 
@@ -106,7 +106,8 @@
                         android:layout_weight="0.4"></View>
 
 
-                    <Button
+                    <TextView
+                        android:id="@+id/tv_my_profile_status"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="8.9"
@@ -118,7 +119,7 @@
                         android:layout_marginLeft="7dp"
                         android:backgroundTint="@color/white"
                         android:gravity="center_vertical">
-                    </Button>
+                    </TextView>
 
                     <View
                         android:layout_width="0dp"

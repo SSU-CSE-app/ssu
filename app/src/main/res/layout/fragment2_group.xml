@@ -277,55 +277,6 @@
                             android:layout_height="match_parent"
                             android:layout_weight="0.5"
                             android:gravity="center"
-                            android:text="알람이름"
-                            android:textSize="10dp"
-                            android:textStyle="bold"/>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:orientation="vertical"
-                            android:weightSum="0.7">
-
-                            <View
-                                android:layout_width="0dp"
-                                android:layout_height="0dp"
-                                android:layout_weight="0.15"
-                                android:visibility="invisible"></View>
-
-                            <EditText
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_marginLeft="5dp"
-                                android:layout_marginRight="5dp"
-                                android:layout_weight="0.4"
-                                android:background="@drawable/board_layout"
-                                android:hint="클릭해서 입력"
-                                android:paddingLeft="5dp"
-                                android:textSize="15dp"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:background="@color/purple_200"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.7"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.5"
-                            android:gravity="center"
                             android:text="그룹"
                             android:textSize="10dp"
                             android:textStyle="bold"/>
