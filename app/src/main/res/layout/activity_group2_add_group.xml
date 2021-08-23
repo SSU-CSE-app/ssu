@@ -72,7 +72,7 @@
                         app:srcCompat="@drawable/ic_baseline_add_a_photo_24"
                         tools:ignore="VectorDrawableCompat"
                         android:background="#00ff0000"
-                        android:layout_marginRight="15dp"></ImageView>
+                        android:layout_marginRight="15dp"/>
 
                     <EditText
                         android:id="@+id/add_group_name"

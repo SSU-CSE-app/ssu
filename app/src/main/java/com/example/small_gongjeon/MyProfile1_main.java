@@ -46,11 +46,44 @@ public class MyProfile1_main extends Fragment implements View.OnClickListener{
         btn_myprofile_inquiry = (ImageButton)view.findViewById(R.id.btn_myprofile_inquiry);
         btn_myprofile_inquiry.setOnClickListener(this);
 
-        //그룹 이미지 추가
+        //프로필 이미지 불러오기
+        String photo = Main.userPhoto;
+        Integer photoID = 0;
         profile_iv = view.findViewById(R.id.profile_picture);
+        switch (photo) {
+            case "1" :
+                photoID = R.drawable.group_profile_1_face;
+                break;
+            case "2" :
+                photoID = R.drawable.group_profile_2_smile;
+                break;
+            case "3" :
+                photoID = R.drawable.profile_3_bigsmile;
+                break;
+            case "4" :
+                photoID = R.drawable.profile_4_sad;
+                break;
+            case "5" :
+                photoID = R.drawable.profile_5_smallsad;
+                break;
+            case "6" :
+                photoID = R.drawable.profile_6_smallsmlie;
+                break;
+            case "7" :
+                photoID = R.drawable.profile_7_sick;
+                break;
+            case "8" :
+                photoID = R.drawable.profile_8_bad;
+                break;
+            case "9" :
+                photoID = R.drawable.profile_9_default;
+                break;
+
+        }
+        profile_iv.setImageResource(photoID);
         profile_iv.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) {    // TODO : 클릭한 사진 따라 1~9 DB로 보내기
                 getActivity().startActivity(new Intent(getActivity(), MyProfile5_AddProfileImage.class));
 
             }
