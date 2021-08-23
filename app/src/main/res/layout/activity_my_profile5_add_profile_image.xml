@@ -23,9 +23,11 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:text="프로필 이미지"
+            android:textColor="@color/white"
             android:textSize="25dp"
             android:gravity="center"
-            android:textStyle="bold"></TextView>
+            android:textStyle="bold"
+            android:background="#b0c8cc"></TextView>
 
 
         <LinearLayout
@@ -33,106 +35,120 @@
             android:layout_height="0dp"
             android:layout_weight="4"
             android:weightSum="3"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="#989898">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_weight="3"
                 android:weightSum="3"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:background="@color/white">
 
-                <ImageView
-                    android:id="@+id/image_face"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/group_profile_1_face"></ImageView>
+                    android:weightSum="3"
+                    android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/image_smile"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/group_profile_2_smile"></ImageView>
+                    <ImageView
+                        android:id="@+id/image_face"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/group_profile_1_face"></ImageView>
 
-                <ImageView
-                    android:id="@+id/image_bigsmile"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    <ImageView
+                        android:id="@+id/image_smile"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/group_profile_2_smile"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/image_bigsmile"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/profile_3_bigsmile"></ImageView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/profile_3_bigsmile"></ImageView>
+                    android:weightSum="3"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image_sad"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/profile_4_sad"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/image_smallsad"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/profile_5_smallsad"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/image_smallsmile"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/profile_6_smallsmlie"></ImageView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="3"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image_sick"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/profile_7_sick"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/image_bad"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/profile_8_bad"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/image_default"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/profile_9_default"></ImageView>
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:weightSum="3"
-                android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/image_sad"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/profile_4_sad"></ImageView>
-
-                <ImageView
-                    android:id="@+id/image_smallsad"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/profile_5_smallsad"></ImageView>
-
-                <ImageView
-                    android:id="@+id/image_smallsmile"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/profile_6_smallsmlie"></ImageView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:weightSum="3"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/image_sick"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/profile_7_sick"></ImageView>
-
-                <ImageView
-                    android:id="@+id/image_bad"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/profile_8_bad"></ImageView>
-
-                <ImageView
-                    android:id="@+id/image_default"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/profile_9_default"></ImageView>
-
-            </LinearLayout>
 
 
         </LinearLayout>

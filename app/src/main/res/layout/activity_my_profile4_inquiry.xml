@@ -22,7 +22,7 @@
             android:layout_gravity="top"
             app:srcCompat="@drawable/ic_baseline_close_24"
             tools:ignore="VectorDrawableCompat"
-            android:background="#F00"></ImageButton>
+            android:background="#6c6c6c"></ImageButton>
 
     </LinearLayout>
 
@@ -33,44 +33,57 @@
         android:weightSum="6.9"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.6"
-            android:text="문의"
-            android:textStyle="bold"
-            android:textSize="30dp"
-            android:paddingLeft="12dp"
-            android:gravity="center|left"></TextView>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.2"></View>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:weightSum="4"
-            android:layout_weight="5.1">
+            android:layout_weight="6.9"
+            android:weightSum="6.9"
+            android:orientation="vertical"
+            android:background="@color/white">
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"></View>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.6"
+                android:text="∴  문의"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:paddingLeft="15dp"
+                android:background="@drawable/profile_outline2"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center|left"></TextView>
 
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="3.6"
-                android:hint="문의내용 작성"></EditText>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                android:layout_weight="5.1"
+                android:background="@drawable/profile_outline">
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2"></View>
-        </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"></View>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.6"
+                    android:hint="  문의내용 작성"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/white"></EditText>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"></View>
+
+             </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -91,33 +104,38 @@
                 android:orientation="horizontal"
                 android:weightSum="4">
 
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"></View>
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="3.8"
-                    android:gravity="right|center">
+                    android:layout_weight="3.6"
+                    android:gravity="right|center"
+                    android:background="@color/white">
+
 
                     <ImageButton
                         android:layout_width="100dp"
-                        android:layout_height="60dp"></ImageButton>
+                        android:layout_height="60dp"
+                        android:background="#f0f0f0"
+                        android:src="@drawable/profile2_send"></ImageButton>
                 </LinearLayout>
 
                 <View
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"></View>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"></View>
+
             </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.2"></View>
-
-
         </LinearLayout>
-
-
     </LinearLayout>
-
-
 </LinearLayout>
