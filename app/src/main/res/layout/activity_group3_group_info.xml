@@ -63,7 +63,7 @@
                     android:layout_weight="1"
                     android:orientation="horizontal">
 
-                    <ImageButton
+                    <ImageView
                         android:id="@+id/add_group_image_btn"
                         android:layout_width="94dp"
                         android:layout_height="94dp"/>

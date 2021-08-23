@@ -232,11 +232,33 @@ public class Friend1_main extends Fragment implements View.OnClickListener{
 
                 switch (photo) {
                     case "1" :
-                        photoID = R.drawable.ic_android_black_50;
+                        photoID = R.drawable.group_profile_1_face;
                         break;
                     case "2" :
-                        photoID = R.drawable.ic_baseline_adb_50;
+                        photoID = R.drawable.group_profile_2_smile;
                         break;
+                    case "3" :
+                        photoID = R.drawable.profile_3_bigsmile;
+                        break;
+                    case "4" :
+                        photoID = R.drawable.profile_4_sad;
+                        break;
+                    case "5" :
+                        photoID = R.drawable.profile_5_smallsad;
+                        break;
+                    case "6" :
+                        photoID = R.drawable.profile_6_smallsmlie;
+                        break;
+                    case "7" :
+                        photoID = R.drawable.profile_7_sick;
+                        break;
+                    case "8" :
+                        photoID = R.drawable.profile_8_bad;
+                        break;
+                    case "9" :
+                        photoID = R.drawable.profile_9_default;
+                        break;
+
                 }
 
                 Friend friend = new Friend();
