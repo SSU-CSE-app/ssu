@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -61,6 +62,7 @@ public class AlarmMainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             this.aSwitch = (Switch) view.findViewById(R.id.switch_alarm_main_individual_alarm);
             this.day = (TextView) view.findViewById(R.id.tv_alarm_main_individual_repeat_day);
             this.btn_delete_ind_alarm = (ImageButton) view.findViewById(R.id.btn_delete_ind_alarm);
+
         }
     }
 
@@ -136,6 +138,59 @@ public class AlarmMainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                     DeleteIndAlarm deleteIndAlarm = new DeleteIndAlarm(key_userId,key_alarmTime, reponseListner);
                     RequestQueue queue = Volley.newRequestQueue(view.getContext());
                     queue.add(deleteIndAlarm);
+                }
+            });
+
+            holder_ind.aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                    String key_userId = Main.userID;
+                    String key_alarmTime = alarm_Time;
+                    String key_isPar = "0";
+                    if(isChecked){
+                        key_isPar = "1";
+                    }
+                    else{
+                        key_isPar = "0";
+                    }
+
+                    System.out.println("key_userId :"+key_userId);
+                    System.out.println("key_alarmTime :"+key_alarmTime);
+                    System.out.println("key_isPar :"+key_isPar);
+
+                    Response.Listener<String> reponseListner = new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            String TAG_JSON="webnautes";
+                            try {
+                                System.out.println("response :\n" + response);
+                                JSONObject jsonObject = new JSONObject(response);
+                                System.out.println("jsonObject : "+jsonObject);
+                                JSONObject keyJsonObject = jsonObject.getJSONObject(TAG_JSON);
+                                System.out.println("keyJsonObject : "+keyJsonObject);
+
+                                boolean isSucceed = keyJsonObject.getBoolean("success");
+
+                                if(isSucceed){  // 변경 성공
+                                    System.out.println("변경 성공");
+//                                    Toast.makeText(getApplicationContext(), "그룹을 탈퇴하였습니다.", Toast.LENGTH_SHORT).show();
+                                }
+                                else{       // 실패
+                                    System.out.println("변경 실패");
+//                                    Toast.makeText(getApplicationContext(), "그룹 탈퇴에 실패하였습니다.", Toast.LENGTH_SHORT).show();
+                                }
+
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+                        }
+                    };
+
+
+                    SetIndIsPar setIndIsPar = new SetIndIsPar(key_userId,key_alarmTime,key_isPar , reponseListner);
+                    RequestQueue queue = Volley.newRequestQueue(compoundButton.getContext());
+                    queue.add(setIndIsPar);
                 }
             });
         }

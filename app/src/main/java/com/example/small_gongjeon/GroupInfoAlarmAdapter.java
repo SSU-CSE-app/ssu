@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Switch;
@@ -76,13 +77,13 @@ public class GroupInfoAlarmAdapter extends RecyclerView.Adapter<GroupInfoAlarmAd
                 String key_groupName = Main.currGroup;
                 String key_alarmTime = alarm_Time;
 
-                System.out.println("key_groupName :"+key_groupName);
-                System.out.println("key_alarmTime :"+key_alarmTime);
+                System.out.println("key_groupName :" + key_groupName);
+                System.out.println("key_alarmTime :" + key_alarmTime);
 
                 Response.Listener<String> reponseListner = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        String TAG_JSON="webnautes";
+                        String TAG_JSON = "webnautes";
                         try {
                             System.out.println("delete groupAlarm\n" + response);
 
@@ -90,11 +91,10 @@ public class GroupInfoAlarmAdapter extends RecyclerView.Adapter<GroupInfoAlarmAd
 
                             boolean isSucceed = jsonObject.getBoolean("success");
 
-                            if(isSucceed){  // 삭제 성공
+                            if (isSucceed) {  // 삭제 성공
                                 System.out.println("삭제 완료");
 //                                    Toast.makeText(getApplicationContext(), "그룹을 탈퇴하였습니다.", Toast.LENGTH_SHORT).show();
-                            }
-                            else{       // 실패
+                            } else {       // 실패
                                 System.out.println("삭제 실패");
 //                                    Toast.makeText(getApplicationContext(), "그룹 탈퇴에 실패하였습니다.", Toast.LENGTH_SHORT).show();
                             }
@@ -107,9 +107,59 @@ public class GroupInfoAlarmAdapter extends RecyclerView.Adapter<GroupInfoAlarmAd
                 };
 
 
-                DeleteGroupAlarm deleteGroupAlarm = new DeleteGroupAlarm(key_groupName,key_alarmTime, reponseListner);
+                DeleteGroupAlarm deleteGroupAlarm = new DeleteGroupAlarm(key_groupName, key_alarmTime, reponseListner);
                 RequestQueue queue = Volley.newRequestQueue(view.getContext());
                 queue.add(deleteGroupAlarm);
+            }
+        });
+
+        viewholder.alarm_switch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                String key_userId = Main.userID;
+                String key_alarmTime = alarm_Time;
+                String key_groupName = Main.currGroup;
+                String key_isPar = "0";
+                if (isChecked) {
+                    key_isPar = "1";
+                } else {
+                    key_isPar = "0";
+                }
+
+//                System.out.println("key_userId :"+key_userId);
+//                System.out.println("key_alarmTime :"+key_alarmTime);
+//                System.out.println("key_isPar :"+key_isPar);
+
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        String TAG_JSON = "webnautes";
+                        try {
+                            System.out.println("response :\n" + response);
+                            JSONObject jsonObject = new JSONObject(response);
+                            System.out.println("jsonObject : " + jsonObject);
+                            JSONObject keyJsonObject = jsonObject.getJSONObject(TAG_JSON);
+                            System.out.println("keyJsonObject : " + keyJsonObject);
+
+                            boolean isSucceed = keyJsonObject.getBoolean("success");
+
+                            if (isSucceed) {  // 변경 성공
+                                System.out.println("변경 성공");
+//                                    Toast.makeText(getApplicationContext(), "그룹을 탈퇴하였습니다.", Toast.LENGTH_SHORT).show();
+                            } else {       // 실패
+                                System.out.println("변경 실패");
+//                                    Toast.makeText(getApplicationContext(), "그룹 탈퇴에 실패하였습니다.", Toast.LENGTH_SHORT).show();
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                };
+                SetGroupIsPar setGroupIsPar = new SetGroupIsPar(key_groupName, key_userId, key_alarmTime, key_isPar, responseListener);
+                RequestQueue queue = Volley.newRequestQueue(compoundButton.getContext());
+                queue.add(setGroupIsPar);
             }
         });
     }
