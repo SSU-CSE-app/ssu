@@ -4,12 +4,21 @@ import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -29,6 +38,7 @@ public class GroupInfoAlarmAdapter extends RecyclerView.Adapter<GroupInfoAlarmAd
         protected TextView alarm_participates;
         protected TextView alarm_time;
         protected Switch alarm_switch;
+        protected ImageButton btn_delete_group_alarm;
 //        protected ImageView alarm_imageView;
 
 
@@ -38,6 +48,7 @@ public class GroupInfoAlarmAdapter extends RecyclerView.Adapter<GroupInfoAlarmAd
             this.alarm_participates = (TextView) view.findViewById(R.id.tv_group_info_alarm_participants);
             this.alarm_time = (TextView) view.findViewById(R.id.tv_group_info_alarm_time);
             this.alarm_switch = (Switch) view.findViewById(R.id.sw_group_info_alarm_switch);
+            this.btn_delete_group_alarm = (ImageButton) view.findViewById(R.id.btn_delete_group_alarm);
 //            this.alarm_imageView = (ImageView) view.findViewById(R.id.iv_group_info_image);
         }
     }
@@ -57,7 +68,50 @@ public class GroupInfoAlarmAdapter extends RecyclerView.Adapter<GroupInfoAlarmAd
         viewholder.alarm_participates.setText(mList.get(position).getParticipates());
         viewholder.alarm_time.setText(mList.get(position).getTime());
         viewholder.alarm_switch.setChecked(mList.get(position).getisChecked());
-        System.out.println("ischecked :"+mList.get(position).getisChecked());
+        String alarm_Time = mList.get(position).getTime();
+
+        viewholder.btn_delete_group_alarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String key_groupName = Main.currGroup;
+                String key_alarmTime = alarm_Time;
+
+                System.out.println("key_groupName :"+key_groupName);
+                System.out.println("key_alarmTime :"+key_alarmTime);
+
+                Response.Listener<String> reponseListner = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        String TAG_JSON="webnautes";
+                        try {
+                            System.out.println("delete groupAlarm\n" + response);
+
+                            JSONObject jsonObject = new JSONObject(response);
+
+                            boolean isSucceed = jsonObject.getBoolean("success");
+
+                            if(isSucceed){  // 삭제 성공
+                                System.out.println("삭제 완료");
+//                                    Toast.makeText(getApplicationContext(), "그룹을 탈퇴하였습니다.", Toast.LENGTH_SHORT).show();
+                            }
+                            else{       // 실패
+                                System.out.println("삭제 실패");
+//                                    Toast.makeText(getApplicationContext(), "그룹 탈퇴에 실패하였습니다.", Toast.LENGTH_SHORT).show();
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                };
+
+
+                DeleteGroupAlarm deleteGroupAlarm = new DeleteGroupAlarm(key_groupName,key_alarmTime, reponseListner);
+                RequestQueue queue = Volley.newRequestQueue(view.getContext());
+                queue.add(deleteGroupAlarm);
+            }
+        });
     }
 
     @Override
