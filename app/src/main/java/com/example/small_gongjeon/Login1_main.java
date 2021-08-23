@@ -14,6 +14,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -46,6 +47,7 @@ public class Login1_main extends AppCompatActivity {
             }
         });
 
+        // 로그인 버튼 클릭 시 수행
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,15 +58,25 @@ public class Login1_main extends AppCompatActivity {
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        String TAG_JSON="webnautes";
                         try {
                             // TODO : 인코딩 문제때문에 한글 DB인 경우 로그인 불가
-                            System.out.println("hongchul" + response);
+                            System.out.println("response :\n" + response);
                             JSONObject jsonObject = new JSONObject(response);
-                            boolean success = jsonObject.getBoolean("success");
+                            System.out.println("jsonObject : "+jsonObject);
+                            JSONObject keyJsonObject = jsonObject.getJSONObject(TAG_JSON);
+                            System.out.println("keyJsonObject : "+keyJsonObject);
+//                            JSONArray jsonArray = jsonObject.getJSONArray(TAG_JSON);
+//                            System.out.println("jsonAraay : "+jsonArray);
+//                            System.out.println("jsonLength : "+jsonArray.length());
+
+                            boolean success = keyJsonObject.getBoolean("success");
                             if (success) { // 로그인에 성공한 경우
-                                String userID = jsonObject.getString("userID");
-                                String userPass = jsonObject.getString("userPassword");
-                                String userName = jsonObject.getString("userName");
+                                String userID = keyJsonObject.getString("userId");
+                                String userPass = keyJsonObject.getString("userPassword");
+                                String userName = keyJsonObject.getString("userName");
+                                String userPhoto = keyJsonObject.getString("userPhoto");
+                                String userStatus = keyJsonObject.getString("userStatus");
 
                                 Toast.makeText(getApplicationContext(),"로그인에 성공하였습니다.",Toast.LENGTH_SHORT).show();
 
@@ -73,6 +85,9 @@ public class Login1_main extends AppCompatActivity {
                                 intent.putExtra("userID", userID);
                                 intent.putExtra("userPass", userPass);
                                 intent.putExtra("userName", userName);
+                                intent.putExtra("userPhoto", userPhoto);
+                                intent.putExtra("userStatus", userStatus);
+
                                 startActivity(intent);
                             } else { // 로그인에 실패한 경우
                                 Toast.makeText(getApplicationContext(),"로그인에 실패하였습니다.",Toast.LENGTH_SHORT).show();
