@@ -117,13 +117,12 @@ public class Fragment2_group extends Fragment {
         spinner_group = (Spinner)view.findViewById(R.id.spinner_select_group);
 
 
-        // 개인 알람 추가 버튼 누를시 실행
+        // 그룹 알람 추가 버튼 누를시 실행
         btn_addAlarm.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 String userId = Main.userID;
                 String alarmTime = time.getCurrentHour().toString()+":"+time.getCurrentMinute().toString();
-                //groupName = "group_01"; //TODO 그룹 선택 기능 구현하면 바꾸기
                 groupName = spinner_group.getSelectedItem().toString();
                 // 요일 숫자로 변환
                 if(Mon.isChecked()){

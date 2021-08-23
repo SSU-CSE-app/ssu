@@ -69,7 +69,7 @@
                         android:gravity="center">
 
                         <ImageButton
-                            android:id="@+id/btn_delete_alarm"
+                            android:id="@+id/btn_delete_ind_alarm"
                             android:layout_width="35dp"
                             android:layout_height="35dp"
                             android:background="@drawable/ic_baseline_delete_forever_30">
