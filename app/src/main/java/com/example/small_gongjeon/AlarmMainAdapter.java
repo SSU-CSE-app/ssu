@@ -50,12 +50,14 @@ public class AlarmMainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     class CustomViewHolder_AlarmMain_Ind extends RecyclerView.ViewHolder{
         protected TextView time;
         protected Switch aSwitch;
+        protected TextView day;
         protected ImageButton btn_delete_ind_alarm;
 
         public CustomViewHolder_AlarmMain_Ind(View view) {
             super(view);
             this.time = (TextView) view.findViewById(R.id.tv_alarm_main_individual_alarm_time);
             this.aSwitch = (Switch) view.findViewById(R.id.switch_alarm_main_individual_alarm);
+            this.day = (TextView) view.findViewById(R.id.tv_alarm_main_individual_repeat_day);
             this.btn_delete_ind_alarm = (ImageButton) view.findViewById(R.id.btn_delete_ind_alarm);
         }
     }
@@ -89,6 +91,7 @@ public class AlarmMainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             CustomViewHolder_AlarmMain_Ind holder_ind = (CustomViewHolder_AlarmMain_Ind) viewholder;
             holder_ind.time.setText(mlist.get(position).getTime());
             holder_ind.aSwitch.setChecked(mlist.get(position).getIsPar());
+            holder_ind.day.setText(mlist.get(position).getDay());
 
             String alarm_Time = mlist.get(position).getTime();
 

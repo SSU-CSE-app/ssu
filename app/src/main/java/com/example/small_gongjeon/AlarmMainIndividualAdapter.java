@@ -25,11 +25,13 @@ public class AlarmMainIndividualAdapter extends RecyclerView.Adapter<AlarmMainIn
     class CustomViewHolder_AlarmMainIndividual extends RecyclerView.ViewHolder{
         protected TextView Time;
         protected Switch aSwitch;
+        protected TextView day;
 
         public CustomViewHolder_AlarmMainIndividual(View view) {
             super(view);
             this.Time = (TextView) view.findViewById(R.id.tv_alarm_main_individual_alarm_time);
             this.aSwitch = (Switch) view.findViewById(R.id.switch_alarm_main_individual_alarm);
+            this.day = (TextView) view.findViewById(R.id.tv_alarm_main_individual_repeat_day);
         }
     }
 
@@ -45,6 +47,8 @@ public class AlarmMainIndividualAdapter extends RecyclerView.Adapter<AlarmMainIn
     public void onBindViewHolder(@NonNull CustomViewHolder_AlarmMainIndividual viewholder, int position) {
         viewholder.Time.setText(mList.get(position).getTime());
         viewholder.aSwitch.setChecked(mList.get(position).getIsPar());
+        viewholder.day.setText(mList.get(position).getDay());
+
     }
     @Override
     public int getItemCount() {

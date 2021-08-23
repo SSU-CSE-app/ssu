@@ -235,6 +235,34 @@ public class Alarm1_main extends Fragment implements View.OnClickListener {
                 String name = item.getString(TAG_NAME);
                 String time = item.getString(TAG_TIME);
                 Integer day = item.getInt(TAG_DAY);
+                String temp_day = Integer.toString(day);
+                System.out.println("템프데이: " + temp_day);
+                String repeat_day = "";
+                char[] digit = temp_day.toCharArray();
+
+                if(temp_day.equals("1111111")) {
+                    repeat_day = "매일";
+                }
+                else{
+                    if(digit[0] == '1')
+                        repeat_day = "월";
+                    if(digit[1] == '1')
+                        repeat_day = repeat_day + " 화";
+                    if(digit[2] == '1')
+                        repeat_day = repeat_day + " 수";
+                    if(digit[3] == '1')
+                        repeat_day = repeat_day + " 목";
+                    if(digit[4] == '1')
+                        repeat_day = repeat_day + " 금";
+                    if(digit[5] == '1')
+                        repeat_day = repeat_day + " 토";
+                    if(digit[6] == '1')
+                        repeat_day = repeat_day + " 일";
+
+                }
+                System.out.println("리핏데이: " + repeat_day);
+
+
                 Boolean isPar;
                 if(item.getString(TAG_ISPAR).equals("1")){ isPar = true; }else { isPar = false;}
 
@@ -243,6 +271,7 @@ public class Alarm1_main extends Fragment implements View.OnClickListener {
                 alarmMain.setName(name);
                 alarmMain.setTime(time);
                 alarmMain.setPar(isPar);
+                alarmMain.setDay(repeat_day);
 
                 mainArrayList.add(alarmMain);
                 mainAdapter.notifyDataSetChanged();

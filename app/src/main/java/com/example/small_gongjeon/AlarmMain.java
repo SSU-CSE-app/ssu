@@ -6,7 +6,7 @@ import android.widget.Switch;
 public class AlarmMain {
     private String Name;
     private String Time;
-    private Number day;
+    private String day;
     private boolean isPar;
     private boolean isTer;
 
@@ -24,10 +24,10 @@ public class AlarmMain {
         Name = name;
     }
 
-    public Number getDay() {
+    public String getDay() {
         return day;
     }
-    public void setDay(Number day) {
+    public void setDay(String day) {
         this.day = day;
     }
 
