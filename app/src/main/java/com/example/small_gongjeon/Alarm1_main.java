@@ -51,6 +51,7 @@ public class Alarm1_main extends Fragment implements View.OnClickListener {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        System.out.println("알람 메인으로 전환!");
         view=inflater.inflate(R.layout.activity_alarm1_main,container,false);
         btn_plus_alarm = (ImageButton)view.findViewById(R.id.btn_plus_alarm);
         btn_plus_alarm.setOnClickListener(this);
@@ -221,6 +222,8 @@ public class Alarm1_main extends Fragment implements View.OnClickListener {
         String TAG_DAY = "alarmDay";
         String TAG_ISPAR = "isPar";
         String TAG_ISTER = "isTer";
+
+        mainArrayList.clear();
 
         try {
             JSONObject jsonObject = new JSONObject(mJsonString);
