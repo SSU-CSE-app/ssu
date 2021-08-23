@@ -26,6 +26,9 @@ public class Main extends AppCompatActivity {
     private MyProfile1_main myprofile1_main;
     public static String userID;
     public static String userName;
+    public static String userPhoto;
+    public static String userStatus;
+
     public static String currGroup;    //  그룹 정보 창 띄울 때 어떤 그룹 정보 띄울지
 
     @Override
@@ -41,6 +44,9 @@ public class Main extends AppCompatActivity {
         Intent intent = getIntent();
         userID = intent.getStringExtra("userID");
         userName = intent.getStringExtra("userName");
+        userPhoto = intent.getStringExtra("userPhoto");
+        userStatus = intent.getStringExtra("userStatus");
+
         currGroup = "default";
 
         NavigationBarView navigationView = findViewById(R.id.navigationView);

@@ -20,6 +20,7 @@ public class MyProfile1_main extends Fragment implements View.OnClickListener{
     private ImageButton btn_myprofile_guide;
     private ImageButton btn_myprofile_inquiry;
     private TextView tv_name;
+    private TextView tv_status;
 
     //프로필 사진 추가 관련 선언
     public static int profile_image_sig;
@@ -33,6 +34,10 @@ public class MyProfile1_main extends Fragment implements View.OnClickListener{
         // 프로필 닉네임 보이게 하기
         tv_name = view.findViewById(R.id.tv_my_profile_name);
         tv_name.setText(Main.userName);
+
+        tv_status = view.findViewById(R.id.tv_my_profile_status);
+        tv_status.setText(Main.userStatus);
+
 
         btn_myprofile_notice = (ImageButton)view.findViewById(R.id.btn_myprofile_notice);
         btn_myprofile_notice.setOnClickListener(this);
