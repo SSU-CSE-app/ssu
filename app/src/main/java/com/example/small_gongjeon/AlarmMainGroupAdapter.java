@@ -23,11 +23,13 @@ public class AlarmMainGroupAdapter extends RecyclerView.Adapter<AlarmMainGroupAd
     class CustomViewHolder_AlarmMainGroup extends  RecyclerView.ViewHolder{
         protected TextView name;
         protected TextView Time;
+        protected TextView day;
 
         public CustomViewHolder_AlarmMainGroup(View view) {
             super(view);
             this.name = (TextView) view.findViewById(R.id.tv_alarm_main_group_alarm_name);
             this.Time = (TextView) view.findViewById(R.id.tv_alarm_main_group_alarm_time);
+            this.day = (TextView) view.findViewById(R.id.tv_alarm_main_group_repeat_day);
 
         }
     }
@@ -45,6 +47,7 @@ public class AlarmMainGroupAdapter extends RecyclerView.Adapter<AlarmMainGroupAd
 
         viewholder.name.setText(mList.get(position).getName());
         viewholder.Time.setText(mList.get(position).getTime());
+        viewholder.day.setText(mList.get(position).getDay());
     }
     @Override
     public int getItemCount() {
