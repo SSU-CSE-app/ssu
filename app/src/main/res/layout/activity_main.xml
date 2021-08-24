@@ -29,7 +29,8 @@
         app:itemTextColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/menu"
-        tools:layout_editor_absoluteX="1dp" />
+        tools:layout_editor_absoluteX="1dp"
+        android:background="@drawable/board_layout_bottom_bar"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

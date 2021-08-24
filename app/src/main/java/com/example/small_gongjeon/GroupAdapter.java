@@ -67,7 +67,7 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.CustomViewHo
 
     @Override
     public CustomViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.listviewitem_group,null);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.listviewitem_group,viewGroup,false);
         CustomViewHolder viewHolder = new CustomViewHolder(view);
 
         return viewHolder;

@@ -93,7 +93,7 @@ public class FriendRequestAdapter extends RecyclerView.Adapter<FriendRequestAdap
 
     @Override
     public CustomViewHolder_request onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.listviewitem_friend_request,null);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.listviewitem_friend_request,viewGroup,false);
         CustomViewHolder_request viewHolder = new CustomViewHolder_request(view);
 
         return viewHolder;

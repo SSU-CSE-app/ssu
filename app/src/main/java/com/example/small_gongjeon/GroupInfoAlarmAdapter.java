@@ -57,7 +57,7 @@ public class GroupInfoAlarmAdapter extends RecyclerView.Adapter<GroupInfoAlarmAd
 
     @Override
     public GroupInfoAlarmAdapter.CustomViewHolder_GroupInfoAlarm onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.listviewitem_alarm_group_info,null);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.listviewitem_alarm_group_info,viewGroup,false);
         GroupInfoAlarmAdapter.CustomViewHolder_GroupInfoAlarm viewHolder = new GroupInfoAlarmAdapter.CustomViewHolder_GroupInfoAlarm(view);
 
         return viewHolder;
