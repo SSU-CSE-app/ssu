@@ -113,7 +113,7 @@
                         android:text="상태 메세지"
                         android:textStyle="bold"
                         android:textSize="20dp"
-                        android:paddingLeft="10dp"
+                        android:paddingLeft="20dp"
                         android:textColor="#6c6c6c"
                         android:layout_margin="10dp"
                         android:background="@drawable/round"
@@ -141,74 +141,59 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="6.1"
-                android:weightSum="6.1"
-                android:background="#989898"
-                android:orientation="vertical">
+                android:weightSum="6"
+                android:orientation="vertical"
+                android:background="#AAC9CC">
 
-                <LinearLayout
+                <Button
+                    android:id="@+id/btn_myprofile_notice"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="6.1"
-                    android:weightSum="6"
-                    android:layout_margin="7dp"
-                    android:orientation="vertical"
-                    android:background="@color/white">
+                    android:layout_weight="1"
+                    android:text=" 공지사항"
+                    android:textSize="23dp"
+                    android:textColor="#6c6c6c"
+                    android:drawableLeft="@drawable/notice_icon"
+                    android:textStyle="bold"
+                    android:gravity="left|center"
+                    android:background="@color/white"
+                    android:layout_marginTop="1dp"></Button>
 
-                    <Button
-                        android:id="@+id/btn_myprofile_notice"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:text="🔻 공지사항"
-                        android:textSize="23dp"
-                        android:textStyle="bold"
-                        android:textAlignment="textStart"
-                        android:gravity="start|center_vertical"
-                        android:backgroundTint="#AAC9CC"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="2dp"></Button>
+                <Button
+                    android:id="@+id/btn_myprofile_guide"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text=" 사용설명서"
+                    android:textSize="23dp"
+                    android:textColor="#6c6c6c"
+                    android:drawableLeft="@drawable/guide_icon"
+                    android:textStyle="bold"
+                    android:gravity="left|center"
+                    android:background="@color/white"
+                    android:layout_marginTop="1dp"></Button>
+                <Button
+                    android:id="@+id/btn_myprofile_inquiry"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text=" 문의"
+                    android:textSize="23dp"
+                    android:textColor="#6c6c6c"
+                    android:drawableLeft="@drawable/inquiry_icon"
+                    android:textStyle="bold"
+                    android:gravity="left|center"
+                    android:background="@color/white"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"></Button>
 
-                    <Button
-                        android:id="@+id/btn_myprofile_guide"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:text="🔻 가이드 및 사용법"
-                        android:textSize="23dp"
-                        android:textStyle="bold"
-                        android:textAlignment="textStart"
-                        android:gravity="start|center_vertical"
-                        android:backgroundTint="#AAC9CC"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginBottom="2dp"></Button>
-
-                    <Button
-                        android:id="@+id/btn_myprofile_inquiry"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:text="🔻 문의"
-                        android:textSize="23dp"
-                        android:textStyle="bold"
-                        android:textAlignment="textStart"
-                        android:gravity="start|center_vertical"
-                        android:backgroundTint="#AAC9CC"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginTop="2dp"></Button>
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="3"
-                        android:src="@drawable/start_alarm_together"
-                        android:scaleType="centerCrop"></ImageView>
-
-                </LinearLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/start_alarm_together"
+                    android:scaleType="centerCrop"></ImageView>
 
             </LinearLayout>
         </LinearLayout>

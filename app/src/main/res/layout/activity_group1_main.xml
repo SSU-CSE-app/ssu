@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        android:layout_weight="9"
+        android:layout_weight="10"
         android:weightSum="5">
 
         <View
@@ -49,7 +49,9 @@
                         android:text="그룹: 7"
                         android:textSize="20dp"
                         android:textStyle="bold"
-                        android:gravity="bottom|left"/>
+                        android:paddingLeft="15dp"
+                        android:gravity="center|left"
+                        android:background="@drawable/round_min"/>
                 </LinearLayout>
 
                 <View
@@ -68,7 +70,8 @@
                         android:id="@+id/btn_add_group"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:background="@color/purple_200"></ImageButton>
+                        android:background="@drawable/board_layout"
+                        android:src="@drawable/add"></ImageButton>
 
                 </LinearLayout>
 

@@ -17,4 +17,10 @@
         android:width="2dp"
         android:color="@android:color/darker_gray" />
 
+    <corners
+        android:topLeftRadius="60dp"
+        android:topRightRadius="60dp"
+        android:bottomLeftRadius="60dp"
+        android:bottomRightRadius="60dp"/>
+
 </shape>
