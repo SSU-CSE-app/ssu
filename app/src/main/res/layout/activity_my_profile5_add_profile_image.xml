@@ -27,7 +27,7 @@
             android:textSize="25dp"
             android:gravity="center"
             android:textStyle="bold"
-            android:background="#b0c8cc"></TextView>
+            android:background="#AAC9CC"></TextView>
 
 
         <LinearLayout

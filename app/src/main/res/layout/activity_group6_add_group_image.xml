@@ -23,9 +23,11 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:text="그룹 이미지"
+            android:textColor="@color/white"
             android:textSize="25dp"
             android:gravity="center"
-            android:textStyle="bold"></TextView>
+            android:textStyle="bold"
+            android:background="#AAC9CC"></TextView>
 
 
         <LinearLayout
@@ -33,107 +35,119 @@
             android:layout_height="0dp"
             android:layout_weight="4"
             android:weightSum="3"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="#989898">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_weight="3"
                 android:weightSum="3"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:background="@color/white">
 
-                <ImageView
-                    android:id="@+id/image_face"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/group_profile_1_face"></ImageView>
+                    android:weightSum="3"
+                    android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/image_smile"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/group_profile_2_smile"></ImageView>
+                    <ImageView
+                        android:id="@+id/image_face"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/group_profile_1_face"></ImageView>
 
-                <ImageView
-                    android:id="@+id/image_food"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    <ImageView
+                        android:id="@+id/image_smile"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/group_profile_2_smile"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/image_food"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/group_3_food"></ImageView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/group_3_food"></ImageView>
+                    android:weightSum="3"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image_travel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/group_4_travel"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/image_heart"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/group_5_heart"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/image_health"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/group_6_health"></ImageView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="3"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image_game"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/group_7_game"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/image_beer"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/group_8_beer"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/image_cloud"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/group_9_cloud"></ImageView>
+
+                </LinearLayout>
+
 
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:weightSum="3"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/image_travel"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/group_4_travel"></ImageView>
-
-                <ImageView
-                    android:id="@+id/image_heart"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/group_5_heart"></ImageView>
-
-                <ImageView
-                    android:id="@+id/image_health"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/group_6_health"></ImageView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:weightSum="3"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/image_game"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/group_7_game"></ImageView>
-
-                <ImageView
-                    android:id="@+id/image_beer"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/group_8_beer"></ImageView>
-
-                <ImageView
-                    android:id="@+id/image_cloud"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/group_9_cloud"></ImageView>
-
-            </LinearLayout>
-
 
         </LinearLayout>
 

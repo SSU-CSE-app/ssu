@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -16,9 +17,9 @@ import androidx.fragment.app.Fragment;
 
 public class MyProfile1_main extends Fragment implements View.OnClickListener{
     private View view;
-    private ImageButton btn_myprofile_notice;
-    private ImageButton btn_myprofile_guide;
-    private ImageButton btn_myprofile_inquiry;
+    private Button btn_myprofile_notice;
+    private Button btn_myprofile_guide;
+    private Button btn_myprofile_inquiry;
     private TextView tv_name;
     private TextView tv_status;
 
@@ -39,11 +40,11 @@ public class MyProfile1_main extends Fragment implements View.OnClickListener{
         tv_status.setText(Main.userStatus);
 
 
-        btn_myprofile_notice = (ImageButton)view.findViewById(R.id.btn_myprofile_notice);
+        btn_myprofile_notice = (Button)view.findViewById(R.id.btn_myprofile_notice);
         btn_myprofile_notice.setOnClickListener(this);
-        btn_myprofile_guide = (ImageButton)view.findViewById(R.id.btn_myprofile_guide);
+        btn_myprofile_guide = (Button)view.findViewById(R.id.btn_myprofile_guide);
         btn_myprofile_guide.setOnClickListener(this);
-        btn_myprofile_inquiry = (ImageButton)view.findViewById(R.id.btn_myprofile_inquiry);
+        btn_myprofile_inquiry = (Button)view.findViewById(R.id.btn_myprofile_inquiry);
         btn_myprofile_inquiry.setOnClickListener(this);
 
         //프로필 이미지 불러오기

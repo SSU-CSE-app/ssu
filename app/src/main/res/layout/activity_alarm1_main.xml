@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        android:layout_weight="9"
+        android:layout_weight="10"
         android:weightSum="5">
 
         <View
@@ -37,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@color/design_default_color_primary"
+                android:background="@drawable/round_min2"
                 android:orientation="vertical"
                 android:weightSum="1">
 
@@ -49,8 +49,9 @@
                     android:paddingLeft="12dp"
                     android:textSize="20dp"
                     android:gravity="center|left"
-                    android:text="오늘의 명언"
-                    android:textColor="#FFFF00"/>
+                    android:textStyle="bold"
+                    android:text="👑 오늘의 명언"
+                    android:textColor="#8000ff"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -59,8 +60,8 @@
                     android:textSize="18dp"
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="12dp"
-                    android:text="일찍일어나는 새가 벌레를 잡아먹는다."
-                    android:textColor="@android:color/white">
+                    android:text="일찍 일어나는 새가 벌레를 잡아먹는다."
+                    android:textColor="@android:color/black">
                 </TextView>
             </LinearLayout>
 
@@ -103,22 +104,33 @@
                         android:id="@+id/btn_plus_alarm"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:background="@color/purple_200"/>
+                        android:background="@drawable/add"/>
 
                 </LinearLayout>
 
             </LinearLayout>
 
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerview_alarm_main_list"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="6"
-                android:dividerHeight="20dp"
-                android:divider="#ffffff"/>
+                android:layout_weight="5.8"
+                android:weightSum="6"
+                android:orientation="vertical"
+                android:background="#AAC9CC">
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_alarm_main_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="6"
+                    android:dividerHeight="20dp"
+                    android:divider="#ffffff"
+                    android:layout_margin="6dp"
+                    android:padding="5dp"
+                    android:background="@drawable/start_alarm_together_810"/>
 
+            </LinearLayout>
 
         </LinearLayout>
 

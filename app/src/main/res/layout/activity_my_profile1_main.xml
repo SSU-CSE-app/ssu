@@ -63,26 +63,25 @@
                     <View
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="0.5"></View>
+                        android:layout_weight="0.4"></View>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="8"
-                        android:background="#b0c8cc"
+                        android:layout_weight="8.1"
+                        android:background="@drawable/round_min"
                         android:layout_margin="15dp">
 
                         <Button
                             android:id="@+id/tv_my_profile_name"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginLeft="7dp"
-                            android:layout_marginRight="7dp"
-                            android:backgroundTint="@color/white"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/round"
                             android:gravity="center"
                             android:text="이민지"
                             android:textColor="#6c6c6c"
-                            android:textSize="50dp"
+                            android:textSize="40dp"
                             android:textStyle="bold"></Button>
 
                     </LinearLayout>
@@ -113,11 +112,11 @@
                         android:layout_weight="8.9"
                         android:text="상태 메세지"
                         android:textStyle="bold"
-                        android:textSize="24dp"
+                        android:textSize="20dp"
+                        android:paddingLeft="10dp"
                         android:textColor="#6c6c6c"
-                        android:layout_marginRight="7dp"
-                        android:layout_marginLeft="7dp"
-                        android:background="@color/white"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/round"
                         android:gravity="center_vertical">
                     </TextView>
 
@@ -150,65 +149,68 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="6.1"
-                    android:weightSum="6.1"
+                    android:weightSum="6"
                     android:layout_margin="7dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:background="@color/white">
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/btn_myprofile_notice"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:src="@drawable/notice"
-                        android:scaleType="fitCenter"
-                        android:paddingTop="7dp"
-                        android:paddingBottom="7dp"
-                        android:paddingRight="270dp"
-                        android:background="@drawable/profile_outline">
+                        android:text="🔻 공지사항"
+                        android:textSize="23dp"
+                        android:textStyle="bold"
+                        android:textAlignment="textStart"
+                        android:gravity="start|center_vertical"
+                        android:backgroundTint="#AAC9CC"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="2dp"></Button>
 
-                    </ImageButton>
-
-                    <ImageButton
+                    <Button
                         android:id="@+id/btn_myprofile_guide"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:background="@drawable/profile_outline"
-                        android:src="@drawable/guide"
-                        android:scaleType="fitCenter"
-                        android:paddingTop="9dp"
-                        android:paddingBottom="9dp"
-                        android:paddingRight="220dp">
+                        android:text="🔻 가이드 및 사용법"
+                        android:textSize="23dp"
+                        android:textStyle="bold"
+                        android:textAlignment="textStart"
+                        android:gravity="start|center_vertical"
+                        android:backgroundTint="#AAC9CC"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"></Button>
 
-                    </ImageButton>
-
-                    <ImageButton
+                    <Button
                         android:id="@+id/btn_myprofile_inquiry"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:background="@drawable/profile_outline"
-                        android:src="@drawable/inquiry"
-                        android:scaleType="fitCenter"
-                        android:paddingTop="13dp"
-                        android:paddingBottom="13dp"
-                        android:paddingRight="290dp">
-
-                    </ImageButton>
+                        android:text="🔻 문의"
+                        android:textSize="23dp"
+                        android:textStyle="bold"
+                        android:textAlignment="textStart"
+                        android:gravity="start|center_vertical"
+                        android:backgroundTint="#AAC9CC"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="2dp"></Button>
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="3.1"
-                        android:src="@drawable/start_alarm_toghther"
+                        android:layout_weight="3"
+                        android:src="@drawable/start_alarm_together"
                         android:scaleType="centerCrop"></ImageView>
 
                 </LinearLayout>
 
             </LinearLayout>
         </LinearLayout>
-
-
     </LinearLayout>
-
 </LinearLayout>

@@ -9,5 +9,5 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:layout_weight="0.82"
-        android:src="@drawable/start_alarm_toghther"/>
+        android:src="@drawable/start_alarm_together"/>
 </LinearLayout>

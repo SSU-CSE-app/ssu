@@ -46,7 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.6"
-                android:text="∴  문의"
+                android:text="🔻  문의"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="25dp"

@@ -45,255 +45,273 @@
                     android:layout_height="match_parent"
                     android:layout_weight="3"
                     android:orientation="vertical"
-                    android:weightSum="6.2">
+                    android:weightSum="3"
+                    android:background="#AAC9CC">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="0.5"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="시간"
-                            android:textSize="20dp"
-                            android:textStyle="bold"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1">
-
-                        <TimePicker
-                            android:id="@+id/tp_add_ind_alarm_time"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:timePickerMode="spinner"/>
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:background="@color/purple_200"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.7"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.5"
-                            android:gravity="center"
-                            android:text="요일"
-                            android:textSize="15dp"
-                            android:textStyle="bold"/>
+                        android:layout_weight="3"
+                        android:orientation="vertical"
+                        android:weightSum="6.2"
+                        android:background="#f0f0f0"
+                        android:layout_margin="5dp">
 
                         <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:orientation="vertical">
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:orientation="horizontal">
 
-                            <LinearLayout
+                            <TextView
                                 android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="0.5"
-                                android:orientation="horizontal">
+                                android:layout_height="match_parent"
+                                android:text="시간"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"/>
 
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.5"
-                                    android:gravity="center"
-                                    android:text="월"/>
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.5"
-                                    android:gravity="center"
-                                    android:text="화"/>
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.5"
-                                    android:gravity="center"
-                                    android:text="수"/>
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.5"
-                                    android:gravity="center"
-                                    android:text="목"/>
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.5"
-                                    android:gravity="center"
-                                    android:text="금"/>
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.5"
-                                    android:gravity="center"
-                                    android:text="토"/>
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.5"
-                                    android:gravity="center"
-                                    android:text="일"/>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="0.5"
-                                android:orientation="horizontal">
-
-                                <CheckBox
-                                    android:id="@+id/cb_add_ind_alarm_MON"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.5"/>
-
-                                <CheckBox
-                                    android:id="@+id/cb_add_ind_alarm_TUE"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.5"/>
-
-                                <CheckBox
-                                    android:id="@+id/cb_add_ind_alarm_WED"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.5"/>
-
-                                <CheckBox
-                                    android:id="@+id/cb_add_ind_alarm_THU"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.5"/>
-
-                                <CheckBox
-                                    android:id="@+id/cb_add_ind_alarm_FRI"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.5"/>
-
-                                <CheckBox
-                                    android:id="@+id/cb_add_ind_alarm_SAT"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.5"/>
-
-                                <CheckBox
-                                    android:id="@+id/cb_add_ind_alarm_SUN"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="0.5"/>
-                            </LinearLayout>
                         </LinearLayout>
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:background="@color/purple_200"></View>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.7"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.5"
-                            android:gravity="center"
-                            android:text="다시알림"
-                            android:textSize="10dp"
-                            android:textStyle="bold"></TextView>
 
                         <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <TimePicker
+                                android:id="@+id/tp_add_ind_alarm_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:timePickerMode="spinner"
+                                android:background="@color/white"/>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="#AAC9CC"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.7"
                             android:orientation="horizontal"
-                            android:weightSum="0.7">
+                            android:weightSum="3">
 
-                            <CheckBox
-                                android:id="@+id/cb_add_ind_alarm_repeat"
+                            <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.1"
-                                android:layout_gravity="center"/>
-                            <Spinner
-                                android:id="@+id/spinner_add_ind_alarm_repeatMin"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="0.3"/>
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:text="요일"
+                                android:textSize="15dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"/>
 
-                            <Spinner
-                                android:id="@+id/spinner_add_ind_alarm_repeatTime"
+                            <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.3"/>
+                                android:layout_weight="2.5"
+                                android:orientation="vertical"
+                                android:background="@color/white">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="0.5"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="월"/>
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="화"/>
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="수"/>
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="목"/>
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="금"/>
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="토"/>
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center"
+                                        android:text="일"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="0.5"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/cb_add_ind_alarm_MON"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"/>
+
+                                    <CheckBox
+                                        android:id="@+id/cb_add_ind_alarm_TUE"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"/>
+
+                                    <CheckBox
+                                        android:id="@+id/cb_add_ind_alarm_WED"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"/>
+
+                                    <CheckBox
+                                        android:id="@+id/cb_add_ind_alarm_THU"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"/>
+
+                                    <CheckBox
+                                        android:id="@+id/cb_add_ind_alarm_FRI"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"/>
+
+                                    <CheckBox
+                                        android:id="@+id/cb_add_ind_alarm_SAT"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"/>
+
+                                    <CheckBox
+                                        android:id="@+id/cb_add_ind_alarm_SUN"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"/>
+                                </LinearLayout>
+                            </LinearLayout>
                         </LinearLayout>
 
-                    </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="#AAC9CC"></View>
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:background="@color/purple_200"></View>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.7"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:text="다시알림"
+                                android:textSize="10dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"></TextView>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2.5"
+                                android:orientation="horizontal"
+                                android:weightSum="0.7"
+                                android:background="@color/white">
+
+                                <CheckBox
+                                    android:id="@+id/cb_add_ind_alarm_repeat"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.1"
+                                    android:layout_gravity="center"/>
+                                <Spinner
+                                    android:id="@+id/spinner_add_ind_alarm_repeatMin"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.3"/>
+
+                                <Spinner
+                                    android:id="@+id/spinner_add_ind_alarm_repeatTime"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.3"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="#AAC9CC"></View>
 
 
 
 
 
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:layout_weight="1.9"
-                        android:visibility="invisible"></View>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.7"
-                        android:orientation="horizontal"
-                        android:gravity="right|center_vertical"
-                        android:weightSum="3">
 
                         <View
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:layout_weight="2"
+                            android:layout_weight="1.9"
                             android:visibility="invisible"></View>
 
-                        <ImageButton
-                            android:id="@+id/btn_add_ind_alarm"
-                            android:layout_width="100dp"
-                            android:layout_height="60dp"/>
-                    </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.7"
+                            android:orientation="horizontal"
+                            android:gravity="right|center_vertical"
+                            android:weightSum="3"
+                            android:background="@color/white">
 
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:visibility="invisible"></View>
+
+                            <ImageButton
+                                android:id="@+id/btn_add_ind_alarm"
+                                android:layout_width="100dp"
+                                android:layout_height="60dp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
                 </LinearLayout>
 
 

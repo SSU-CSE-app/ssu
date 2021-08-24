@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.55"
-            android:text="∴ 공지사항"
+            android:text="🔻 공지사항"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="25dp"
@@ -76,7 +76,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.998"
-                    android:background="@drawable/start_alarm_toghther"/>
+                    android:background="@drawable/start_alarm_together"/>
 
                 <View
                     android:layout_width="0dp"
