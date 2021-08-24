@@ -36,7 +36,7 @@ public class AlarmMainGroupAdapter extends RecyclerView.Adapter<AlarmMainGroupAd
 
     @Override
     public CustomViewHolder_AlarmMainGroup onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.listviewitem_alarm_group,null);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.listviewitem_alarm_group,viewGroup,false);
         CustomViewHolder_AlarmMainGroup viewHolder = new CustomViewHolder_AlarmMainGroup(view);
 
         return viewHolder;

@@ -41,7 +41,7 @@ public class GroupAddInviteAdapter extends RecyclerView.Adapter<GroupAddInviteAd
 
     @Override
     public CustomViewHolder_group onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.listviewitem_group_add,null);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.listviewitem_group_add,viewGroup,false);
         GroupAddInviteAdapter.CustomViewHolder_group viewHolder = new GroupAddInviteAdapter.CustomViewHolder_group(view);
 
         return viewHolder;
