@@ -18,8 +18,7 @@
             android:exported="true" />
 
         <activity android:name=".Thumbnail"
-            android:exported="true"
-            android:theme="@style/Theme.SmallGongjeon.">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -81,11 +80,6 @@
         <activity
             android:name=".Login1_main"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".Group5_GroupMember"
