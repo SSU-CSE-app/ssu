@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,7 +36,7 @@ public class FriendRequestAdapter extends RecyclerView.Adapter<FriendRequestAdap
 
     class CustomViewHolder_request extends RecyclerView.ViewHolder {
         protected TextView name;
-//        protected ImageView imageView;
+        protected ImageView imageView;
 
         //추가 내용
         protected ImageButton btn_accept_friend;
@@ -44,7 +45,7 @@ public class FriendRequestAdapter extends RecyclerView.Adapter<FriendRequestAdap
         public CustomViewHolder_request(View view) {
             super(view);
             this.name = (TextView) view.findViewById(R.id.name_friend_request);
-//            this.imageView = (ImageView) view.findViewById(R.id.image_friend_request);
+            this.imageView = (ImageView) view.findViewById(R.id.image_friend_request);
             //추가
             this.btn_accept_friend = (ImageButton) view.findViewById(R.id.btn_accept_friend);
 
@@ -103,7 +104,7 @@ public class FriendRequestAdapter extends RecyclerView.Adapter<FriendRequestAdap
     public void onBindViewHolder(@NonNull FriendRequestAdapter.CustomViewHolder_request viewholder, int position) {
 
         viewholder.name.setText(mList.get(position).getName());
-//        viewholder.imageView.setImageDrawable(mList.get(position).getD());
+        viewholder.imageView.setImageResource(mList.get(position).getPhotoID());
     }
 
     @Override
