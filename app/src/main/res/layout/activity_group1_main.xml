@@ -11,19 +11,14 @@
         android:layout_height="0dp"
         android:orientation="horizontal"
         android:layout_weight="10"
-        android:weightSum="5">
+        android:weightSum="5"
+        android:background="#f0f0f0">
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="0.25"
-            android:visibility="invisible">
-        </View>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="4.5"
+            android:layout_weight="5"
             android:orientation="vertical"
             android:weightSum="9">
 
@@ -34,6 +29,7 @@
                 android:layout_weight="1"
                 android:orientation="horizontal"
                 android:weightSum="4">
+
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -51,7 +47,8 @@
                         android:textStyle="bold"
                         android:paddingLeft="15dp"
                         android:gravity="center|left"
-                        android:background="@drawable/round_min"/>
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/round_blue"/>
                 </LinearLayout>
 
                 <View
@@ -70,33 +67,35 @@
                         android:id="@+id/btn_add_group"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
+                        android:layout_marginRight="15dp"
                         android:background="@drawable/board_layout"
                         android:src="@drawable/add"></ImageButton>
 
                 </LinearLayout>
 
+
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.02"
+                android:background="#989898"></View>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerview_group"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="8"
+                android:layout_weight="7.98"
                 android:dividerHeight="20dp"
-                android:divider="#ffffff"></androidx.recyclerview.widget.RecyclerView>
-
-
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:divider="#ffffff"
+                android:background="@color/white"></androidx.recyclerview.widget.RecyclerView>
 
         </LinearLayout>
-
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="0.25"
-            android:visibility="invisible">
-        </View>
 
     </LinearLayout>
 

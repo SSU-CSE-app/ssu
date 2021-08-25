@@ -53,10 +53,6 @@
             android:name=".Friend1_main"
             android:exported="true" />
         <activity
-            android:name=".Group4_InviteMember"
-            android:exported="true"
-            android:theme="@style/Theme.SmallGongjeon." />
-        <activity
             android:name=".Group2_AddGroup"
             android:exported="true"
             android:theme="@style/Theme.SmallGongjeon." />

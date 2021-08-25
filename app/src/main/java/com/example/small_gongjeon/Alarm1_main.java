@@ -57,9 +57,9 @@ public class Alarm1_main extends Fragment implements View.OnClickListener {
         btn_plus_alarm.setOnClickListener(this);
 
         ArrayList arrayList = new ArrayList<>();
-        arrayList.add("       전체");
-        arrayList.add("       그룹");
-        arrayList.add("       개인");
+        arrayList.add("     전체");
+        arrayList.add("     그룹");
+        arrayList.add("     개인");
 
         spinner = (Spinner)view.findViewById(R.id.spinner_which_alarm);
         arrayAdapter = new ArrayAdapter<>(view.getContext(),android.R.layout.simple_spinner_dropdown_item,arrayList);

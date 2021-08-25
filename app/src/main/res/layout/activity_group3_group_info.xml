@@ -13,7 +13,8 @@
         android:layout_height="0dp"
         android:gravity="right|bottom"
         android:layout_weight="0.3"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="#f0f0f0">
 
         <ImageButton
             android:id="@+id/close_group_info_btn"
@@ -33,15 +34,10 @@
         android:weightSum="4"
         android:orientation="horizontal">
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.2"/>
-
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="3.6"
+            android:layout_weight="4"
             android:orientation="vertical"
             android:weightSum="6.9">
 
@@ -49,13 +45,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1.9"
-                android:weightSum="1.9"
-                android:orientation="vertical">
+                android:weightSum="1.7"
+                android:orientation="vertical"
+                android:background="#f0f0f0">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.2"/>
+                    android:layout_weight="0.3"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -63,24 +60,47 @@
                     android:layout_weight="1"
                     android:orientation="horizontal">
 
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="0.4"
+                        android:layout_height="match_parent"></View>
+
                     <ImageView
                         android:id="@+id/add_group_image_btn"
                         android:layout_width="94dp"
-                        android:layout_height="94dp"/>
+                        android:layout_height="94dp"
+                        android:layout_gravity="center"/>
 
-                    <TextView
-                        android:id="@+id/tv_group_info_group_name"
-                        android:layout_width="220dp"
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="0.3"
+                        android:layout_height="match_parent"></View>
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
+                        android:layout_weight="3.5"
                         android:gravity="center"
-                        android:text="Group Name"
-                        android:textSize="30dp" />
+                        android:background="@drawable/round_blue">
+
+                        <TextView
+                            android:id="@+id/tv_group_info_group_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Group Name"
+                            android:textSize="35dp"
+                            android:textStyle="bold"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/round" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="match_parent"></View>
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.2"></LinearLayout>
+
 
                 <TextView
                     android:layout_width="match_parent"
@@ -88,27 +108,39 @@
                     android:textSize="18dp"
                     android:textStyle="bold"
                     android:gravity="center"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.39"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.01"
+                    android:background="#989898"></View>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="0.25">
+                android:layout_weight="0.15">
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="0.4"
+                android:layout_weight="0.5"
                 android:orientation="vertical"
                 android:gravity="center|left">
 
                 <Button
                     android:id="@+id/btn_group_member"
-                    android:layout_width="120dp"
+                    android:layout_width="110dp"
                     android:text="그룹 멤버"
-                    android:textSize="10dp"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:textColor="#303030"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/round_blue"
+                    app:backgroundTint="#B8CCE4"
                     android:layout_height="match_parent"/>
 
             </LinearLayout>
@@ -116,7 +148,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="0.25">
+                android:layout_weight="0.1">
             </LinearLayout>
 
 
@@ -124,25 +156,27 @@
                 android:id="@+id/recyclerview_group_info_alarm"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="3.1" />
+                android:layout_weight="3.25"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:weightSum="1">
+                android:weightSum="1"
+                android:background="#f0f0f0">
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.2"/>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:orientation="horizontal"
-                    android:layout_weight="0.6">
+                    android:layout_weight="1">
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -160,17 +194,17 @@
                         <Button
                             android:id="@+id/btn_group_info_group_withdraw"
                             android:layout_width="100dp"
-                            android:layout_height="60dp"
-                            android:text="그룹 탈퇴"/>
+                            android:layout_height="50dp"
+                            android:text="그룹 탈퇴"
+                            android:textColor="#303030"
+                            android:textStyle="bold"
+                            android:layout_marginRight="15dp"
+                            app:backgroundTint="@color/white"
+                            android:background="@drawable/board_layout"/>
 
                     </LinearLayout>
                 </LinearLayout>
 
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.2"/>
             </LinearLayout>
 
         </LinearLayout>
