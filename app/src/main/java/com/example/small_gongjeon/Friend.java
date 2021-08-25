@@ -9,6 +9,16 @@ public class Friend {
     private String name;
     private String message;
     private Integer photoID;
+    private String userId;
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
 
     public void setName(String name) {
         this.name = name;
