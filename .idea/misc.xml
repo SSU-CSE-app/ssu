@@ -3,16 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_alarm2_plus_alarm.xml" value="0.12604166666666666" />
-        <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_friend1_main.xml" value="0.12335359675785208" />
-        <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_group5_groupinfo_member.xml" value="0.10099637681159421" />
         <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_login2_sing_up.xml" value="0.1296875" />
-        <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/fragment1_individual.xml" value="0.4" />
-        <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/fragment2_group.xml" value="0.378125" />
-        <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/listviewitem_alarm_group.xml" value="0.10572916666666667" />
-        <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/listviewitem_alarm_individual.xml" value="0.264" />
-        <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/listviewitem_friend.xml" value="0.213768115942029" />
-        <entry key="..\:/Users/sunho9889/AndroidStudioProjects/ssu/app/src/main/res/layout/listviewitem_group_member.xml" value="0.136" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/drawable/board_layout_listviewitem.xml" value="0.40260416666666665" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/drawable/group_profile_1_face.xml" value="0.40260416666666665" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/drawable/ic_android_black_50.xml" value="0.40260416666666665" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_alarm1_main.xml" value="0.22" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_alarm2_plus_alarm.xml" value="0.1879432624113475" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_friend1_main.xml" value="0.30027173913043476" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_friend2_add_friend.xml" value="0.31068840579710144" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_friend3_request.xml" value="0.38645833333333335" />
@@ -21,16 +17,23 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_group3_group_info.xml" value="0.38645833333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_group4_invite_member.xml" value="0.38645833333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_group5_groupinfo_member.xml" value="0.38645833333333335" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_group6_add_group_image.xml" value="0.38645833333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_login1.xml" value="0.39791666666666664" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_login2_sign_up.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_login2_sing_up.xml" value="0.32653985507246375" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_my_profile1_main.xml" value="0.38645833333333335" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_my_profile5_add_profile_image.xml" value="0.38645833333333335" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/activity_thumbnail.xml" value="0.17962962962962964" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/fragment1_individual.xml" value="0.2979274611398964" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/fragment2_group.xml" value="0.38645833333333335" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/listviewitem_alarm_group.xml" value="0.38645833333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/listviewitem_alarm_group_info.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/listviewitem_alarm_individual.xml" value="0.26721014492753625" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/listviewitem_friend.xml" value="0.30027173913043476" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/listviewitem_friend_request.xml" value="0.38645833333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/listviewitem_group.xml" value="0.38645833333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ssu/app/src/main/res/layout/listviewitem_group_add.xml" value="0.38645833333333335" />
+        <entry key="..\:/Users/user/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_spinner_dropdown_item.xml" value="0.1879432624113475" />
       </map>
     </option>
   </component>
