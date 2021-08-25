@@ -15,6 +15,13 @@ public class SendAddGroupAlarmRequest extends StringRequest {
 
     public SendAddGroupAlarmRequest(String groupName, String userId,String alarmTime, String alarmDay,String repeat,String repeatMin,String repeatNum, Response.Listener<String> listener) {
         super(Method.POST, URL, listener, null);
+        String[] timeArray = alarmTime.split(":");
+//        System.out.println("timeArray"+timeArray);
+        if(Integer.parseInt(timeArray[1])/10 < 1){  // 분 단위가 10보다 작을 경우
+            timeArray[1] = "0"+timeArray[1];
+        }
+        alarmTime = timeArray[0]+":"+timeArray[1];
+//        System.out.println("alarmTime : " +alarmTime);
 
         map = new HashMap<>();
         map.put("groupName",groupName);
