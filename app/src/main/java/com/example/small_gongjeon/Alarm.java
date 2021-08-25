@@ -7,6 +7,7 @@ public class Alarm {
     private String time;
     private String name;
     private Switch onoff;
+    private String day;
     private boolean isChecked ;
     private int type;
     private String participates;
@@ -55,5 +56,13 @@ public class Alarm {
 
     public void setType(int type) {
         this.type = type;
+    }
+
+    public String getDay() {
+        return day;
+    }
+
+    public void setDay(String day) {
+        this.day = day;
     }
 }
