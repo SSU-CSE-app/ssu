@@ -7,13 +7,13 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AcceptFriendRequest extends StringRequest {
+public class RefuseFriendRequest extends StringRequest {
     // 서버 URL 설정 ( PHP 파일 연동 )
-    final static private String URL = "http://27.96.134.147/accept_friend_request.php";
+    final static private String URL = "http://27.96.134.147/refuse_friend_request.php";
     private Map<String, String> map;
 
     // requesterId : 요청 보내는 사람    receiverId : 요청 받는 사람
-    public AcceptFriendRequest(String userId, String requester, Response.Listener<String> listener) {
+    public RefuseFriendRequest(String userId, String requester, Response.Listener<String> listener) {
         super(Method.POST, URL, listener, null);
 
         map = new HashMap<>();

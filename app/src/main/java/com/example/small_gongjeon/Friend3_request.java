@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
+import android.nfc.TagLostException;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -186,6 +187,7 @@ public class Friend3_request extends AppCompatActivity {
         String TAG_JSON="webnautes";
         String TAG_NAME = "requester";
         String TAG_Photo = "requesterPhoto";
+        String TAG_ID = "requesterId";
 
         try {
             JSONObject jsonObject = new JSONObject(mJsonString);
@@ -200,6 +202,7 @@ public class Friend3_request extends AppCompatActivity {
 
                 String name = item.getString(TAG_NAME);
                 String photo = item.getString(TAG_Photo);
+                String id = item.getString(TAG_ID);
                 System.out.println("photo :"+photo);
                 Integer photoID = null;
                 switch (photo) {
@@ -236,6 +239,7 @@ public class Friend3_request extends AppCompatActivity {
 
                 friend.setName(name);
                 friend.setPhotoID(photoID);
+                friend.setUserId(id);
 
                 mArrayList.add(friend);
                 mAdapter.notifyDataSetChanged();
