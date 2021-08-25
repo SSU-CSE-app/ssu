@@ -43,10 +43,14 @@ public class Alarm1_main extends Fragment implements View.OnClickListener {
     private Spinner spinner;
     ArrayAdapter<String> arrayAdapter;
 
-    private ArrayList<AlarmMain> mainArrayList;
+    protected ArrayList<AlarmMain> mainArrayList;
     private AlarmMainAdapter mainAdapter;
     private RecyclerView mRecyclerView;
     private String mJsonString;
+
+    public void setMainArrayListClear(){
+        this.mainArrayList.clear();
+    }
 
     @Nullable
     @Override
@@ -91,11 +95,6 @@ public class Alarm1_main extends Fragment implements View.OnClickListener {
         mRecyclerView = (RecyclerView)view.findViewById(R.id.recyclerview_alarm_main_list);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-//        mArrayList_Group = new ArrayList<>();
-//        mArrayList_Ind = new ArrayList<>();
-//
-//        mAdapter_Ind = new AlarmMainIndividualAdapter(getActivity(), mArrayList_Ind);
-//        mAdapter_Group = new AlarmMainGroupAdapter(getActivity(), mArrayList_Group);
 
         mainArrayList = new ArrayList<>();
 
@@ -108,15 +107,10 @@ public class Alarm1_main extends Fragment implements View.OnClickListener {
         mainAdapter.notifyDataSetChanged();
 
 
-//        String userId = Main.userID;
-//
-//        GetData task = new GetData();
-//        task.execute( "http://" + IP_ADDRESS + "/alarm_list_request.php", userId);
-
         return view;
     }
 
-    private class GetData extends AsyncTask<String, Void, String> {
+    protected class GetData extends AsyncTask<String, Void, String> {
 
         ProgressDialog progressDialog;
         String errorString = null;
@@ -224,66 +218,72 @@ public class Alarm1_main extends Fragment implements View.OnClickListener {
         String TAG_ISTER = "isTer";
 
         mainArrayList.clear();
+        if(mJsonString != "") {
+            try {
+                System.out.println("mJsonString :" + mJsonString);
+                JSONObject jsonObject = new JSONObject(mJsonString);
+                JSONArray jsonArray = jsonObject.getJSONArray(TAG_JSON);
+                String temp_friend_num = String.valueOf(jsonArray.length());
+                System.out.println("length : " + jsonArray.length());
+                for (int i = 0; i < jsonArray.length(); i++) {
+                    System.out.println("currJson: " + jsonArray.getJSONObject(i));
+                    JSONObject item = jsonArray.getJSONObject(i);
 
-        try {
-            JSONObject jsonObject = new JSONObject(mJsonString);
-            System.out.println("mJsonString :"+mJsonString);
-            JSONArray jsonArray = jsonObject.getJSONArray(TAG_JSON);
-            String temp_friend_num = String.valueOf(jsonArray.length());
+                    String name = item.getString(TAG_NAME);
+                    String time = item.getString(TAG_TIME);
+                    Integer day = item.getInt(TAG_DAY);
+                    String temp_day = Integer.toString(day);
+                    System.out.println("템프데이: " + temp_day);
+                    String repeat_day = "";
+                    char[] digit = temp_day.toCharArray();
 
-            for(int i=0;i<jsonArray.length();i++){
-                System.out.println("currJson: "+jsonArray.getJSONObject(i));
-                JSONObject item = jsonArray.getJSONObject(i);
+                    if (temp_day.equals("1111111")) {
+                        repeat_day = "매일";
+                    } else {
+                        if (digit[0] == '1')
+                            repeat_day = "월";
+                        if (digit[1] == '1')
+                            repeat_day = repeat_day + " 화";
+                        if (digit[2] == '1')
+                            repeat_day = repeat_day + " 수";
+                        if (digit[3] == '1')
+                            repeat_day = repeat_day + " 목";
+                        if (digit[4] == '1')
+                            repeat_day = repeat_day + " 금";
+                        if (digit[5] == '1')
+                            repeat_day = repeat_day + " 토";
+                        if (digit[6] == '1')
+                            repeat_day = repeat_day + " 일";
 
-                String name = item.getString(TAG_NAME);
-                String time = item.getString(TAG_TIME);
-                Integer day = item.getInt(TAG_DAY);
-                String temp_day = Integer.toString(day);
-                System.out.println("템프데이: " + temp_day);
-                String repeat_day = "";
-                char[] digit = temp_day.toCharArray();
+                    }
+                    System.out.println("리핏데이: " + repeat_day);
 
-                if(temp_day.equals("1111111")) {
-                    repeat_day = "매일";
+
+                    Boolean isPar;
+                    if (item.getString(TAG_ISPAR).equals("1")) {
+                        isPar = true;
+                    } else {
+                        isPar = false;
+                    }
+
+                    AlarmMain alarmMain = new AlarmMain();
+
+                    alarmMain.setName(name);
+                    alarmMain.setTime(time);
+                    alarmMain.setPar(isPar);
+                    alarmMain.setDay(repeat_day);
+
+                    mainArrayList.add(alarmMain);
+                    mainAdapter.notifyDataSetChanged();
+
                 }
-                else{
-                    if(digit[0] == '1')
-                        repeat_day = "월";
-                    if(digit[1] == '1')
-                        repeat_day = repeat_day + " 화";
-                    if(digit[2] == '1')
-                        repeat_day = repeat_day + " 수";
-                    if(digit[3] == '1')
-                        repeat_day = repeat_day + " 목";
-                    if(digit[4] == '1')
-                        repeat_day = repeat_day + " 금";
-                    if(digit[5] == '1')
-                        repeat_day = repeat_day + " 토";
-                    if(digit[6] == '1')
-                        repeat_day = repeat_day + " 일";
 
-                }
-                System.out.println("리핏데이: " + repeat_day);
+            } catch (JSONException e) {
 
-
-                Boolean isPar;
-                if(item.getString(TAG_ISPAR).equals("1")){ isPar = true; }else { isPar = false;}
-
-                AlarmMain alarmMain = new AlarmMain();
-
-                alarmMain.setName(name);
-                alarmMain.setTime(time);
-                alarmMain.setPar(isPar);
-                alarmMain.setDay(repeat_day);
-
-                mainArrayList.add(alarmMain);
-                mainAdapter.notifyDataSetChanged();
-
+                Log.d(TAG, "showResult : ", e);
             }
-
-        } catch (JSONException e) {
-
-            Log.d(TAG, "showResult : ", e);
+        }else{
+            Toast.makeText(getActivity().getApplicationContext(), "개인 알람이 없습니다!", Toast.LENGTH_SHORT).show();
         }
 
     }

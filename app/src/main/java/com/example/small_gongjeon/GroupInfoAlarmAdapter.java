@@ -38,6 +38,7 @@ public class GroupInfoAlarmAdapter extends RecyclerView.Adapter<GroupInfoAlarmAd
     class CustomViewHolder_GroupInfoAlarm extends RecyclerView.ViewHolder {
         protected TextView alarm_participates;
         protected TextView alarm_time;
+        protected TextView day;
         protected Switch alarm_switch;
         protected ImageButton btn_delete_group_alarm;
 //        protected ImageView alarm_imageView;
@@ -48,6 +49,7 @@ public class GroupInfoAlarmAdapter extends RecyclerView.Adapter<GroupInfoAlarmAd
             super(view);
             this.alarm_participates = (TextView) view.findViewById(R.id.tv_group_info_alarm_participants);
             this.alarm_time = (TextView) view.findViewById(R.id.tv_group_info_alarm_time);
+            this.day = (TextView) view.findViewById(R.id.tv_group_info_repeat_day);
             this.alarm_switch = (Switch) view.findViewById(R.id.sw_group_info_alarm_switch);
             this.btn_delete_group_alarm = (ImageButton) view.findViewById(R.id.btn_delete_group_alarm);
 //            this.alarm_imageView = (ImageView) view.findViewById(R.id.iv_group_info_image);
@@ -68,6 +70,7 @@ public class GroupInfoAlarmAdapter extends RecyclerView.Adapter<GroupInfoAlarmAd
 
         viewholder.alarm_participates.setText(mList.get(position).getParticipates());
         viewholder.alarm_time.setText(mList.get(position).getTime());
+        viewholder.day.setText(mList.get(position).getDay());
         viewholder.alarm_switch.setChecked(mList.get(position).getisChecked());
         String alarm_Time = mList.get(position).getTime();
 

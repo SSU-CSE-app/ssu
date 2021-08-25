@@ -12,20 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmallGongjeon"
         android:usesCleartextTraffic="true">
-
+        <activity
+            android:name=".Pause_alarm"
+            android:exported="true" />
         <activity
             android:name=".Main"
             android:exported="true" />
-
-        <activity android:name=".Thumbnail"
+        <activity
+            android:name=".Thumbnail"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <activity
             android:name=".MyProfile4_inquiry"
             android:exported="true"
@@ -75,8 +76,7 @@
             android:exported="true" />
         <activity
             android:name=".Login1_main"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".Group5_GroupMember"
             android:theme="@style/Theme.SmallGongjeon." />
@@ -85,7 +85,7 @@
             android:theme="@style/Theme.SmallGongjeon." />
         <activity
             android:name=".MyProfile5_AddProfileImage"
-            android:theme="@style/Theme.SmallGongjeon."/>
+            android:theme="@style/Theme.SmallGongjeon." />
     </application>
 
 </manifest>

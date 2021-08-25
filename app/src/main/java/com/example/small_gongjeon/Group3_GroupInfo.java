@@ -304,6 +304,7 @@ public class Group3_GroupInfo extends AppCompatActivity {
         String TAG_JSON="webnautes";
         String TAG_TIME = "alarm_Time";
         String TAG_PARTICIPANTS = "participants";
+        String TAG_DAY = "alarmDay";
         String TAG_ISPAR = "isPar";
         String TAG_ISTER = "isTER";
 
@@ -320,6 +321,32 @@ public class Group3_GroupInfo extends AppCompatActivity {
 
                 String time = item.getString(TAG_TIME);
                 String participants = item.getString(TAG_PARTICIPANTS);
+                Integer day = item.getInt(TAG_DAY);
+                String temp_day = Integer.toString(day);
+                String repeat_day = "";
+                char[] digit = temp_day.toCharArray();
+
+                if(temp_day.equals("1111111")) {
+                    repeat_day = "매일";
+                }
+                else{
+                    if(digit[0] == '1')
+                        repeat_day = "월";
+                    if(digit[1] == '1')
+                        repeat_day = repeat_day + " 화";
+                    if(digit[2] == '1')
+                        repeat_day = repeat_day + " 수";
+                    if(digit[3] == '1')
+                        repeat_day = repeat_day + " 목";
+                    if(digit[4] == '1')
+                        repeat_day = repeat_day + " 금";
+                    if(digit[5] == '1')
+                        repeat_day = repeat_day + " 토";
+                    if(digit[6] == '1')
+                        repeat_day = repeat_day + " 일";
+
+                }
+
                 Boolean isPar;
                 if(item.getString(TAG_ISPAR).equals("1")){ isPar = true; }else { isPar = false;}
 
@@ -328,6 +355,7 @@ public class Group3_GroupInfo extends AppCompatActivity {
                 alarm.setTime(time);
                 alarm.setParticipates(participants);
                 alarm.setisChecked(isPar);
+                alarm.setDay(repeat_day);
 
                 mArrayList.add(alarm);
                 mAdapter.notifyDataSetChanged();

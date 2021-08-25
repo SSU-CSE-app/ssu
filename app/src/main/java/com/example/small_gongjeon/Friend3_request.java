@@ -185,6 +185,7 @@ public class Friend3_request extends AppCompatActivity {
 
         String TAG_JSON="webnautes";
         String TAG_NAME = "requester";
+        String TAG_Photo = "requesterPhoto";
 
         try {
             JSONObject jsonObject = new JSONObject(mJsonString);
@@ -198,10 +199,43 @@ public class Friend3_request extends AppCompatActivity {
                 JSONObject item = jsonArray.getJSONObject(i);
 
                 String name = item.getString(TAG_NAME);
+                String photo = item.getString(TAG_Photo);
+                System.out.println("photo :"+photo);
+                Integer photoID = null;
+                switch (photo) {
+                    case "1" :
+                        photoID = R.drawable.group_profile_1_face;
+                        break;
+                    case "2" :
+                        photoID = R.drawable.group_profile_2_smile;
+                        break;
+                    case "3" :
+                        photoID = R.drawable.profile_3_bigsmile;
+                        break;
+                    case "4" :
+                        photoID = R.drawable.profile_4_sad;
+                        break;
+                    case "5" :
+                        photoID = R.drawable.profile_5_smallsad;
+                        break;
+                    case "6" :
+                        photoID = R.drawable.profile_6_smallsmlie;
+                        break;
+                    case "7" :
+                        photoID = R.drawable.profile_7_sick;
+                        break;
+                    case "8" :
+                        photoID = R.drawable.profile_8_bad;
+                        break;
+                    case "9" :
+                        photoID = R.drawable.profile_9_default;
+                        break;
 
+                }
                 Friend friend = new Friend();
 
                 friend.setName(name);
+                friend.setPhotoID(photoID);
 
                 mArrayList.add(friend);
                 mAdapter.notifyDataSetChanged();
