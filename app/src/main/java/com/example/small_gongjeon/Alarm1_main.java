@@ -75,13 +75,13 @@ public class Alarm1_main extends Fragment implements View.OnClickListener {
                 System.out.println("currType : "+spinner.getSelectedItem().toString());
                 mainArrayList.clear();
                 GetData afterTask = new GetData();
-                if(spinner.getSelectedItem().toString().equals("       개인")){
+                if(spinner.getSelectedItem().toString().equals("     개인")){
                     afterTask.execute( "http://" + IP_ADDRESS + "/alarm_ind_list_request.php", Main.userID);
                 }
-                else if(spinner.getSelectedItem().toString().equals("       그룹")){
+                else if(spinner.getSelectedItem().toString().equals("     그룹")){
                     afterTask.execute( "http://" + IP_ADDRESS + "/alarm_group_list_request.php", Main.userID);
                 }
-                else if(spinner.getSelectedItem().toString().equals("       전체")){
+                else if(spinner.getSelectedItem().toString().equals("     전체")){
                     afterTask.execute( "http://" + IP_ADDRESS + "/alarm_list_request.php", Main.userID);
                 }
             }
@@ -216,7 +216,7 @@ public class Alarm1_main extends Fragment implements View.OnClickListener {
         String TAG_DAY = "alarmDay";
         String TAG_ISPAR = "isPar";
         String TAG_ISTER = "isTer";
-
+        System.out.println("showResult activated!");
         mainArrayList.clear();
         if(mJsonString != "") {
             try {

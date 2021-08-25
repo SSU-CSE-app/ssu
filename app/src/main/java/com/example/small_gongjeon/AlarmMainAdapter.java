@@ -72,15 +72,15 @@ public class AlarmMainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         View view;
         switch(viewType) {
             case 0:     // 그룹 알람인 경우
-//                Log.d("FFFFF","onCreateViewHolder :"+viewType);
-//                Log.d("FFFFF","-----그룹 알람인 경우-----");
+                Log.d("FFFFF","onCreateViewHolder :"+viewType);
+                Log.d("FFFFF","-----그룹 알람인 경우-----");
                 view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.listviewitem_alarm_group,null);
                 CustomViewHolder_AlarmMain_Group viewHolder_Group = new CustomViewHolder_AlarmMain_Group(view);
 
                 return viewHolder_Group;
             case 1:     // 개인 알람인 경우
-//                Log.d("FFFFF","onCreateViewHolder :"+viewType);
-//                Log.d("FFFFF","-----개인 알람인 경우-----");
+                Log.d("FFFFF","onCreateViewHolder :"+viewType);
+                Log.d("FFFFF","-----개인 알람인 경우-----");
                 view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.listviewitem_alarm_individual,viewGroup,false);
                 CustomViewHolder_AlarmMain_Ind viewHolder_Ind = new CustomViewHolder_AlarmMain_Ind(view);
 
