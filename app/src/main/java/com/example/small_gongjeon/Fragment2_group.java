@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.Spinner;
@@ -61,14 +62,14 @@ public class Fragment2_group extends Fragment {
     private String repeatMin;
     private String groupName;
 
-    private ImageButton btn_addAlarm;
+    private Button btn_addAlarm;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment2_group, container, false);
         // 버튼 바인딩
-        btn_addAlarm = (ImageButton)view.findViewById(R.id.btn_add_group_alarm);
+        btn_addAlarm = (Button)view.findViewById(R.id.btn_add_group_alarm);
 
         // 체크박스 바인딩
         Mon = (CheckBox)view.findViewById(R.id.cb_add_group_alarm_MON);

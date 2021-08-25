@@ -15,36 +15,27 @@
         android:weightSum="5">
 
 
+
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="5"
             android:orientation="vertical"
-            android:weightSum="7.2">
+            android:weightSum="6.6">
 
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.6"
-                android:visibility="invisible"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="6"
+                android:layout_weight="6.6"
                 android:orientation="horizontal"
                 android:weightSum="4">
 
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:visibility="invisible"/>
-
                 <LinearLayout
+                    android:layout_marginTop="12dp"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="3"
+                    android:layout_weight="4"
                     android:weightSum="3"
                     android:orientation="vertical"
                     android:background="#AAC9CC">
@@ -58,31 +49,29 @@
                         android:layout_margin="5dp"
                         android:background="#f0f0f0">
 
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="0.5"
+                            android:layout_weight="1"
+                            android:weightSum="3"
                             android:orientation="horizontal">
 
                             <TextView
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
                                 android:text="시간"
-                                android:textSize="20dp"
+                                android:textSize="15dp"
                                 android:textStyle="bold"
-                                android:textColor="@color/black"/>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1">
+                                android:textColor="@color/black">/</TextView>
 
                             <TimePicker
                                 android:id="@+id/tp_add_group_alarm_time"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="match_parent"
+                                android:layout_weight="2.5"
                                 android:timePickerMode="spinner"
                                 android:background="@color/white"/>
                         </LinearLayout>
@@ -179,47 +168,96 @@
                                     android:layout_weight="0.5"
                                     android:orientation="horizontal">
 
-                                    <CheckBox
-                                        android:id="@+id/cb_add_group_alarm_MON"
+                                    <LinearLayout
                                         android:layout_width="0dp"
                                         android:layout_height="match_parent"
-                                        android:layout_weight="0.5"/>
+                                        android:layout_weight="0.5"
+                                        android:paddingRight="6dp"
+                                        android:gravity="center">
+                                        <CheckBox
+                                            android:id="@+id/cb_add_group_alarm_MON"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:gravity="center"/>
+                                    </LinearLayout>
 
-                                    <CheckBox
-                                        android:id="@+id/cb_add_group_alarm_TUE"
+                                    <LinearLayout
                                         android:layout_width="0dp"
                                         android:layout_height="match_parent"
-                                        android:layout_weight="0.5"/>
+                                        android:layout_weight="0.5"
+                                        android:paddingRight="6dp"
+                                        android:gravity="center">
+                                        <CheckBox
+                                            android:id="@+id/cb_add_group_alarm_TUE"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:gravity="center"/>
+                                    </LinearLayout>
 
-                                    <CheckBox
-                                        android:id="@+id/cb_add_group_alarm_WED"
+                                    <LinearLayout
                                         android:layout_width="0dp"
                                         android:layout_height="match_parent"
-                                        android:layout_weight="0.5"/>
+                                        android:layout_weight="0.5"
+                                        android:paddingRight="6dp"
+                                        android:gravity="center">
+                                        <CheckBox
+                                            android:id="@+id/cb_add_group_alarm_WED"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:gravity="center"/>
+                                    </LinearLayout>
 
-                                    <CheckBox
-                                        android:id="@+id/cb_add_group_alarm_THU"
+                                    <LinearLayout
                                         android:layout_width="0dp"
                                         android:layout_height="match_parent"
-                                        android:layout_weight="0.5"/>
+                                        android:layout_weight="0.5"
+                                        android:paddingRight="6dp"
+                                        android:gravity="center">
+                                        <CheckBox
+                                            android:id="@+id/cb_add_group_alarm_THU"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:gravity="center"/>
+                                    </LinearLayout>
 
-                                    <CheckBox
-                                        android:id="@+id/cb_add_group_alarm_FRI"
+                                    <LinearLayout
                                         android:layout_width="0dp"
                                         android:layout_height="match_parent"
-                                        android:layout_weight="0.5"/>
+                                        android:layout_weight="0.5"
+                                        android:paddingRight="6dp"
+                                        android:gravity="center">
+                                        <CheckBox
+                                            android:id="@+id/cb_add_group_alarm_FRI"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:gravity="center"/>
+                                    </LinearLayout>
 
-                                    <CheckBox
-                                        android:id="@+id/cb_add_group_alarm_SAT"
+                                    <LinearLayout
                                         android:layout_width="0dp"
                                         android:layout_height="match_parent"
-                                        android:layout_weight="0.5"/>
+                                        android:layout_weight="0.5"
+                                        android:paddingRight="6dp"
+                                        android:gravity="center">
+                                        <CheckBox
+                                            android:id="@+id/cb_add_group_alarm_SAT"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:gravity="center"/>
+                                    </LinearLayout>
 
-                                    <CheckBox
-                                        android:id="@+id/cb_add_group_alarm_SUN"
+                                    <LinearLayout
                                         android:layout_width="0dp"
                                         android:layout_height="match_parent"
-                                        android:layout_weight="0.5"/>
+                                        android:layout_weight="0.5"
+                                        android:paddingRight="6dp"
+                                        android:gravity="center">
+                                        <CheckBox
+                                            android:id="@+id/cb_add_group_alarm_SUN"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:gravity="center"/>
+                                    </LinearLayout>
                                 </LinearLayout>
                             </LinearLayout>
                         </LinearLayout>
@@ -294,7 +332,7 @@
                                 android:layout_weight="0.5"
                                 android:gravity="center"
                                 android:text="그룹"
-                                android:textSize="10dp"
+                                android:textSize="15dp"
                                 android:textStyle="bold"
                                 android:textColor="@color/black"/>
 
@@ -331,10 +369,10 @@
 
 
                         <View
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="1.2"
-                            android:visibility="invisible"/>
+                            android:layout_weight="2.5"
+                            android:background="@color/white" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -351,19 +389,25 @@
                                 android:layout_weight="2"
                                 android:visibility="invisible"/>
 
-                            <ImageButton
+                            <Button
                                 android:id="@+id/btn_add_group_alarm"
                                 android:layout_width="100dp"
-                                android:layout_height="60dp"/>
+                                android:layout_height="60dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:text="알람 추가"
+                                android:backgroundTint="#AAC9CC"/>
                         </LinearLayout>
 
                     </LinearLayout>
 
                 </LinearLayout>
+
             </LinearLayout>
 
-
         </LinearLayout>
+
+
 
 
     </LinearLayout>

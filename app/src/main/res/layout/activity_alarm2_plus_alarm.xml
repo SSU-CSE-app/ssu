@@ -38,7 +38,7 @@
                     android:layout_gravity="top"
                     app:srcCompat="@drawable/ic_baseline_close_24"
                     tools:ignore="VectorDrawableCompat"
-                    android:background="#989898"></ImageButton>
+                    android:background="#FF0000"></ImageButton>
             </LinearLayout>
 
             <com.google.android.material.tabs.TabLayout
