@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:gravity="right|bottom"
-        android:layout_weight="0.3"
+        android:layout_weight="0.28"
         android:orientation="horizontal">
 
         <ImageButton
@@ -31,21 +31,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
+        android:layout_weight="3.02"
         android:weightSum="3"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#B9CEAC">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="horizontal"
             android:weightSum="4"
-            android:layout_weight="1">
+            android:layout_weight="0.8"
+            android:background="@drawable/round"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="0.9"
                 android:orientation="vertical"
                 android:weightSum="1">
 
@@ -65,18 +71,14 @@
                     <View
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="0.2"></View>
+                        android:layout_weight="0.7"></View>
 
                     <ImageButton
                         android:id="@+id/btn_add_friend_search"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.6"/>
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/ic_baseline_person_search_24"/>
 
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.2"/>
                 </LinearLayout>
 
                 <View
@@ -89,7 +91,7 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
+                android:layout_weight="3.1"
                 android:weightSum="1"
                 android:orientation="vertical">
 
@@ -134,14 +136,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_weight="2.2"
             android:weightSum="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@color/white">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="0.5"
+                android:layout_weight="0.6"
                 android:orientation="horizontal"
                 android:weightSum="1">
 
@@ -174,13 +177,24 @@
                 </LinearLayout>
 
             </LinearLayout>
-            <ImageButton
-                android:id="@+id/btn_send_friend_request"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="0.5"/>
+                android:layout_weight="0.4"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:background="#f0f0f0">
 
+                <ImageButton
+                    android:id="@+id/btn_send_friend_request"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/board_layout"
+                    android:src="@drawable/add"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="280dp"/>
+
+            </LinearLayout>
         </LinearLayout>
-
     </LinearLayout>
 </LinearLayout>

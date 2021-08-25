@@ -26,28 +26,29 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_weight="1.2"
                 android:orientation="horizontal"
                 android:weightSum="4">
 
 
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="3dp"
+                    android:layout_height="50dp"
                     android:layout_weight="1.5"
                     android:orientation="vertical"
-                    android:gravity="center|left">
+                    android:gravity="center|left"
+                    android:layout_gravity="center_vertical">
 
                     <TextView
                         android:id="@+id/tv_group_num"
-                        android:layout_width="100dp"
-                        android:layout_height="40dp"
+                        android:layout_width="120dp"
+                        android:layout_height="45dp"
                         android:text="그룹: 7"
                         android:textSize="20dp"
                         android:textStyle="bold"
-                        android:paddingLeft="15dp"
+                        android:paddingLeft="20dp"
                         android:gravity="center|left"
-                        android:layout_marginLeft="15dp"
+                        android:layout_marginLeft="20dp"
                         android:background="@drawable/round_blue"/>
                 </LinearLayout>
 
@@ -67,7 +68,7 @@
                         android:id="@+id/btn_add_group"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:layout_marginRight="15dp"
+                        android:layout_marginRight="20dp"
                         android:background="@drawable/board_layout"
                         android:src="@drawable/add"></ImageButton>
 
@@ -79,19 +80,19 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="0.02"
+                android:layout_weight="0.01"
                 android:background="#989898"></View>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerview_group"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="7.98"
+                android:layout_weight="7.79"
                 android:dividerHeight="20dp"
-                android:paddingLeft="25dp"
-                android:paddingRight="25dp"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
                 android:divider="#ffffff"
                 android:background="@color/white"></androidx.recyclerview.widget.RecyclerView>
 

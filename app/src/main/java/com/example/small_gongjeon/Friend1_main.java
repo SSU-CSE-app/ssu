@@ -50,7 +50,7 @@ public class Friend1_main extends Fragment implements View.OnClickListener{
     private View view;
     private TextView friend_num;
     ImageButton btn_add_friend;
-    ImageButton btn_friend_request;
+    Button btn_friend_request;
 
     @Nullable
     @Override
@@ -60,7 +60,7 @@ public class Friend1_main extends Fragment implements View.OnClickListener{
 
         btn_add_friend = (ImageButton)view.findViewById(R.id.btn_add_friend);
         btn_add_friend.setOnClickListener(this);
-        btn_friend_request = (ImageButton)view.findViewById(R.id.btn_friend_request);
+        btn_friend_request = (Button)view.findViewById(R.id.btn_friend_request);
         btn_friend_request.setOnClickListener(this);
 
         friend_num = (TextView)view.findViewById(R.id.tv_friend_num);
