@@ -32,6 +32,13 @@ public class Pause_alarm extends AppCompatActivity{
             }
         });
 
+        btn_pause_alarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
 
     }
 }
