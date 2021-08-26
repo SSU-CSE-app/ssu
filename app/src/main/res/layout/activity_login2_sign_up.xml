@@ -31,6 +31,7 @@
             android:layout_height="match_parent"
             android:layout_weight="3.6"
             android:orientation="vertical"
+            android:layout_marginHorizontal="15dp"
             android:weightSum="7">
 
             <!-- 아이디 부분 (세로 : 1.5 ~ 3) -->
