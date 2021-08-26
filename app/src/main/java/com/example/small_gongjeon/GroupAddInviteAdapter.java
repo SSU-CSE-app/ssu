@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -27,14 +28,14 @@ public class GroupAddInviteAdapter extends RecyclerView.Adapter<GroupAddInviteAd
     class CustomViewHolder_group extends RecyclerView.ViewHolder {
         protected TextView name;
         protected CheckBox checkBox;
-//        protected ImageView imageView;
+        protected ImageView imageView;
 
 
         public CustomViewHolder_group(View view) {
             super(view);
             this.name = (TextView) view.findViewById(R.id.name_invite_friend);
             this.checkBox = (CheckBox) view.findViewById(R.id.checkbox_invite_friend);
-//            this.imageView = (ImageView) view.findViewById(R.id.image_friend);
+            this.imageView = (ImageView) view.findViewById(R.id.image_invite_friend);
         }
     }
 
@@ -53,7 +54,7 @@ public class GroupAddInviteAdapter extends RecyclerView.Adapter<GroupAddInviteAd
         viewholder.name.setText(mList.get(position).getName());
         viewholder.checkBox.setChecked(false);
 //        viewholder.message.setText(mList.get(position).getMessage());
-//        viewholder.imageView.setImageDrawable(mList.get(position).getD());
+        viewholder.imageView.setImageResource(mList.get(position).getPhotoID());
     }
 
     @Override
