@@ -45,7 +45,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/ic_baseline_check_40"
-                        android:background="#008000">
+                        android:background="#B9CEAC">
                     </ImageButton>
                 </LinearLayout>
 
@@ -60,7 +60,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/ic_baseline_close_40_white"
-                        android:background="#FF0000"/>
+                        android:background="#989898"/>
                 </LinearLayout>
 
             </LinearLayout>

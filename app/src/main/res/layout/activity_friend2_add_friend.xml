@@ -22,9 +22,7 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_gravity="top"
-            app:srcCompat="@drawable/ic_baseline_close_24"
-            tools:ignore="VectorDrawableCompat"
-            android:background="#F00"></ImageButton>
+            android:background="@drawable/ic_baseline_close_24"></ImageButton>
     </LinearLayout>
 
 
@@ -182,8 +180,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="0.4"
                 android:orientation="horizontal"
-                android:weightSum="1"
-                android:background="#f0f0f0">
+                android:weightSum="1">
 
                 <ImageButton
                     android:id="@+id/btn_send_friend_request"

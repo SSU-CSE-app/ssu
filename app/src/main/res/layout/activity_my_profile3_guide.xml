@@ -74,6 +74,7 @@
                     android:layout_weight="0.001"/>
 
                 <ListView
+                    android:id="@+id/alarm_together_image"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.998"

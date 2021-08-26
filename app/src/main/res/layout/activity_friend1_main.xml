@@ -73,24 +73,24 @@
 
                     <ImageButton
                         android:id="@+id/btn_add_friend"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
                         android:layout_marginRight="20dp"
-                        android:layout_marginTop="15dp"
+                        android:layout_marginTop="25dp"
                         android:src="@drawable/add"
                         android:background="@drawable/board_layout"></ImageButton>
 
                     <Button
                         android:id="@+id/btn_friend_request"
                         android:layout_width="140dp"
-                        android:layout_height="40dp"
+                        android:layout_height="38dp"
                         android:text="받은 친구요청"
                         android:textColor="#6c6c6c"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:layout_marginLeft="25dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="25dp"
                         android:background="@drawable/round"></Button>
                 </LinearLayout>
 
