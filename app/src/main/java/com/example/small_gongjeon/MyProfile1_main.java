@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,7 +22,7 @@ public class MyProfile1_main extends Fragment implements View.OnClickListener{
     private Button btn_myprofile_guide;
     private Button btn_myprofile_inquiry;
     private TextView tv_name;
-    private TextView tv_status;
+    private EditText tv_status;
 
     //프로필 사진 추가 관련 선언
     public static int profile_image_sig;
