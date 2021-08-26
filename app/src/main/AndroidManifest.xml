@@ -13,8 +13,14 @@
         android:theme="@style/Theme.SmallGongjeon"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".Pause_alarm"
+            android:name=".Pause_alarm_member"
+            android:theme="@style/Theme.SmallGongjeon."
             android:exported="true" />
+        <activity
+            android:name=".Pause_alarm"
+            android:exported="true">
+        </activity>
+
         <activity
             android:name=".Main"
             android:exported="true" />
@@ -77,7 +83,7 @@
             android:exported="true" />
         <activity
             android:name=".Login1_main"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Group5_GroupMember"
             android:theme="@style/Theme.SmallGongjeon." />

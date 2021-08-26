@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:layout_gravity="center"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="7.2"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="right|bottom"
+        android:layout_weight="0.6"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+
+        <ImageButton
+
+            android:id="@+id/btn_close"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:background="@drawable/ic_baseline_close_24"></ImageButton>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6.6"
+        android:weightSum="5"
+        android:orientation="vertical"
+        android:background="#AAC9CC">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="아직도 자는 사람"
+            android:textColor="#6c6c6c"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:drawableLeft="@drawable/ic_baseline_group_35"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/round"
+            android:layout_margin="10dp"
+            android:gravity="center|left"
+            android:paddingLeft="20dp"></Button>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/profile_5_smallsad"></ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:text="이선호"
+                        android:gravity="center|left"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:paddingLeft="8dp"></TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/profile_3_bigsmile"></ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:text="이민지"
+                        android:gravity="center|left"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:paddingLeft="8dp"></TextView>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 리사이클러뷰 -->
+        <!--<androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_pause_alarm"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_weight="4"></androidx.recyclerview.widget.RecyclerView> -->
+
+    </LinearLayout>
+
+</LinearLayout>

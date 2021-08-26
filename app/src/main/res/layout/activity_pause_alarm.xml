@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#AAC9CC"
     android:orientation="vertical">
 
     <LinearLayout
@@ -37,6 +38,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
+                    android:background="@drawable/round"
                     android:text="15:59"
                     android:textSize="100dp"
                     android:textStyle="bold"
@@ -59,9 +61,10 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="4"
-                    android:text="기상인원 :"
-                    android:textSize="40dp"
+                    android:text="기상 인원 :"
+                    android:textSize="30dp"
                     android:textStyle="bold"
+                    android:drawableLeft="@drawable/ic_baseline_group_35"
                     android:gravity="center"></TextView>
 
                 <LinearLayout
@@ -77,7 +80,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="1"
-                        android:textSize="40dp"
+                        android:textSize="30dp"
                         android:gravity="center"></TextView>
 
                     <TextView
@@ -85,7 +88,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="/"
-                        android:textSize="40dp"
+                        android:textSize="30dp"
                         android:textStyle="bold"
                         android:gravity="center"></TextView>
 
@@ -95,7 +98,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="3"
-                        android:textSize="40dp"
+                        android:textSize="30dp"
                         android:gravity="center"></TextView>
                 </LinearLayout>
             </LinearLayout>
@@ -112,7 +115,7 @@
                     android:text="기상 현황"
                     android:textStyle="bold"
                     android:textSize="30dp"
-                    android:backgroundTint="#808080"
+                    android:backgroundTint="#a9a9a9"
                     android:textColor="@color/white"
                     android:gravity="center"></Button>
             </LinearLayout>
@@ -135,7 +138,7 @@
                     android:text="알람 끄기"
                     android:textStyle="bold"
                     android:textSize="30dp"
-                    android:backgroundTint="#FF00"
+                    android:backgroundTint="#C4302B"
                     android:textColor="@color/white"
                     android:gravity="center"></Button>
             </LinearLayout>
