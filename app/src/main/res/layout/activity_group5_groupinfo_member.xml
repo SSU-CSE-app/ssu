@@ -14,7 +14,8 @@
         android:layout_height="0dp"
         android:gravity="right|bottom"
         android:layout_weight="0.6"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@color/white">
 
 
         <ImageButton
@@ -23,9 +24,7 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_gravity="top"
-            app:srcCompat="@drawable/ic_baseline_close_24"
-            tools:ignore="VectorDrawableCompat"
-            android:background="#F00"></ImageButton>
+            android:background="@drawable/ic_baseline_close_24"></ImageButton>
 
 
     </LinearLayout>

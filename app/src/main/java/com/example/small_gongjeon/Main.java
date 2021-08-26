@@ -30,7 +30,6 @@ public class Main extends AppCompatActivity {
     public static String userStatus;
 
     public static String currGroup;    //  그룹 정보 창 띄울 때 어떤 그룹 정보 띄울지
-    public static String currGroupPhoto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +48,6 @@ public class Main extends AppCompatActivity {
         userStatus = intent.getStringExtra("userStatus");
 
         currGroup = "default";
-        currGroupPhoto = "1";
 
         NavigationBarView navigationView = findViewById(R.id.navigationView);
         navigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {

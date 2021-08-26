@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -37,6 +38,7 @@ public class Group3_GroupInfo extends AppCompatActivity {
 
     private static String IP_ADDRESS = "27.96.134.147";
     private static String TAG = "small_gongjeon";
+    public static Drawable Photo;
 
     private String mJsonString;
 
@@ -64,41 +66,8 @@ public class Group3_GroupInfo extends AppCompatActivity {
         groupName = (TextView) findViewById(R.id.tv_group_info_group_name);
         groupName_main = (TextView) findViewById(R.id.name_group);
         groupName.setText(Main.currGroup);
-        // Main.currGroupPhoto에서 가져온 사진 정보 적용
-        Integer photoID=0;
-        switch (Main.currGroupPhoto) {
-            case "1" :
-                photoID = R.drawable.group_profile_1_face;
-                break;
-            case "2" :
-                photoID = R.drawable.group_profile_2_smile;
-                break;
-            case "3" :
-                photoID = R.drawable.group_3_food;
-                break;
-            case "4" :
-                photoID = R.drawable.group_4_travel;
-                break;
-            case "5" :
-                photoID = R.drawable.group_5_heart;
-                break;
-            case "6" :
-                photoID = R.drawable.group_6_health;
-                break;
-            case "7" :
-                photoID = R.drawable.group_7_game;
-                break;
-            case "8" :
-                photoID = R.drawable.group_8_beer;
-                break;
-            case "9" :
-                photoID = R.drawable.group_9_cloud;
-                break;
-
-        }
-        groupPhoto = (ImageView) findViewById(R.id.add_group_image_btn);
-        groupPhoto.setImageResource(photoID);
-
+        groupPhoto = (ImageView) findViewById(R.id.add_group_image);
+        groupPhoto.setImageDrawable(Photo);
 
 
         btn_group_member = (Button)findViewById(R.id.btn_group_member);

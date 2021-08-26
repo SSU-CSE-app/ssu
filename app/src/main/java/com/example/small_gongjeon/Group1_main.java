@@ -195,7 +195,7 @@ public class Group1_main extends Fragment implements View.OnClickListener{
             System.out.println("jsonAraay : "+jsonArray);
             System.out.println("jsonLength : "+jsonArray.length());
             String temp_group_num = String.valueOf(jsonArray.length());
-            group_num.setText("그룹: " + temp_group_num);
+            group_num.setText(" " + temp_group_num);
             for(int i=0;i<jsonArray.length();i++){
 //                System.out.println("currJson: "+jsonArray.getJSONObject(i));
                 JSONObject item = jsonArray.getJSONObject(i);
