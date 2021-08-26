@@ -28,6 +28,7 @@
                 android:layout_weight="0.3"
                 android:gravity="right|bottom"
                 android:orientation="horizontal"
+                android:background="#f0f0f0"
                 android:weightSum="4">
 
 
@@ -36,9 +37,8 @@
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_gravity="top"
-                    app:srcCompat="@drawable/ic_baseline_close_24"
                     tools:ignore="VectorDrawableCompat"
-                    android:background="#FF0000"></ImageButton>
+                    android:background="@drawable/ic_baseline_close_24"></ImageButton>
             </LinearLayout>
 
             <com.google.android.material.tabs.TabLayout

@@ -47,7 +47,7 @@ public class Fragment1_individual extends Fragment {
     private String repeatTimes;
     private String repeatMin;
 
-    private  Button btn_addAlarm;
+    private  ImageButton btn_addAlarm;
 
 
     @Nullable
@@ -55,7 +55,7 @@ public class Fragment1_individual extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment1_individual, container, false);
         // 버튼 바인딩
-        btn_addAlarm = (Button)view.findViewById(R.id.btn_add_ind_alarm);
+        btn_addAlarm = (ImageButton)view.findViewById(R.id.btn_add_ind_alarm);
 
         // 체크박스 바인딩
         Mon = (CheckBox)view.findViewById(R.id.cb_add_ind_alarm_MON);

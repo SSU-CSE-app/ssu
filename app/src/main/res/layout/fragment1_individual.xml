@@ -319,17 +319,25 @@
                             android:layout_height="2dp"
                             android:background="#AAC9CC"/>
 
-
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="3.2"
+                            android:layout_weight="0.7"
+                            android:background="@color/white"></View>
+
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2.3"
+                            android:src="@drawable/start_alarm_together"
+                            android:scaleType="centerCrop"
                             android:background="@color/white" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="0.7"
+                            android:layout_weight="0.8"
                             android:orientation="horizontal"
                             android:gravity="right|center_vertical"
                             android:weightSum="3"
@@ -341,14 +349,14 @@
                                 android:layout_weight="2"
                                 android:visibility="invisible"/>
 
-                            <Button
+                            <ImageButton
                                 android:id="@+id/btn_add_ind_alarm"
-                                android:layout_width="100dp"
+                                android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:layout_marginRight="8dp"
-                                android:layout_marginBottom="8dp"
-                                android:text="알람 추가"
-                                android:backgroundTint="#AAC9CC"/>
+                                android:layout_marginRight="20dp"
+                                android:background="@drawable/board_layout"
+                                android:src="@drawable/add"
+                                android:layout_marginBottom="10dp"/>
                         </LinearLayout>
 
                     </LinearLayout>
