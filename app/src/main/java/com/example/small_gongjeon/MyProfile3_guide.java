@@ -8,6 +8,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 public class MyProfile3_guide extends AppCompatActivity {
@@ -27,7 +28,7 @@ public class MyProfile3_guide extends AppCompatActivity {
         });
 
         //리스트뷰 배경 투명도
-        Drawable alpha = ((ListView)findViewById(R.id.alarm_together_image)).getBackground();
+        Drawable alpha = ((LinearLayout)findViewById(R.id.alarm_together_image)).getBackground();
         alpha.setAlpha(70);
     }
 
