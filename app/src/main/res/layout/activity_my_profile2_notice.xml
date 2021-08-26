@@ -66,24 +66,57 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:weightSum="1"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:id="@+id/alarm_together_image"
+                android:background="@drawable/alarm_together_notice">
 
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.001"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="8">
 
-                <ListView
-                    android:id="@+id/alarm_together_image"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.998"
-                    android:background="@drawable/alarm_together_notice"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.2"></View>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.6"
+                        android:text="  version (v0.0.1)"
+                        android:textSize="35dp"
+                        android:paddingLeft="15dp"
+                        android:drawableLeft="@drawable/circle"></TextView>
 
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.001"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.3"></View>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.6"
+                        android:text="  점검 안내"
+                        android:textSize="35dp"
+                        android:paddingLeft="15dp"
+                        android:drawableLeft="@drawable/circle"></TextView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.3"></View>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.6"
+                        android:text="  알람이 울리지 않을 때"
+                        android:textSize="35dp"
+                        android:paddingLeft="15dp"
+                        android:drawableLeft="@drawable/circle"></TextView>
+
+                </LinearLayout>
 
             </LinearLayout>
 

@@ -73,12 +73,153 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.001"/>
 
-                <ListView
+                <LinearLayout
                     android:id="@+id/alarm_together_image"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.998"
-                    android:background="@drawable/alarm_together_notice"/>
+                    android:background="@drawable/alarm_together_notice"
+                    android:orientation="vertical"
+                    android:weightSum="8">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.8"
+                        android:weightSum="1"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.3"></View>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.7"
+                            android:text=" 메인 알람창"
+                            android:textSize="30dp"
+                            android:gravity="bottom"
+                            android:drawableLeft="@drawable/one"
+                            android:paddingLeft="15dp"
+                            android:background="@drawable/round_gray"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.2"
+                        android:padding="15dp"
+                        android:text="• 핵심 기능 : 개인 알람 추가 및 on/off, 개인알람 확인, 그룹알람 확인"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="10dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.8"
+                        android:weightSum="1"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.3"></View>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.7"
+                            android:text=" 그룹창"
+                            android:textSize="30dp"
+                            android:gravity="bottom"
+                            android:drawableLeft="@drawable/two"
+                            android:paddingLeft="15dp"
+                            android:background="@drawable/round_gray"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.2"
+                        android:padding="15dp"
+                        android:text="• 핵심 기능 : 그룹 정보 (그룹 멤버, 인원, 그룹 알람) 확인, 그룹 추가 및 탈퇴"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.8"
+                        android:weightSum="1"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.3"></View>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.7"
+                            android:text=" 친구창"
+                           android:textSize="30dp"
+                            android:gravity="bottom"
+                            android:drawableLeft="@drawable/three"
+                            android:paddingLeft="15dp"
+                            android:background="@drawable/round_gray"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.2"
+                        android:padding="15dp"
+                        android:text="• 핵심 기능 : 친구 추가 요청하기 및 받기, 친구 목록 보기"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="10dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.8"
+                        android:weightSum="1"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.3"></View>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.7"
+                            android:text=" 프로필창"
+                            android:textSize="30dp"
+                            android:gravity="bottom"
+                            android:drawableLeft="@drawable/four"
+                            android:paddingLeft="15dp"
+                            android:background="@drawable/round_gray"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.2"
+                        android:padding="15dp"
+                        android:text="• 핵심 기능 : 프로필 사진 바꾸기, 공지사항, 사용설명서, 문의"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
 
                 <View
                     android:layout_width="0dp"
