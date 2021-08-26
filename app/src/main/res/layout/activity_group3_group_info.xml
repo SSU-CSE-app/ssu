@@ -66,7 +66,7 @@
                         android:layout_height="match_parent"></View>
 
                     <ImageView
-                        android:id="@+id/add_group_image_btn"
+                        android:id="@+id/add_group_image"
                         android:layout_width="94dp"
                         android:layout_height="94dp"
                         android:layout_gravity="center"/>
