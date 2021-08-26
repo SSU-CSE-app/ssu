@@ -53,7 +53,7 @@
                     android:text="월 화 수 목 금 토"
                     android:textSize="13dp"
                     android:gravity="center"
-                    android:textStyle="bold"></TextView>
+                    android:textStyle="bold"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"

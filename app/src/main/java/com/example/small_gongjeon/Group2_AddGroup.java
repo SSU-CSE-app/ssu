@@ -102,14 +102,6 @@ public class Group2_AddGroup extends AppCompatActivity {
             }
         });
 
-//        ListView lv = findViewById(R.id.listview_group_add);
-//        InviteMemberList adapter = new InviteMemberList();
-//
-//        lv.setAdapter(adapter);
-//
-//        adapter.addFriend(ContextCompat.getDrawable(this,R.drawable.ic_launcher_background), "이선호");
-//        adapter.addFriend(ContextCompat.getDrawable(this,R.drawable.tap_friends), "이민지");
-//        adapter.addFriend(ContextCompat.getDrawable(this,R.drawable.tap_friends), "김흥수");
     }
     private class GetData extends AsyncTask<String, Void, String> {
 
@@ -213,6 +205,7 @@ public class Group2_AddGroup extends AppCompatActivity {
 
         String TAG_JSON="webnautes";
         String TAG_NAME = "userName";
+        String TAG_PHOTO = "userPhoto";
 
         try {
             JSONObject jsonObject = new JSONObject(mJsonString);
@@ -223,12 +216,43 @@ public class Group2_AddGroup extends AppCompatActivity {
             for(int i=0;i<jsonArray.length();i++){
                 System.out.println("currJson: "+jsonArray.getJSONObject(i));
                 JSONObject item = jsonArray.getJSONObject(i);
-
+                String photo = item.getString(TAG_PHOTO);
                 String name = item.getString(TAG_NAME);
+                Integer photoID = null;
+                switch (photo) {
+                    case "1" :
+                        photoID = R.drawable.group_profile_1_face;
+                        break;
+                    case "2" :
+                        photoID = R.drawable.group_profile_2_smile;
+                        break;
+                    case "3" :
+                        photoID = R.drawable.profile_3_bigsmile;
+                        break;
+                    case "4" :
+                        photoID = R.drawable.profile_4_sad;
+                        break;
+                    case "5" :
+                        photoID = R.drawable.profile_5_smallsad;
+                        break;
+                    case "6" :
+                        photoID = R.drawable.profile_6_smallsmlie;
+                        break;
+                    case "7" :
+                        photoID = R.drawable.profile_7_sick;
+                        break;
+                    case "8" :
+                        photoID = R.drawable.profile_8_bad;
+                        break;
+                    case "9" :
+                        photoID = R.drawable.profile_9_default;
+                        break;
 
+                }
                 Friend friend = new Friend();
 
                 friend.setName(name);
+                friend.setPhotoID(photoID);
 
                 mArrayList.add(friend);
                 mAdapter.notifyDataSetChanged();
